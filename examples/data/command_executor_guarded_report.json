@@ -1,0 +1,172 @@
+{
+  "policy_name": "command_filter_demo",
+  "stop_reason": "no_actions",
+  "metrics": {
+    "compound_count": 4,
+    "credible_hit_count": 0,
+    "experiment_ready_count": 0,
+    "human_signed_count": 0,
+    "credible_hit_rate": 0.0,
+    "experiment_ready_rate": 0.0,
+    "claim_upgrade_rate": 0.0,
+    "qualified_count": 4,
+    "rejected_count": 0,
+    "conflicted_count": 0,
+    "abstain_count": 0,
+    "needs_promotion_count": 0,
+    "needs_human_count": 0,
+    "planned_action_count": 4,
+    "planned_action_cost": 4.0,
+    "planned_high_fidelity_count": 0,
+    "planned_human_count": 0,
+    "trust_gap_reversal_rate": 0.0,
+    "trust_gap_waste_rate": 0.0,
+    "high_fidelity_scaffold_count": 0,
+    "repeated_scaffold_high_fidelity_count": 0,
+    "repeated_scaffold_high_fidelity_rate": 0.0,
+    "scaffold_repeat_waste_count": 0,
+    "scaffold_repeat_waste_rate": 0.0,
+    "rescued_scaffold_count": 0,
+    "rescued_scaffold_rate": 0.0
+  },
+  "action_count": 4,
+  "applied_observation_count": 4,
+  "missing_observation_count": 0,
+  "skipped_observation_count": 0,
+  "invalid_observation_count": 0,
+  "blocked_action_count": 0,
+  "failed_action_count": 0,
+  "actions": [
+    {
+      "action_id": "act_a16a6cbd11dd4a308242602dab7bd634",
+      "kind": "filter",
+      "subject_ids": [
+        "cmpd_001"
+      ],
+      "budget_reserved": 1.0,
+      "reason": "fixed_cascade_next_missing_step",
+      "result_observation_ids": [
+        "obs_chem_filter_cmpd_001"
+      ]
+    },
+    {
+      "action_id": "act_3247200568014fabb1d5ae4b04850b19",
+      "kind": "filter",
+      "subject_ids": [
+        "cmpd_002"
+      ],
+      "budget_reserved": 1.0,
+      "reason": "fixed_cascade_next_missing_step",
+      "result_observation_ids": [
+        "obs_chem_filter_cmpd_002"
+      ]
+    },
+    {
+      "action_id": "act_a20bfdc5deba419bb476fe2e482b9cda",
+      "kind": "filter",
+      "subject_ids": [
+        "cmpd_003"
+      ],
+      "budget_reserved": 1.0,
+      "reason": "fixed_cascade_next_missing_step",
+      "result_observation_ids": [
+        "obs_chem_filter_cmpd_003"
+      ]
+    },
+    {
+      "action_id": "act_a05c8022a0144f3d98e96d1335c6b3cb",
+      "kind": "filter",
+      "subject_ids": [
+        "cmpd_004"
+      ],
+      "budget_reserved": 1.0,
+      "reason": "fixed_cascade_next_missing_step",
+      "result_observation_ids": [
+        "obs_chem_filter_cmpd_004"
+      ]
+    }
+  ],
+  "missing_observations": [],
+  "rounds": [
+    {
+      "round_index": 0,
+      "planned_action_count": 4,
+      "applied_observation_count": 4,
+      "missing_observation_count": 0,
+      "skipped_observation_count": 0,
+      "invalid_observation_count": 0,
+      "blocked_action_count": 0,
+      "failed_action_count": 0,
+      "stop_reason": "continued",
+      "actions": [
+        {
+          "action_id": "act_a16a6cbd11dd4a308242602dab7bd634",
+          "subject_id": "cmpd_001",
+          "action_kind": "filter",
+          "oracle_name": "basic_chem_filter",
+          "status": "applied",
+          "reason": "observation_admitted",
+          "observation_id": "obs_chem_filter_cmpd_001",
+          "trust_gate_result_id": "tg_4b4fe8f9c1b5413e812318d346a2904c",
+          "trust_gate_decision": "qualified",
+          "evidence_tier": "l0_chem_valid"
+        },
+        {
+          "action_id": "act_3247200568014fabb1d5ae4b04850b19",
+          "subject_id": "cmpd_002",
+          "action_kind": "filter",
+          "oracle_name": "basic_chem_filter",
+          "status": "applied",
+          "reason": "observation_admitted",
+          "observation_id": "obs_chem_filter_cmpd_002",
+          "trust_gate_result_id": "tg_33d2025bd78d48d9837aca90ba3cf801",
+          "trust_gate_decision": "qualified",
+          "evidence_tier": "l0_chem_valid"
+        },
+        {
+          "action_id": "act_a20bfdc5deba419bb476fe2e482b9cda",
+          "subject_id": "cmpd_003",
+          "action_kind": "filter",
+          "oracle_name": "basic_chem_filter",
+          "status": "applied",
+          "reason": "observation_admitted",
+          "observation_id": "obs_chem_filter_cmpd_003",
+          "trust_gate_result_id": "tg_40862614226048848c6f17e59048f575",
+          "trust_gate_decision": "qualified",
+          "evidence_tier": "l0_chem_valid"
+        },
+        {
+          "action_id": "act_a05c8022a0144f3d98e96d1335c6b3cb",
+          "subject_id": "cmpd_004",
+          "action_kind": "filter",
+          "oracle_name": "basic_chem_filter",
+          "status": "applied",
+          "reason": "observation_admitted",
+          "observation_id": "obs_chem_filter_cmpd_004",
+          "trust_gate_result_id": "tg_124c3a50e01745be8b875f450d930a87",
+          "trust_gate_decision": "qualified",
+          "evidence_tier": "l0_chem_valid"
+        }
+      ]
+    },
+    {
+      "round_index": 1,
+      "planned_action_count": 0,
+      "applied_observation_count": 0,
+      "missing_observation_count": 0,
+      "skipped_observation_count": 0,
+      "invalid_observation_count": 0,
+      "blocked_action_count": 0,
+      "failed_action_count": 0,
+      "stop_reason": "no_actions",
+      "actions": []
+    }
+  ],
+  "input": {
+    "candidate_csv": "E:\\11\\drug-loop-harness\\examples\\data\\candidates.csv",
+    "tool": "E:\\11\\drug-loop-harness\\examples\\tools\\emit_chem_filter_observation.py",
+    "guard_enforced": true,
+    "max_rounds": 3,
+    "tool_timeout": 5.0
+  }
+}

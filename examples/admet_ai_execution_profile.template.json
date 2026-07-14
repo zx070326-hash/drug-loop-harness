@@ -1,0 +1,22 @@
+{
+  "schema_version": "admet_ai_execution_profile.v1",
+  "profile_id": "admet_ai_local_v2_YYYYMMDD",
+  "predict_command_prefix": [
+    "admet_predict"
+  ],
+  "version_command": [
+    "python",
+    "-c",
+    "import importlib.metadata; print(importlib.metadata.version('admet-ai'))"
+  ],
+  "expected_version": "REPLACE_WITH_EXACT_INSTALLED_VERSION",
+  "model_name": "admet-ai",
+  "model_version": "REPLACE_WITH_DECLARED_MODEL_VERSION",
+  "endpoint_set_id": "REPLACE_WITH_REVIEWED_ENDPOINT_SET_ID",
+  "model_manifest_path": "C:/absolute/path/to/admet-ai-model-manifest.json",
+  "model_manifest_sha256": "REPLACE_WITH_SHA256_OF_EXACT_MANIFEST_BYTES",
+  "accounted_cost_per_attempt": 0,
+  "cost_accounting_basis": "REPLACE_WITH_PREDECLARED_LOCAL_OR_PROVIDER_COST_POLICY",
+  "timeout_seconds": 600,
+  "version_timeout_seconds": 30
+}

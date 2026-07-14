@@ -1,0 +1,7 @@
+id,subject_id,oracle_name,passed,score,pose_valid,steric_clash,ligand_strain_flag,hERG_risk,solubility,decision,uncertainty,cost_spent,domain,source
+obs_s_rescore_201,cmpd_201,table_rescoring,false,-5.1,true,false,false,,,,,8,protein_ligand|non_covalent,scaffold_round_2
+obs_s_rescore_202,cmpd_202,table_rescoring,false,-5.3,true,false,false,,,,,8,protein_ligand|non_covalent,scaffold_round_2
+obs_s_rescore_203,cmpd_203,table_rescoring,false,-5.0,true,false,false,,,,,8,protein_ligand|non_covalent,scaffold_round_2
+obs_s_rescore_204,cmpd_204,table_rescoring,true,-8.0,true,false,false,,,,,8,protein_ligand|non_covalent,scaffold_round_2
+obs_s_rescore_205,cmpd_205,table_rescoring,false,-5.8,true,false,false,,,,,8,protein_ligand|non_covalent,scaffold_round_2
+obs_s_human_204,cmpd_204,human_review,true,,,,,,,approve,,10,medchem_review,scaffold_round_2

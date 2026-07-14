@@ -1,0 +1,13 @@
+id,subject_id,oracle_name,passed,score,pose_valid,steric_clash,ligand_strain_flag,hERG_risk,solubility,decision,uncertainty,cost_spent,domain,source
+obs_c_chem_101,cmpd_101,basic_chem_filter,true,,,,,,,,,1,small_molecule,conflict_round_1
+obs_c_chem_102,cmpd_102,basic_chem_filter,true,,,,,,,,,1,small_molecule,conflict_round_1
+obs_c_chem_103,cmpd_103,basic_chem_filter,true,,,,,,,,,1,small_molecule,conflict_round_1
+obs_c_chem_104,cmpd_104,basic_chem_filter,true,,,,,,,,,1,small_molecule,conflict_round_1
+obs_c_admet_101,cmpd_101,table_admet,true,,,,,low,ok,,0.24,2,small_molecule,conflict_round_1
+obs_c_admet_102,cmpd_102,table_admet,true,,,,,low,ok,,0.28,2,small_molecule,conflict_round_1
+obs_c_admet_103,cmpd_103,table_admet,true,,,,,low,ok,,0.20,2,small_molecule,conflict_round_1
+obs_c_admet_104,cmpd_104,table_admet,false,,,,,high,poor,,0.16,2,small_molecule,conflict_round_1
+obs_c_dock_101,cmpd_101,table_docking,true,-9.8,true,false,false,,,,,5,protein_ligand|non_covalent,conflict_round_1
+obs_c_dock_102,cmpd_102,table_docking,true,-8.5,true,false,false,,,,,5,protein_ligand|non_covalent,conflict_round_1
+obs_c_dock_103,cmpd_103,table_docking,true,-8.2,true,false,false,,,,,5,protein_ligand|non_covalent,conflict_round_1
+obs_c_dock_104,cmpd_104,table_docking,true,-8.0,true,false,false,,,,,5,protein_ligand|non_covalent,conflict_round_1

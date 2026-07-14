@@ -1,0 +1,6 @@
+id,smiles,route_id,scaffold,tags
+cmpd_201,COc1ncccc1N,route_scaffold_trap,aminopyridine_trap,trap
+cmpd_202,COc1ncc(N)cc1,route_scaffold_trap,aminopyridine_trap,trap
+cmpd_203,COc1ccnc(N)c1,route_scaffold_trap,aminopyridine_trap,trap
+cmpd_204,CCNc1ncccc1O,route_scaffold_trap,hydroxy_pyridine,rescue
+cmpd_205,CCN(CC)C(=O)N,route_scaffold_trap,urea,background

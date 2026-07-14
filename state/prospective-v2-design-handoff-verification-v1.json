@@ -1,0 +1,10 @@
+{
+  "assay_protocol_registration_ready": false,
+  "autonomous_execution_permitted": false,
+  "execution_authority_granted": false,
+  "issue_messages": [],
+  "schema_version": "prospective_v2_design_handoff_verification.v1",
+  "scientific_claim_upgrade_permitted": false,
+  "source_handoff_content_sha256": "01bb5277fdc9935fcf15c6ac014a6d5e223f668fbec735247d14b9ef371f7d18",
+  "verification_status": "PASS"
+}

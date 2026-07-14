@@ -1,0 +1,34 @@
+{
+  "schema_version": "prospective_assay_result.v1",
+  "result_id": "assay_result_001",
+  "source_plan_content_sha256": "REPLACE_WITH_PLAN_HASH",
+  "source_randomization_verification_content_sha256": "REPLACE_WITH_RANDOMIZATION_VERIFICATION_HASH",
+  "source_approval_content_sha256": "REPLACE_WITH_APPROVAL_HASH",
+  "source_endpoint_policy_content_sha256": "REPLACE_WITH_ENDPOINT_POLICY_HASH",
+  "request_id": "REPLACE_WITH_APPROVED_REQUEST_ID",
+  "subject_id": "REPLACE_WITH_APPROVED_SUBJECT_ID",
+  "oracle_name": "prospective_assay_oracle",
+  "input_smiles_sha256": "REPLACE_WITH_CAMPAIGN_SMILES_SHA256",
+  "cost_spent": 5.0,
+  "assay_run": {
+    "run_id": "external_assay_run_001",
+    "site_id": "external_lab_A",
+    "assay_protocol_id": "target_assay_protocol_v1",
+    "started_at": "2026-07-12T00:00:00+00:00",
+    "completed_at": "2026-07-12T04:00:00+00:00",
+    "qc_status": "pass"
+  },
+  "endpoint": {
+    "metric_key": "ic50_nM",
+    "value": 50.0,
+    "unit": "nM"
+  },
+  "controls": {
+    "positive_control": true,
+    "negative_control": true
+  },
+  "source_output": {
+    "path": "assay-raw-output.json",
+    "sha256": "REPLACE_WITH_RAW_OUTPUT_SHA256"
+  }
+}

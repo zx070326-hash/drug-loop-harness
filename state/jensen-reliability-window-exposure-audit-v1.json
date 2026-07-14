@@ -1,0 +1,22 @@
+{
+  "interpretation": "This audit can establish absence of matching workspace JSON artifacts only; it cannot prove that no human has ever viewed source rows.",
+  "matches": [],
+  "policy_execution_authority_granted": false,
+  "scanned_json_file_count": 191,
+  "schema_version": "jensen_reliability_window_exposure_audit.v1",
+  "scientific_claim_upgrade_permitted": false,
+  "scope": "existing state JSON artifacts excluding this new stress-stage namespace",
+  "selected_offsets": [
+    160,
+    224,
+    288
+  ],
+  "semantic_keys": [
+    "candidate_offset",
+    "candidate_offsets"
+  ],
+  "status": "PASS_NO_SELECTED_WINDOW_POLICY_ARTIFACTS",
+  "unreadable": [],
+  "unreadable_json_file_count": 0,
+  "workspace_artifact_match_count": 0
+}

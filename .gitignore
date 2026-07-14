@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environments and local configuration
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Downloaded third-party data, tools, environments, and live runs
+external/
+
+# Runtime state is private by default. Only the frozen, small development
+# evidence needed to inspect the current Jensen/prospective claims is tracked.
+state/*
+!state/jensen-policy-curve-protocol-v3.json
+!state/jensen-policy-curve-evaluation-v3.json
+!state/jensen-reliability-window-exposure-audit-v1.json
+!state/jensen-reliability-stress-protocol-v1.json
+!state/jensen-reliability-stress-evaluation-v1.json
+!state/prospective-v2-design-handoff-v1.json
+!state/prospective-v2-design-handoff-verification-v1.json
+
+# Generated archives, logs, and molecular/simulation payloads
+*.log
+*.out
+*.err
+*.zip
+*.gz
+*.tgz
+*.tar
+*.tar.*
+*.sdf
+*.pdb
+*.dcd
+*.xtc
+*.nc
+
+# Accidental root-level shell artifacts
+/-*

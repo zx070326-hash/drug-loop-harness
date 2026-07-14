@@ -1,0 +1,27 @@
+{
+  "schema_version": "admet_endpoint_interpretation_policy.v1",
+  "policy_id": "REPLACE_WITH_REVIEWED_POLICY_ID",
+  "source_profile_content_sha256": "REPLACE_WITH_CANONICAL_PROFILE_CONTENT_SHA256",
+  "profile_id": "REPLACE_WITH_PROFILE_ID",
+  "model_name": "admet-ai",
+  "model_version": "REPLACE_WITH_DECLARED_MODEL_VERSION",
+  "endpoint_set_id": "REPLACE_WITH_REVIEWED_ENDPOINT_SET_ID",
+  "applicability_domain": [
+    "small_molecule"
+  ],
+  "row_binding_column": "smiles",
+  "row_binding_kind": "smiles",
+  "rules": [
+    {
+      "raw_column": "REPLACE_WITH_RAW_CSV_COLUMN",
+      "metric_name": "REPLACE_WITH_NORMALIZED_METRIC_NAME",
+      "unit": "REPLACE_WITH_REVIEWED_UNIT",
+      "comparator": "at_most",
+      "threshold": 0,
+      "rationale": "REPLACE_WITH_ENDPOINT_DIRECTION_THRESHOLD_AND_MISSINGNESS_RATIONALE"
+    }
+  ],
+  "reviewer": "REPLACE_WITH_HUMAN_REVIEWER",
+  "rationale": "REPLACE_WITH_POLICY_REVIEW_RATIONALE",
+  "reviewed_at": "REPLACE_WITH_TIMEZONE_AWARE_TIMESTAMP_BEFORE_EXECUTION"
+}

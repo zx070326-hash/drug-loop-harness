@@ -1,0 +1,17 @@
+{
+  "provider": "admet-ai",
+  "package_distribution": "admet-ai",
+  "package_version": "REPLACE_WITH_EXACT_INSTALLED_VERSION",
+  "model_name": "REPLACE_WITH_MODEL_NAME",
+  "model_version": "REPLACE_WITH_DECLARED_MODEL_VERSION",
+  "endpoint_set_id": "REPLACE_WITH_REVIEWED_ENDPOINT_SET_ID",
+  "artifact_inventory": [
+    {
+      "path": "REPLACE_WITH_LOCAL_MODEL_OR_PACKAGE_ARTIFACT_PATH",
+      "sha256": "REPLACE_WITH_ARTIFACT_SHA256"
+    }
+  ],
+  "prepared_by": "REPLACE_WITH_HUMAN_REVIEWER",
+  "prepared_at": "REPLACE_WITH_TIMEZONE_AWARE_TIMESTAMP",
+  "notes": "This manifest identifies a reviewed local installation. It is not an endpoint threshold policy or a validation claim."
+}

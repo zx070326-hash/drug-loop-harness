@@ -1,0 +1,33 @@
+{
+  "power_plan_id": "target_loop_power_plan_001",
+  "target_population_id": "target_population_v1",
+  "primary_outcome_metric_id": "prospective_assay_validated_candidate_rate",
+  "primary_outcome_validation_oracle_kind": "assay",
+  "primary_outcome_metric_key": "assay_validated",
+  "primary_outcome_positive_value": true,
+  "primary_outcome_denominator_kind": "randomized_candidate_promotion_episodes",
+  "calculation_method": "normal_approximation_two_independent_proportions",
+  "alternative": "two_sided",
+  "alpha": 0.05,
+  "target_power": 0.8,
+  "baseline_assay_validated_rate": 0.1,
+  "minimum_absolute_rate_difference": 0.15,
+  "planned_randomized_episodes_per_arm": 120,
+  "expected_assay_cost_per_episode": 5.0,
+  "declared_per_arm_experiment_budget_limit": 600.0,
+  "planned_assay_site_id": "target_loop_assay_site_001",
+  "independent_replication_cohort_required": true,
+  "replication_cohort_id": "target_loop_replication_cohort_001",
+  "independent_assay_site_required": true,
+  "external_arm_randomization_required": true,
+  "human_acceptance": {
+    "decision": "accept",
+    "reviewer": "scientist@example.org",
+    "reviewed_at": "2026-07-11T00:00:00+00:00",
+    "rationale": "Reviewed effect size, alpha, target power, budget feasibility, and independent replication requirement."
+  },
+  "policy_ranking_permitted": false,
+  "execution_authority_granted": false,
+  "autonomous_execution_permitted": false,
+  "scientific_claim_upgrade_permitted": false
+}

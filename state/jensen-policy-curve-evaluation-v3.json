@@ -1,0 +1,799 @@
+{
+  "aggregate": {
+    "maximum_single_target_regret_auc_harm_vs_greedy": 0.01498724590740741,
+    "median_regret_auc_reduction_vs_greedy": 0.02595678922222222,
+    "median_top_recovery_auc_advantage_vs_greedy": 0.05555555555555555,
+    "scientific_unit": "target",
+    "scientific_unit_count": 5,
+    "target_regret_auc_win_count": 4
+  },
+  "budget_report_sha256": {
+    "12": "345f9a18291824761bd844b724a55230e4c77eaa14f9e2c0847415b3b6cb3d28",
+    "3": "f1b77df557249f34c8bcae168e7d354ec155a1acaf8fecb09372660a6b67a676",
+    "6": "6afa16dcf3eea1603dd52f0db1ed2ccfca5ffd013cd65e3eea529495218bbfbe",
+    "9": "38f1928cb33c51cfe1e15051d5af89eb4f2e31f145a793717abe20131eed2bfa"
+  },
+  "decision": "SUPPORT_PROSPECTIVE_POLICY_STUDY_DESIGN",
+  "gate_checks": {
+    "all_trace_and_budget_controls": true,
+    "complete_target_count": true,
+    "median_regret_auc_reduction": true,
+    "median_top_recovery_auc_noninferiority": true,
+    "single_target_regret_harm_bound": true,
+    "target_regret_auc_win_count": true
+  },
+  "interpretation": {
+    "formal_inference_permitted": false,
+    "general_policy_superiority_permitted": false,
+    "molecular_activity_claim_permitted": false,
+    "prospective_replication_required_for_policy_claim": true,
+    "scientific_claim_upgrade_permitted": false,
+    "strict_unseen_confirmation": false
+  },
+  "leave_one_target_out": [
+    {
+      "descriptive_thresholds_preserved": true,
+      "median_regret_auc_reduction": 0.053387411712962976,
+      "median_top_recovery_auc_advantage": 0.06944444444444445,
+      "omitted_target_id": "FACTOR_D",
+      "regret_auc_win_count": 4,
+      "retained_target_count": 4
+    },
+    {
+      "descriptive_thresholds_preserved": true,
+      "median_regret_auc_reduction": 0.053213794231481495,
+      "median_top_recovery_auc_advantage": 0.0,
+      "omitted_target_id": "CXCR4",
+      "regret_auc_win_count": 3,
+      "retained_target_count": 4
+    },
+    {
+      "descriptive_thresholds_preserved": true,
+      "median_regret_auc_reduction": 0.02578317174074074,
+      "median_top_recovery_auc_advantage": 0.06944444444444445,
+      "omitted_target_id": "HIF_PH",
+      "regret_auc_win_count": 3,
+      "retained_target_count": 4
+    },
+    {
+      "descriptive_thresholds_preserved": true,
+      "median_regret_auc_reduction": 0.053387411712962976,
+      "median_top_recovery_auc_advantage": 0.013888888888888888,
+      "omitted_target_id": "PARP1",
+      "regret_auc_win_count": 3,
+      "retained_target_count": 4
+    },
+    {
+      "descriptive_thresholds_preserved": true,
+      "median_regret_auc_reduction": 0.02578317174074074,
+      "median_top_recovery_auc_advantage": 0.0,
+      "omitted_target_id": "NR1A2",
+      "regret_auc_win_count": 3,
+      "retained_target_count": 4
+    }
+  ],
+  "primary_gate_passed": true,
+  "protocol_file_sha256": "f50bccc6e07d3e654aa08f3caef2c62591a00835a6c3c5d9b330650665655ba6",
+  "protocol_id": "jensen-five-target-promotion-policy-curve-v3",
+  "schema_version": "jensen_policy_curve_evaluation.v3",
+  "status": "PASS_COMPLETE_FROZEN_CURVE",
+  "target_auc_results": [
+    {
+      "cost_auc_difference_vs_greedy": 0.1599999999999957,
+      "policy_auc": {
+        "greedy": {
+          "cost_spent_auc": 7.34,
+          "simple_regret_auc": 0.06299520681481482,
+          "top_recovery_auc": 0.08333333333333333
+        },
+        "heuristic": {
+          "cost_spent_auc": 7.34,
+          "simple_regret_auc": 0.4057091033333334,
+          "top_recovery_auc": 0.0
+        },
+        "jensen_tvr": {
+          "cost_spent_auc": 7.499999999999996,
+          "simple_regret_auc": 0.07798245272222223,
+          "top_recovery_auc": 0.0
+        }
+      },
+      "regret_auc_reduction_vs_greedy": -0.01498724590740741,
+      "target_id": "FACTOR_D",
+      "top_recovery_auc_advantage_vs_greedy": -0.08333333333333333
+    },
+    {
+      "cost_auc_difference_vs_greedy": 0.15999999999999392,
+      "policy_auc": {
+        "greedy": {
+          "cost_spent_auc": 7.34,
+          "simple_regret_auc": 0.16827878705555557,
+          "top_recovery_auc": 0.0
+        },
+        "heuristic": {
+          "cost_spent_auc": 7.34,
+          "simple_regret_auc": 0.3546242137777778,
+          "top_recovery_auc": 0.0
+        },
+        "jensen_tvr": {
+          "cost_spent_auc": 7.499999999999994,
+          "simple_regret_auc": 0.14232199783333335,
+          "top_recovery_auc": 0.08333333333333333
+        }
+      },
+      "regret_auc_reduction_vs_greedy": 0.02595678922222222,
+      "target_id": "CXCR4",
+      "top_recovery_auc_advantage_vs_greedy": 0.08333333333333333
+    },
+    {
+      "cost_auc_difference_vs_greedy": 0.14518518518517975,
+      "policy_auc": {
+        "greedy": {
+          "cost_spent_auc": 7.34,
+          "simple_regret_auc": 0.23077121477777776,
+          "top_recovery_auc": 0.08333333333333333
+        },
+        "heuristic": {
+          "cost_spent_auc": 7.34,
+          "simple_regret_auc": 0.34658302599999996,
+          "top_recovery_auc": 0.0
+        },
+        "jensen_tvr": {
+          "cost_spent_auc": 7.48518518518518,
+          "simple_regret_auc": 0.14995318057407403,
+          "top_recovery_auc": 0.027777777777777776
+        }
+      },
+      "regret_auc_reduction_vs_greedy": 0.08081803420370373,
+      "target_id": "HIF_PH",
+      "top_recovery_auc_advantage_vs_greedy": -0.05555555555555555
+    },
+    {
+      "cost_auc_difference_vs_greedy": 0.1599999999999957,
+      "policy_auc": {
+        "greedy": {
+          "cost_spent_auc": 7.34,
+          "simple_regret_auc": 0.19808832249999997,
+          "top_recovery_auc": 0.0
+        },
+        "heuristic": {
+          "cost_spent_auc": 7.34,
+          "simple_regret_auc": 0.4380873773333333,
+          "top_recovery_auc": 0.0
+        },
+        "jensen_tvr": {
+          "cost_spent_auc": 7.499999999999996,
+          "simple_regret_auc": 0.1724787682407407,
+          "top_recovery_auc": 0.05555555555555555
+        }
+      },
+      "regret_auc_reduction_vs_greedy": 0.02560955425925926,
+      "target_id": "PARP1",
+      "top_recovery_auc_advantage_vs_greedy": 0.05555555555555555
+    },
+    {
+      "cost_auc_difference_vs_greedy": 0.15999999999999392,
+      "policy_auc": {
+        "greedy": {
+          "cost_spent_auc": 7.34,
+          "simple_regret_auc": 0.5206972965000001,
+          "top_recovery_auc": 0.0
+        },
+        "heuristic": {
+          "cost_spent_auc": 7.34,
+          "simple_regret_auc": 0.6676668793333334,
+          "top_recovery_auc": 0.0
+        },
+        "jensen_tvr": {
+          "cost_spent_auc": 7.499999999999994,
+          "simple_regret_auc": 0.2527939401481481,
+          "top_recovery_auc": 0.12962962962962965
+        }
+      },
+      "regret_auc_reduction_vs_greedy": 0.267903356351852,
+      "target_id": "NR1A2",
+      "top_recovery_auc_advantage_vs_greedy": 0.12962962962962965
+    }
+  ],
+  "target_curves": [
+    {
+      "budget": 3.0,
+      "mean_cost_spent": 2.840000000000001,
+      "mean_simple_regret": 0.4057091033333334,
+      "mean_top_recovery": 0.0,
+      "policy_name": "heuristic",
+      "target_id": "FACTOR_D",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 3.0,
+      "mean_cost_spent": 2.840000000000001,
+      "mean_simple_regret": 0.07534954222222225,
+      "mean_top_recovery": 0.0,
+      "policy_name": "greedy",
+      "target_id": "FACTOR_D",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 3.0,
+      "mean_cost_spent": 2.9999999999999964,
+      "mean_simple_regret": 0.21766385888888892,
+      "mean_top_recovery": 0.0,
+      "policy_name": "jensen_tvr",
+      "target_id": "FACTOR_D",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 6.0,
+      "mean_cost_spent": 5.840000000000003,
+      "mean_simple_regret": 0.4057091033333334,
+      "mean_top_recovery": 0.0,
+      "policy_name": "heuristic",
+      "target_id": "FACTOR_D",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 6.0,
+      "mean_cost_spent": 5.840000000000001,
+      "mean_simple_regret": 0.07030191266666669,
+      "mean_top_recovery": 0.0,
+      "policy_name": "greedy",
+      "target_id": "FACTOR_D",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 6.0,
+      "mean_cost_spent": 5.999999999999996,
+      "mean_simple_regret": 0.058962077444444476,
+      "mean_top_recovery": 0.0,
+      "policy_name": "jensen_tvr",
+      "target_id": "FACTOR_D",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 9.0,
+      "mean_cost_spent": 8.840000000000002,
+      "mean_simple_regret": 0.4057091033333334,
+      "mean_top_recovery": 0.0,
+      "policy_name": "heuristic",
+      "target_id": "FACTOR_D",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 9.0,
+      "mean_cost_spent": 8.84,
+      "mean_simple_regret": 0.05774137133333335,
+      "mean_top_recovery": 0.16666666666666666,
+      "policy_name": "greedy",
+      "target_id": "FACTOR_D",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 9.0,
+      "mean_cost_spent": 8.999999999999993,
+      "mean_simple_regret": 0.04489474666666668,
+      "mean_top_recovery": 0.0,
+      "policy_name": "jensen_tvr",
+      "target_id": "FACTOR_D",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 12.0,
+      "mean_cost_spent": 11.839999999999991,
+      "mean_simple_regret": 0.4057091033333334,
+      "mean_top_recovery": 0.0,
+      "policy_name": "heuristic",
+      "target_id": "FACTOR_D",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 12.0,
+      "mean_cost_spent": 11.839999999999998,
+      "mean_simple_regret": 0.04653513066666667,
+      "mean_top_recovery": 0.16666666666666666,
+      "policy_name": "greedy",
+      "target_id": "FACTOR_D",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 12.0,
+      "mean_cost_spent": 11.999999999999991,
+      "mean_simple_regret": 0.04251720922222224,
+      "mean_top_recovery": 0.0,
+      "policy_name": "jensen_tvr",
+      "target_id": "FACTOR_D",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 3.0,
+      "mean_cost_spent": 2.840000000000001,
+      "mean_simple_regret": 0.3546242137777778,
+      "mean_top_recovery": 0.0,
+      "policy_name": "heuristic",
+      "target_id": "CXCR4",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 3.0,
+      "mean_cost_spent": 2.840000000000001,
+      "mean_simple_regret": 0.2682158848888889,
+      "mean_top_recovery": 0.0,
+      "policy_name": "greedy",
+      "target_id": "CXCR4",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 3.0,
+      "mean_cost_spent": 2.999999999999997,
+      "mean_simple_regret": 0.23038623411111114,
+      "mean_top_recovery": 0.0,
+      "policy_name": "jensen_tvr",
+      "target_id": "CXCR4",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 6.0,
+      "mean_cost_spent": 5.840000000000003,
+      "mean_simple_regret": 0.3546242137777778,
+      "mean_top_recovery": 0.0,
+      "policy_name": "heuristic",
+      "target_id": "CXCR4",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 6.0,
+      "mean_cost_spent": 5.840000000000001,
+      "mean_simple_regret": 0.1821140748888889,
+      "mean_top_recovery": 0.0,
+      "policy_name": "greedy",
+      "target_id": "CXCR4",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 6.0,
+      "mean_cost_spent": 5.9999999999999964,
+      "mean_simple_regret": 0.14516380444444446,
+      "mean_top_recovery": 0.05555555555555555,
+      "policy_name": "jensen_tvr",
+      "target_id": "CXCR4",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 9.0,
+      "mean_cost_spent": 8.840000000000002,
+      "mean_simple_regret": 0.3546242137777778,
+      "mean_top_recovery": 0.0,
+      "policy_name": "heuristic",
+      "target_id": "CXCR4",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 9.0,
+      "mean_cost_spent": 8.84,
+      "mean_simple_regret": 0.15020084811111115,
+      "mean_top_recovery": 0.0,
+      "policy_name": "greedy",
+      "target_id": "CXCR4",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 9.0,
+      "mean_cost_spent": 8.999999999999993,
+      "mean_simple_regret": 0.12399496700000003,
+      "mean_top_recovery": 0.1111111111111111,
+      "policy_name": "jensen_tvr",
+      "target_id": "CXCR4",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 12.0,
+      "mean_cost_spent": 11.839999999999991,
+      "mean_simple_regret": 0.3546242137777778,
+      "mean_top_recovery": 0.0,
+      "policy_name": "heuristic",
+      "target_id": "CXCR4",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 12.0,
+      "mean_cost_spent": 11.839999999999998,
+      "mean_simple_regret": 0.07682699144444448,
+      "mean_top_recovery": 0.0,
+      "policy_name": "greedy",
+      "target_id": "CXCR4",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 12.0,
+      "mean_cost_spent": 11.999999999999986,
+      "mean_simple_regret": 0.08522821000000004,
+      "mean_top_recovery": 0.16666666666666666,
+      "policy_name": "jensen_tvr",
+      "target_id": "CXCR4",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 3.0,
+      "mean_cost_spent": 2.840000000000001,
+      "mean_simple_regret": 0.34658302599999996,
+      "mean_top_recovery": 0.0,
+      "policy_name": "heuristic",
+      "target_id": "HIF_PH",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 3.0,
+      "mean_cost_spent": 2.840000000000001,
+      "mean_simple_regret": 0.2883028547777778,
+      "mean_top_recovery": 0.0,
+      "policy_name": "greedy",
+      "target_id": "HIF_PH",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 3.0,
+      "mean_cost_spent": 2.9999999999999964,
+      "mean_simple_regret": 0.34658302599999996,
+      "mean_top_recovery": 0.0,
+      "policy_name": "jensen_tvr",
+      "target_id": "HIF_PH",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 6.0,
+      "mean_cost_spent": 5.840000000000003,
+      "mean_simple_regret": 0.34658302599999996,
+      "mean_top_recovery": 0.0,
+      "policy_name": "heuristic",
+      "target_id": "HIF_PH",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 6.0,
+      "mean_cost_spent": 5.840000000000001,
+      "mean_simple_regret": 0.24570619644444447,
+      "mean_top_recovery": 0.0,
+      "policy_name": "greedy",
+      "target_id": "HIF_PH",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 6.0,
+      "mean_cost_spent": 5.9999999999999964,
+      "mean_simple_regret": 0.1701006704444444,
+      "mean_top_recovery": 0.0,
+      "policy_name": "jensen_tvr",
+      "target_id": "HIF_PH",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 9.0,
+      "mean_cost_spent": 8.840000000000002,
+      "mean_simple_regret": 0.34658302599999996,
+      "mean_top_recovery": 0.0,
+      "policy_name": "heuristic",
+      "target_id": "HIF_PH",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 9.0,
+      "mean_cost_spent": 8.84,
+      "mean_simple_regret": 0.22378826300000002,
+      "mean_top_recovery": 0.16666666666666666,
+      "policy_name": "greedy",
+      "target_id": "HIF_PH",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 9.0,
+      "mean_cost_spent": 8.982222222222214,
+      "mean_simple_regret": 0.09363192055555554,
+      "mean_top_recovery": 0.05555555555555555,
+      "policy_name": "jensen_tvr",
+      "target_id": "HIF_PH",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 12.0,
+      "mean_cost_spent": 11.839999999999991,
+      "mean_simple_regret": 0.34658302599999996,
+      "mean_top_recovery": 0.0,
+      "policy_name": "heuristic",
+      "target_id": "HIF_PH",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 12.0,
+      "mean_cost_spent": 11.839999999999998,
+      "mean_simple_regret": 0.157335515,
+      "mean_top_recovery": 0.16666666666666666,
+      "policy_name": "greedy",
+      "target_id": "HIF_PH",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 12.0,
+      "mean_cost_spent": 11.946666666666657,
+      "mean_simple_regret": 0.02567087544444444,
+      "mean_top_recovery": 0.05555555555555555,
+      "policy_name": "jensen_tvr",
+      "target_id": "HIF_PH",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 3.0,
+      "mean_cost_spent": 2.840000000000001,
+      "mean_simple_regret": 0.4380873773333333,
+      "mean_top_recovery": 0.0,
+      "policy_name": "heuristic",
+      "target_id": "PARP1",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 3.0,
+      "mean_cost_spent": 2.840000000000001,
+      "mean_simple_regret": 0.36310955222222213,
+      "mean_top_recovery": 0.0,
+      "policy_name": "greedy",
+      "target_id": "PARP1",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 3.0,
+      "mean_cost_spent": 2.9999999999999964,
+      "mean_simple_regret": 0.2744299181111111,
+      "mean_top_recovery": 0.0,
+      "policy_name": "jensen_tvr",
+      "target_id": "PARP1",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 6.0,
+      "mean_cost_spent": 5.840000000000003,
+      "mean_simple_regret": 0.4380873773333333,
+      "mean_top_recovery": 0.0,
+      "policy_name": "heuristic",
+      "target_id": "PARP1",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 6.0,
+      "mean_cost_spent": 5.840000000000001,
+      "mean_simple_regret": 0.18347428088888887,
+      "mean_top_recovery": 0.0,
+      "policy_name": "greedy",
+      "target_id": "PARP1",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 6.0,
+      "mean_cost_spent": 5.9999999999999964,
+      "mean_simple_regret": 0.18252991111111114,
+      "mean_top_recovery": 0.0,
+      "policy_name": "jensen_tvr",
+      "target_id": "PARP1",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 9.0,
+      "mean_cost_spent": 8.840000000000002,
+      "mean_simple_regret": 0.4380873773333333,
+      "mean_top_recovery": 0.0,
+      "policy_name": "heuristic",
+      "target_id": "PARP1",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 9.0,
+      "mean_cost_spent": 8.84,
+      "mean_simple_regret": 0.15779571655555555,
+      "mean_top_recovery": 0.0,
+      "policy_name": "greedy",
+      "target_id": "PARP1",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 9.0,
+      "mean_cost_spent": 8.999999999999993,
+      "mean_simple_regret": 0.14497867366666664,
+      "mean_top_recovery": 0.05555555555555555,
+      "policy_name": "jensen_tvr",
+      "target_id": "PARP1",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 12.0,
+      "mean_cost_spent": 11.839999999999991,
+      "mean_simple_regret": 0.4380873773333333,
+      "mean_top_recovery": 0.0,
+      "policy_name": "heuristic",
+      "target_id": "PARP1",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 12.0,
+      "mean_cost_spent": 11.839999999999998,
+      "mean_simple_regret": 0.14288038788888888,
+      "mean_top_recovery": 0.0,
+      "policy_name": "greedy",
+      "target_id": "PARP1",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 12.0,
+      "mean_cost_spent": 11.999999999999991,
+      "mean_simple_regret": 0.10542552177777775,
+      "mean_top_recovery": 0.2222222222222222,
+      "policy_name": "jensen_tvr",
+      "target_id": "PARP1",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 3.0,
+      "mean_cost_spent": 2.840000000000001,
+      "mean_simple_regret": 0.6676668793333334,
+      "mean_top_recovery": 0.0,
+      "policy_name": "heuristic",
+      "target_id": "NR1A2",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 3.0,
+      "mean_cost_spent": 2.840000000000001,
+      "mean_simple_regret": 0.6365428585555556,
+      "mean_top_recovery": 0.0,
+      "policy_name": "greedy",
+      "target_id": "NR1A2",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 3.0,
+      "mean_cost_spent": 2.999999999999995,
+      "mean_simple_regret": 0.5038382419999999,
+      "mean_top_recovery": 0.0,
+      "policy_name": "jensen_tvr",
+      "target_id": "NR1A2",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 6.0,
+      "mean_cost_spent": 5.840000000000003,
+      "mean_simple_regret": 0.6676668793333334,
+      "mean_top_recovery": 0.0,
+      "policy_name": "heuristic",
+      "target_id": "NR1A2",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 6.0,
+      "mean_cost_spent": 5.840000000000001,
+      "mean_simple_regret": 0.603889526,
+      "mean_top_recovery": 0.0,
+      "policy_name": "greedy",
+      "target_id": "NR1A2",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 6.0,
+      "mean_cost_spent": 5.9999999999999964,
+      "mean_simple_regret": 0.26935188577777774,
+      "mean_top_recovery": 0.05555555555555555,
+      "policy_name": "jensen_tvr",
+      "target_id": "NR1A2",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 9.0,
+      "mean_cost_spent": 8.840000000000002,
+      "mean_simple_regret": 0.6676668793333334,
+      "mean_top_recovery": 0.0,
+      "policy_name": "heuristic",
+      "target_id": "NR1A2",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 9.0,
+      "mean_cost_spent": 8.84,
+      "mean_simple_regret": 0.530428778,
+      "mean_top_recovery": 0.0,
+      "policy_name": "greedy",
+      "target_id": "NR1A2",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 9.0,
+      "mean_cost_spent": 8.999999999999993,
+      "mean_simple_regret": 0.1976804253333333,
+      "mean_top_recovery": 0.16666666666666666,
+      "policy_name": "jensen_tvr",
+      "target_id": "NR1A2",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 12.0,
+      "mean_cost_spent": 11.839999999999991,
+      "mean_simple_regret": 0.6676668793333334,
+      "mean_top_recovery": 0.0,
+      "policy_name": "heuristic",
+      "target_id": "NR1A2",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 12.0,
+      "mean_cost_spent": 11.839999999999998,
+      "mean_simple_regret": 0.21900431244444443,
+      "mean_top_recovery": 0.0,
+      "policy_name": "greedy",
+      "target_id": "NR1A2",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "budget": 12.0,
+      "mean_cost_spent": 11.999999999999988,
+      "mean_simple_regret": 0.07886077666666665,
+      "mean_top_recovery": 0.3333333333333333,
+      "policy_name": "jensen_tvr",
+      "target_id": "NR1A2",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "protocol_id": "target_loop_evaluation_001",
+  "target_population_id": "target_population_v1",
+  "study_scope": {
+    "evaluation_unit": "candidate_promotion_episode",
+    "policy_scope": "promotion_policy_only",
+    "candidate_population_allocation": "independent_external_randomization_from_fixed_candidate_pools"
+  },
+  "prospective_split": {
+    "split_id": "prospective_batch_001",
+    "split_kind": "prospective",
+    "outcomes_observed_after_registration": true
+  },
+  "arms": [
+    {
+      "arm_id": "baseline_fixed",
+      "role": "baseline",
+      "policy_spec": {
+        "policy_kind": "fixed_cascade",
+        "parameters": {
+          "cascade": [
+            "filter",
+            "predict_admet",
+            "dock",
+            "send_to_experiment"
+          ]
+        }
+      }
+    },
+    {
+      "arm_id": "credibility_aware",
+      "role": "credibility_aware",
+      "policy_spec": {
+      "policy_kind": "trust_gap_aware",
+      "parameters": {
+          "max_actions": 1,
+          "min_multiplier": 0.05,
+          "min_value_per_cost": 0.0
+      }
+      }
+    }
+  ],
+  "shared_budget": {
+    "budget_currency": "declared_cost_units",
+    "compute_budget_limit": 50.0,
+    "experiment_budget_limit": 10.0,
+    "per_arm_experiment_budget_limit": 5.0,
+    "human_review_budget_limit": 4.0
+  },
+  "primary_outcome": {
+    "metric_id": "prospective_assay_validated_candidate_rate",
+    "validation_oracle_kind": "assay",
+    "outcome_metric_key": "assay_validated",
+    "positive_outcome_value": true,
+    "numerator_definition": "Distinct candidates with admitted prospective assay evidence satisfying the declared protocol endpoint.",
+    "denominator_kind": "randomized_candidate_promotion_episodes",
+    "denominator_definition": "All randomized candidate-promotion episodes assigned to the arm; calculated only when every endpoint is admitted."
+  },
+  "secondary_metric_ids": [
+    "prospective_promotion_precision",
+    "cost_per_assay_validated_candidate",
+    "proxy_reversal_rate",
+    "unresolved_credibility_rate"
+  ],
+  "analysis_plan": {
+    "primary_analysis": "effect_size_with_confidence_interval",
+    "confidence_interval_method": "newcombe_wilson_95",
+    "missing_outcome_handling": "report_missing_separately_not_negative",
+    "multiple_comparison_handling": "primary_confirmatory_secondary_exploratory"
+  },
+  "adaptation_controls": {
+    "online_rethresholding_permitted": false,
+    "policy_parameter_updates_permitted": false,
+    "arm_switching_permitted": false,
+    "outcome_dependent_early_stopping_permitted": false
+  },
+  "bias_controls": {
+    "arm_assignment_method": "independent_external_randomization",
+    "assignment_before_outcomes_observed": true,
+    "outcome_assessor_blinded_to_arm": true,
+    "all_randomized_subjects_reported": true
+  },
+  "human_acceptance": {
+    "decision": "accept",
+    "reviewer": "scientist@example.org",
+    "reviewed_at": "2026-07-09T00:00:00+00:00",
+    "rationale": "Reviewed fixed arms, shared budget, assay outcome, and no-online-adaptation controls."
+  }
+}

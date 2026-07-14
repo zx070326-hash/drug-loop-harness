@@ -1,0 +1,408 @@
+{
+  "policy_name": "fixed_cascade",
+  "stop_reason": "no_progress",
+  "metrics": {
+    "compound_count": 4,
+    "credible_hit_count": 3,
+    "experiment_ready_count": 0,
+    "human_signed_count": 0,
+    "credible_hit_rate": 0.75,
+    "experiment_ready_rate": 0.0,
+    "claim_upgrade_rate": 0.0,
+    "qualified_count": 4,
+    "rejected_count": 1,
+    "conflicted_count": 0,
+    "abstain_count": 0,
+    "needs_promotion_count": 6,
+    "needs_human_count": 0,
+    "planned_action_count": 11,
+    "planned_action_cost": 27.0,
+    "planned_high_fidelity_count": 0,
+    "planned_human_count": 0,
+    "trust_gap_reversal_rate": 0.0,
+    "trust_gap_waste_rate": 0.0,
+    "high_fidelity_scaffold_count": 0,
+    "repeated_scaffold_high_fidelity_count": 0,
+    "repeated_scaffold_high_fidelity_rate": 0.0,
+    "scaffold_repeat_waste_count": 0,
+    "scaffold_repeat_waste_rate": 0.0,
+    "rescued_scaffold_count": 0,
+    "rescued_scaffold_rate": 0.0
+  },
+  "action_count": 11,
+  "applied_observation_count": 11,
+  "missing_observation_count": 0,
+  "skipped_observation_count": 0,
+  "invalid_observation_count": 0,
+  "blocked_action_count": 3,
+  "failed_action_count": 0,
+  "actions": [
+    {
+      "action_id": "act_57c653dcf6034a71a318b7169c77ff9a",
+      "kind": "filter",
+      "subject_ids": [
+        "cmpd_001"
+      ],
+      "budget_reserved": 1.0,
+      "reason": "fixed_cascade_next_missing_step",
+      "result_observation_ids": [
+        "obs_chem_filter_cmpd_001"
+      ]
+    },
+    {
+      "action_id": "act_d53ec175061b40bbb46f43ba69729495",
+      "kind": "filter",
+      "subject_ids": [
+        "cmpd_002"
+      ],
+      "budget_reserved": 1.0,
+      "reason": "fixed_cascade_next_missing_step",
+      "result_observation_ids": [
+        "obs_chem_filter_cmpd_002"
+      ]
+    },
+    {
+      "action_id": "act_7c0c5f0f6fbc4abe8b30faba25004040",
+      "kind": "filter",
+      "subject_ids": [
+        "cmpd_003"
+      ],
+      "budget_reserved": 1.0,
+      "reason": "fixed_cascade_next_missing_step",
+      "result_observation_ids": [
+        "obs_chem_filter_cmpd_003"
+      ]
+    },
+    {
+      "action_id": "act_fbaea81e0c11442587948625894410d0",
+      "kind": "filter",
+      "subject_ids": [
+        "cmpd_004"
+      ],
+      "budget_reserved": 1.0,
+      "reason": "fixed_cascade_next_missing_step",
+      "result_observation_ids": [
+        "obs_chem_filter_cmpd_004"
+      ]
+    },
+    {
+      "action_id": "act_e3040cf7d3c14676b9de81cdbcf05cd3",
+      "kind": "predict_admet",
+      "subject_ids": [
+        "cmpd_001"
+      ],
+      "budget_reserved": 2.0,
+      "reason": "fixed_cascade_next_missing_step",
+      "result_observation_ids": [
+        "obs_admet_001"
+      ]
+    },
+    {
+      "action_id": "act_2ce8adefabbc4b01bcc43da404dd689b",
+      "kind": "predict_admet",
+      "subject_ids": [
+        "cmpd_002"
+      ],
+      "budget_reserved": 2.0,
+      "reason": "fixed_cascade_next_missing_step",
+      "result_observation_ids": [
+        "obs_admet_002"
+      ]
+    },
+    {
+      "action_id": "act_68cc81fa7a744151a5d608baa9b0f491",
+      "kind": "predict_admet",
+      "subject_ids": [
+        "cmpd_003"
+      ],
+      "budget_reserved": 2.0,
+      "reason": "fixed_cascade_next_missing_step",
+      "result_observation_ids": [
+        "obs_admet_003"
+      ]
+    },
+    {
+      "action_id": "act_df9dfa1549ea43f1a2f661578f9c97d4",
+      "kind": "predict_admet",
+      "subject_ids": [
+        "cmpd_004"
+      ],
+      "budget_reserved": 2.0,
+      "reason": "fixed_cascade_next_missing_step",
+      "result_observation_ids": [
+        "obs_admet_004"
+      ]
+    },
+    {
+      "action_id": "act_80e9dd8d4c1a4fe1bec80cbfe6c55c76",
+      "kind": "dock",
+      "subject_ids": [
+        "cmpd_001"
+      ],
+      "budget_reserved": 5.0,
+      "reason": "fixed_cascade_next_missing_step",
+      "result_observation_ids": [
+        "obs_dock_001"
+      ]
+    },
+    {
+      "action_id": "act_4572cfade0af450cbf3d98dec19eeb43",
+      "kind": "dock",
+      "subject_ids": [
+        "cmpd_003"
+      ],
+      "budget_reserved": 5.0,
+      "reason": "fixed_cascade_next_missing_step",
+      "result_observation_ids": [
+        "obs_dock_003"
+      ]
+    },
+    {
+      "action_id": "act_604a527e1244446e88480b2e37902e07",
+      "kind": "dock",
+      "subject_ids": [
+        "cmpd_004"
+      ],
+      "budget_reserved": 5.0,
+      "reason": "fixed_cascade_next_missing_step",
+      "result_observation_ids": [
+        "obs_dock_004"
+      ]
+    }
+  ],
+  "missing_observations": [],
+  "rounds": [
+    {
+      "round_index": 0,
+      "planned_action_count": 4,
+      "applied_observation_count": 4,
+      "missing_observation_count": 0,
+      "skipped_observation_count": 0,
+      "invalid_observation_count": 0,
+      "blocked_action_count": 0,
+      "failed_action_count": 0,
+      "stop_reason": "continued",
+      "actions": [
+        {
+          "action_id": "act_57c653dcf6034a71a318b7169c77ff9a",
+          "subject_id": "cmpd_001",
+          "action_kind": "filter",
+          "oracle_name": "basic_chem_filter",
+          "status": "applied",
+          "reason": "observation_admitted",
+          "observation_id": "obs_chem_filter_cmpd_001",
+          "trust_gate_result_id": "tg_5e036656658747569a4d915de4976774",
+          "trust_gate_decision": "qualified",
+          "evidence_tier": "l0_chem_valid"
+        },
+        {
+          "action_id": "act_d53ec175061b40bbb46f43ba69729495",
+          "subject_id": "cmpd_002",
+          "action_kind": "filter",
+          "oracle_name": "basic_chem_filter",
+          "status": "applied",
+          "reason": "observation_admitted",
+          "observation_id": "obs_chem_filter_cmpd_002",
+          "trust_gate_result_id": "tg_4e5a0c26fb1b4bb3b849d55e9c874ef3",
+          "trust_gate_decision": "qualified",
+          "evidence_tier": "l0_chem_valid"
+        },
+        {
+          "action_id": "act_7c0c5f0f6fbc4abe8b30faba25004040",
+          "subject_id": "cmpd_003",
+          "action_kind": "filter",
+          "oracle_name": "basic_chem_filter",
+          "status": "applied",
+          "reason": "observation_admitted",
+          "observation_id": "obs_chem_filter_cmpd_003",
+          "trust_gate_result_id": "tg_c64ac743403e490c8ffcd77f2a3e5de7",
+          "trust_gate_decision": "qualified",
+          "evidence_tier": "l0_chem_valid"
+        },
+        {
+          "action_id": "act_fbaea81e0c11442587948625894410d0",
+          "subject_id": "cmpd_004",
+          "action_kind": "filter",
+          "oracle_name": "basic_chem_filter",
+          "status": "applied",
+          "reason": "observation_admitted",
+          "observation_id": "obs_chem_filter_cmpd_004",
+          "trust_gate_result_id": "tg_f27b618aebf14ccca0004cec89767e29",
+          "trust_gate_decision": "qualified",
+          "evidence_tier": "l0_chem_valid"
+        }
+      ]
+    },
+    {
+      "round_index": 1,
+      "planned_action_count": 4,
+      "applied_observation_count": 4,
+      "missing_observation_count": 0,
+      "skipped_observation_count": 0,
+      "invalid_observation_count": 0,
+      "blocked_action_count": 0,
+      "failed_action_count": 0,
+      "stop_reason": "continued",
+      "actions": [
+        {
+          "action_id": "act_e3040cf7d3c14676b9de81cdbcf05cd3",
+          "subject_id": "cmpd_001",
+          "action_kind": "predict_admet",
+          "oracle_name": "table_admet",
+          "status": "applied",
+          "reason": "observation_admitted",
+          "observation_id": "obs_admet_001",
+          "trust_gate_result_id": "tg_e4b2665a038d45b4807a84295ee75a27",
+          "trust_gate_decision": "needs_promotion",
+          "evidence_tier": "l2_admet_proxy"
+        },
+        {
+          "action_id": "act_2ce8adefabbc4b01bcc43da404dd689b",
+          "subject_id": "cmpd_002",
+          "action_kind": "predict_admet",
+          "oracle_name": "table_admet",
+          "status": "applied",
+          "reason": "observation_admitted",
+          "observation_id": "obs_admet_002",
+          "trust_gate_result_id": "tg_143e04c65dc347c4aae9aec2361b9f5e",
+          "trust_gate_decision": "rejected",
+          "evidence_tier": "l2_admet_proxy"
+        },
+        {
+          "action_id": "act_68cc81fa7a744151a5d608baa9b0f491",
+          "subject_id": "cmpd_003",
+          "action_kind": "predict_admet",
+          "oracle_name": "table_admet",
+          "status": "applied",
+          "reason": "observation_admitted",
+          "observation_id": "obs_admet_003",
+          "trust_gate_result_id": "tg_e7a81bdb8ace462ba7b8a0104de300a6",
+          "trust_gate_decision": "needs_promotion",
+          "evidence_tier": "l2_admet_proxy"
+        },
+        {
+          "action_id": "act_df9dfa1549ea43f1a2f661578f9c97d4",
+          "subject_id": "cmpd_004",
+          "action_kind": "predict_admet",
+          "oracle_name": "table_admet",
+          "status": "applied",
+          "reason": "observation_admitted",
+          "observation_id": "obs_admet_004",
+          "trust_gate_result_id": "tg_372637a2e8e74dc1bb6d0b2bec2a94c2",
+          "trust_gate_decision": "needs_promotion",
+          "evidence_tier": "l2_admet_proxy"
+        }
+      ]
+    },
+    {
+      "round_index": 2,
+      "planned_action_count": 3,
+      "applied_observation_count": 3,
+      "missing_observation_count": 0,
+      "skipped_observation_count": 0,
+      "invalid_observation_count": 0,
+      "blocked_action_count": 0,
+      "failed_action_count": 0,
+      "stop_reason": "continued",
+      "actions": [
+        {
+          "action_id": "act_80e9dd8d4c1a4fe1bec80cbfe6c55c76",
+          "subject_id": "cmpd_001",
+          "action_kind": "dock",
+          "oracle_name": "table_docking",
+          "status": "applied",
+          "reason": "observation_admitted",
+          "observation_id": "obs_dock_001",
+          "trust_gate_result_id": "tg_8056a36375c849e8acb2b99857fa534d",
+          "trust_gate_decision": "needs_promotion",
+          "evidence_tier": "l3_binding_proxy"
+        },
+        {
+          "action_id": "act_4572cfade0af450cbf3d98dec19eeb43",
+          "subject_id": "cmpd_003",
+          "action_kind": "dock",
+          "oracle_name": "table_docking",
+          "status": "applied",
+          "reason": "observation_admitted",
+          "observation_id": "obs_dock_003",
+          "trust_gate_result_id": "tg_4518532cf0a84eebb42711112d00871e",
+          "trust_gate_decision": "needs_promotion",
+          "evidence_tier": "l3_binding_proxy"
+        },
+        {
+          "action_id": "act_604a527e1244446e88480b2e37902e07",
+          "subject_id": "cmpd_004",
+          "action_kind": "dock",
+          "oracle_name": "table_docking",
+          "status": "applied",
+          "reason": "observation_admitted",
+          "observation_id": "obs_dock_004",
+          "trust_gate_result_id": "tg_883702a33ad64f4b82456feb857c2480",
+          "trust_gate_decision": "needs_promotion",
+          "evidence_tier": "l3_binding_proxy"
+        }
+      ]
+    },
+    {
+      "round_index": 3,
+      "planned_action_count": 3,
+      "applied_observation_count": 0,
+      "missing_observation_count": 0,
+      "skipped_observation_count": 0,
+      "invalid_observation_count": 0,
+      "blocked_action_count": 3,
+      "failed_action_count": 0,
+      "stop_reason": "no_progress",
+      "actions": [
+        {
+          "action_id": "act_18098a24ce6747ec8fb9de36612076a8",
+          "subject_id": "cmpd_001",
+          "action_kind": "ask_human",
+          "oracle_name": "human_review",
+          "status": "approval_required",
+          "reason": "missing_approval:approval_id; risk=human_review; approval_required=true",
+          "observation_id": null,
+          "trust_gate_result_id": null,
+          "trust_gate_decision": null,
+          "evidence_tier": null
+        },
+        {
+          "action_id": "act_248686f1f4fa4d80ac09b7bbfb49a464",
+          "subject_id": "cmpd_003",
+          "action_kind": "ask_human",
+          "oracle_name": "human_review",
+          "status": "approval_required",
+          "reason": "missing_approval:approval_id; risk=human_review; approval_required=true",
+          "observation_id": null,
+          "trust_gate_result_id": null,
+          "trust_gate_decision": null,
+          "evidence_tier": null
+        },
+        {
+          "action_id": "act_67815954b02943bab945b935aadc58d1",
+          "subject_id": "cmpd_004",
+          "action_kind": "ask_human",
+          "oracle_name": "human_review",
+          "status": "approval_required",
+          "reason": "missing_approval:approval_id; risk=human_review; approval_required=true",
+          "observation_id": null,
+          "trust_gate_result_id": null,
+          "trust_gate_decision": null,
+          "evidence_tier": null
+        }
+      ]
+    }
+  ],
+  "input": {
+    "candidate_csv": "E:\\11\\drug-loop-harness\\examples\\data\\candidates.csv",
+    "generated_chem_filter": true,
+    "observation_csvs": [
+      "E:\\11\\drug-loop-harness\\examples\\data\\downstream_observations.csv"
+    ],
+    "observation_cache_count": 15,
+    "policy": "fixed_cascade",
+    "guard_enforced": true,
+    "max_rounds": 6,
+    "budget_limit": null
+  }
+}

@@ -1,0 +1,1010 @@
+{
+  "aggregate": {
+    "maximum_single_target_simple_regret_harm": 0.005888286703703713,
+    "median_failed_cost_reduction": 0.10407407407407421,
+    "median_simple_regret_harm": -0.006422529740740729,
+    "median_top_recovery_difference": 0.0,
+    "qualified_failure_contamination_count": 0,
+    "scientific_unit": "target",
+    "scientific_unit_count": 5,
+    "target_failed_cost_win_count": 5
+  },
+  "clean_equivalence": [
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 160,
+      "metrics_equivalent": true,
+      "target_id": "FACTOR_D",
+      "warm_start_seed": 101
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 160,
+      "metrics_equivalent": true,
+      "target_id": "FACTOR_D",
+      "warm_start_seed": 211
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 160,
+      "metrics_equivalent": true,
+      "target_id": "FACTOR_D",
+      "warm_start_seed": 307
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 224,
+      "metrics_equivalent": true,
+      "target_id": "FACTOR_D",
+      "warm_start_seed": 101
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 224,
+      "metrics_equivalent": true,
+      "target_id": "FACTOR_D",
+      "warm_start_seed": 211
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 224,
+      "metrics_equivalent": true,
+      "target_id": "FACTOR_D",
+      "warm_start_seed": 307
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 288,
+      "metrics_equivalent": true,
+      "target_id": "FACTOR_D",
+      "warm_start_seed": 101
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 288,
+      "metrics_equivalent": true,
+      "target_id": "FACTOR_D",
+      "warm_start_seed": 211
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 288,
+      "metrics_equivalent": true,
+      "target_id": "FACTOR_D",
+      "warm_start_seed": 307
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 160,
+      "metrics_equivalent": true,
+      "target_id": "CXCR4",
+      "warm_start_seed": 101
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 160,
+      "metrics_equivalent": true,
+      "target_id": "CXCR4",
+      "warm_start_seed": 211
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 160,
+      "metrics_equivalent": true,
+      "target_id": "CXCR4",
+      "warm_start_seed": 307
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 224,
+      "metrics_equivalent": true,
+      "target_id": "CXCR4",
+      "warm_start_seed": 101
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 224,
+      "metrics_equivalent": true,
+      "target_id": "CXCR4",
+      "warm_start_seed": 211
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 224,
+      "metrics_equivalent": true,
+      "target_id": "CXCR4",
+      "warm_start_seed": 307
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 288,
+      "metrics_equivalent": true,
+      "target_id": "CXCR4",
+      "warm_start_seed": 101
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 288,
+      "metrics_equivalent": true,
+      "target_id": "CXCR4",
+      "warm_start_seed": 211
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 288,
+      "metrics_equivalent": true,
+      "target_id": "CXCR4",
+      "warm_start_seed": 307
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 160,
+      "metrics_equivalent": true,
+      "target_id": "HIF_PH",
+      "warm_start_seed": 101
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 160,
+      "metrics_equivalent": true,
+      "target_id": "HIF_PH",
+      "warm_start_seed": 211
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 160,
+      "metrics_equivalent": true,
+      "target_id": "HIF_PH",
+      "warm_start_seed": 307
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 224,
+      "metrics_equivalent": true,
+      "target_id": "HIF_PH",
+      "warm_start_seed": 101
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 224,
+      "metrics_equivalent": true,
+      "target_id": "HIF_PH",
+      "warm_start_seed": 211
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 224,
+      "metrics_equivalent": true,
+      "target_id": "HIF_PH",
+      "warm_start_seed": 307
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 288,
+      "metrics_equivalent": true,
+      "target_id": "HIF_PH",
+      "warm_start_seed": 101
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 288,
+      "metrics_equivalent": true,
+      "target_id": "HIF_PH",
+      "warm_start_seed": 211
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 288,
+      "metrics_equivalent": true,
+      "target_id": "HIF_PH",
+      "warm_start_seed": 307
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 160,
+      "metrics_equivalent": true,
+      "target_id": "PARP1",
+      "warm_start_seed": 101
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 160,
+      "metrics_equivalent": true,
+      "target_id": "PARP1",
+      "warm_start_seed": 211
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 160,
+      "metrics_equivalent": true,
+      "target_id": "PARP1",
+      "warm_start_seed": 307
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 224,
+      "metrics_equivalent": true,
+      "target_id": "PARP1",
+      "warm_start_seed": 101
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 224,
+      "metrics_equivalent": true,
+      "target_id": "PARP1",
+      "warm_start_seed": 211
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 224,
+      "metrics_equivalent": true,
+      "target_id": "PARP1",
+      "warm_start_seed": 307
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 288,
+      "metrics_equivalent": true,
+      "target_id": "PARP1",
+      "warm_start_seed": 101
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 288,
+      "metrics_equivalent": true,
+      "target_id": "PARP1",
+      "warm_start_seed": 211
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 288,
+      "metrics_equivalent": true,
+      "target_id": "PARP1",
+      "warm_start_seed": 307
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 160,
+      "metrics_equivalent": true,
+      "target_id": "NR1A2",
+      "warm_start_seed": 101
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 160,
+      "metrics_equivalent": true,
+      "target_id": "NR1A2",
+      "warm_start_seed": 211
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 160,
+      "metrics_equivalent": true,
+      "target_id": "NR1A2",
+      "warm_start_seed": 307
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 224,
+      "metrics_equivalent": true,
+      "target_id": "NR1A2",
+      "warm_start_seed": 101
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 224,
+      "metrics_equivalent": true,
+      "target_id": "NR1A2",
+      "warm_start_seed": 211
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 224,
+      "metrics_equivalent": true,
+      "target_id": "NR1A2",
+      "warm_start_seed": 307
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 288,
+      "metrics_equivalent": true,
+      "target_id": "NR1A2",
+      "warm_start_seed": 101
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 288,
+      "metrics_equivalent": true,
+      "target_id": "NR1A2",
+      "warm_start_seed": 211
+    },
+    {
+      "action_sequence_equivalent": true,
+      "candidate_offset": 288,
+      "metrics_equivalent": true,
+      "target_id": "NR1A2",
+      "warm_start_seed": 307
+    }
+  ],
+  "decision": "SUPPORT_CREDIBILITY_AWARE_POLICY_FOR_PROSPECTIVE_DESIGN",
+  "gate_checks": {
+    "all_trace_and_budget_controls": true,
+    "clean_action_sequence_equivalence": true,
+    "complete_target_count": true,
+    "median_failed_cost_reduction": true,
+    "median_simple_regret_noninferiority": true,
+    "median_top_recovery_noninferiority": true,
+    "single_target_simple_regret_harm_bound": true,
+    "target_failed_cost_win_count": true,
+    "zero_qualified_failure_contamination": true
+  },
+  "interpretation": {
+    "formal_inference_permitted": false,
+    "general_policy_superiority_permitted": false,
+    "prospective_assay_study_justified_only_if_gate_passed": true,
+    "scientific_claim_upgrade_permitted": false,
+    "strict_external_confirmation": false
+  },
+  "leave_one_target_out": [
+    {
+      "failed_cost_win_count": 4,
+      "median_failed_cost_reduction": 0.10611111111111116,
+      "median_simple_regret_harm": -0.003424415759259253,
+      "median_top_recovery_difference": -0.009259259259259245,
+      "omitted_target_id": "FACTOR_D",
+      "retained_target_count": 4
+    },
+    {
+      "failed_cost_win_count": 4,
+      "median_failed_cost_reduction": 0.09666666666666679,
+      "median_simple_regret_harm": -0.007401924407407404,
+      "median_top_recovery_difference": 0.018518518518518504,
+      "omitted_target_id": "CXCR4",
+      "retained_target_count": 4
+    },
+    {
+      "failed_cost_win_count": 4,
+      "median_failed_cost_reduction": 0.11351851851851857,
+      "median_simple_regret_harm": -0.0044038104259259275,
+      "median_top_recovery_difference": -0.009259259259259245,
+      "omitted_target_id": "HIF_PH",
+      "retained_target_count": 4
+    },
+    {
+      "failed_cost_win_count": 4,
+      "median_failed_cost_reduction": 0.11351851851851857,
+      "median_simple_regret_harm": -0.007401924407407404,
+      "median_top_recovery_difference": 0.018518518518518504,
+      "omitted_target_id": "PARP1",
+      "retained_target_count": 4
+    },
+    {
+      "failed_cost_win_count": 4,
+      "median_failed_cost_reduction": 0.09666666666666679,
+      "median_simple_regret_harm": -0.003424415759259253,
+      "median_top_recovery_difference": 0.009259259259259259,
+      "omitted_target_id": "NR1A2",
+      "retained_target_count": 4
+    }
+  ],
+  "primary_gate_passed": true,
+  "protocol_file_sha256": "ea66b7c4b88362173a82d1c8f9b1c14d3329735a4051b527caf28a1fd3f94d98",
+  "protocol_id": "jensen-reliability-aware-tvr-stress-v1",
+  "scenario_report_sha256": {
+    "clean": "e832c378e239b26bbc7c3c52ad0dec1681934323b2d444aea9918bfc0292e666",
+    "docking_failure_035": "8edc94f09f1631627b893841411a0eb267dd0ac8cda16feef8c98176def46d7d",
+    "dose_response_failure_035": "d323f43d8573046fbefb05818c6c7f5b7547b3162a5d757184a9253e330c0e9d",
+    "single_point_failure_035": "a94134f520980b68ff69ffa179d4fd1cbda3eb303505ad04d86624daaeab09a7"
+  },
+  "scenario_target_summaries": [
+    {
+      "mean_cost_spent": 11.999999999999991,
+      "mean_failed_cost": 0.0,
+      "mean_high_fidelity_simple_regret": 0.06686534911111112,
+      "mean_invalid_cost": 0.0,
+      "mean_top_recovery": 0.27777777777777773,
+      "policy_name": "jensen_tvr",
+      "scenario_id": "clean",
+      "target_id": "FACTOR_D",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999991,
+      "mean_failed_cost": 0.0,
+      "mean_high_fidelity_simple_regret": 0.06686534911111112,
+      "mean_invalid_cost": 0.0,
+      "mean_top_recovery": 0.27777777777777773,
+      "policy_name": "reliability_tvr",
+      "scenario_id": "clean",
+      "target_id": "FACTOR_D",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999988,
+      "mean_failed_cost": 0.0,
+      "mean_high_fidelity_simple_regret": 0.07613165311111114,
+      "mean_invalid_cost": 0.0,
+      "mean_top_recovery": 0.16666666666666666,
+      "policy_name": "jensen_tvr",
+      "scenario_id": "clean",
+      "target_id": "CXCR4",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999988,
+      "mean_failed_cost": 0.0,
+      "mean_high_fidelity_simple_regret": 0.07613165311111114,
+      "mean_invalid_cost": 0.0,
+      "mean_top_recovery": 0.16666666666666666,
+      "policy_name": "reliability_tvr",
+      "scenario_id": "clean",
+      "target_id": "CXCR4",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.982222222222212,
+      "mean_failed_cost": 0.0,
+      "mean_high_fidelity_simple_regret": 0.10084374244444444,
+      "mean_invalid_cost": 0.0,
+      "mean_top_recovery": 0.2222222222222222,
+      "policy_name": "jensen_tvr",
+      "scenario_id": "clean",
+      "target_id": "HIF_PH",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.982222222222212,
+      "mean_failed_cost": 0.0,
+      "mean_high_fidelity_simple_regret": 0.10084374244444444,
+      "mean_invalid_cost": 0.0,
+      "mean_top_recovery": 0.2222222222222222,
+      "policy_name": "reliability_tvr",
+      "scenario_id": "clean",
+      "target_id": "HIF_PH",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.982222222222212,
+      "mean_failed_cost": 0.0,
+      "mean_high_fidelity_simple_regret": 0.11958369888888891,
+      "mean_invalid_cost": 0.0,
+      "mean_top_recovery": 0.1111111111111111,
+      "policy_name": "jensen_tvr",
+      "scenario_id": "clean",
+      "target_id": "PARP1",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.982222222222212,
+      "mean_failed_cost": 0.0,
+      "mean_high_fidelity_simple_regret": 0.11958369888888891,
+      "mean_invalid_cost": 0.0,
+      "mean_top_recovery": 0.1111111111111111,
+      "policy_name": "reliability_tvr",
+      "scenario_id": "clean",
+      "target_id": "PARP1",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999991,
+      "mean_failed_cost": 0.0,
+      "mean_high_fidelity_simple_regret": 0.020498589333333334,
+      "mean_invalid_cost": 0.0,
+      "mean_top_recovery": 0.6666666666666666,
+      "policy_name": "jensen_tvr",
+      "scenario_id": "clean",
+      "target_id": "NR1A2",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999991,
+      "mean_failed_cost": 0.0,
+      "mean_high_fidelity_simple_regret": 0.020498589333333334,
+      "mean_invalid_cost": 0.0,
+      "mean_top_recovery": 0.6666666666666666,
+      "policy_name": "reliability_tvr",
+      "scenario_id": "clean",
+      "target_id": "NR1A2",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.982222222222212,
+      "mean_failed_cost": 0.14444444444444446,
+      "mean_high_fidelity_simple_regret": 0.10162212122222224,
+      "mean_invalid_cost": 0.14444444444444446,
+      "mean_top_recovery": 0.16666666666666666,
+      "policy_name": "jensen_tvr",
+      "scenario_id": "docking_failure_035",
+      "target_id": "FACTOR_D",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999988,
+      "mean_failed_cost": 0.1655555555555556,
+      "mean_high_fidelity_simple_regret": 0.07209280733333334,
+      "mean_invalid_cost": 0.1655555555555556,
+      "mean_top_recovery": 0.27777777777777773,
+      "policy_name": "reliability_tvr",
+      "scenario_id": "docking_failure_035",
+      "target_id": "FACTOR_D",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999991,
+      "mean_failed_cost": 0.12999999999999998,
+      "mean_high_fidelity_simple_regret": 0.05261074177777778,
+      "mean_invalid_cost": 0.12999999999999998,
+      "mean_top_recovery": 0.3333333333333333,
+      "policy_name": "jensen_tvr",
+      "scenario_id": "docking_failure_035",
+      "target_id": "CXCR4",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999991,
+      "mean_failed_cost": 0.11666666666666668,
+      "mean_high_fidelity_simple_regret": 0.05261074177777778,
+      "mean_invalid_cost": 0.11666666666666668,
+      "mean_top_recovery": 0.27777777777777773,
+      "policy_name": "reliability_tvr",
+      "scenario_id": "docking_failure_035",
+      "target_id": "CXCR4",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999991,
+      "mean_failed_cost": 0.13,
+      "mean_high_fidelity_simple_regret": 0.087461617,
+      "mean_invalid_cost": 0.13,
+      "mean_top_recovery": 0.27777777777777773,
+      "policy_name": "jensen_tvr",
+      "scenario_id": "docking_failure_035",
+      "target_id": "HIF_PH",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999991,
+      "mean_failed_cost": 0.11333333333333334,
+      "mean_high_fidelity_simple_regret": 0.08726358777777778,
+      "mean_invalid_cost": 0.11333333333333334,
+      "mean_top_recovery": 0.27777777777777773,
+      "policy_name": "reliability_tvr",
+      "scenario_id": "docking_failure_035",
+      "target_id": "HIF_PH",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.964444444444432,
+      "mean_failed_cost": 0.1688888888888889,
+      "mean_high_fidelity_simple_regret": 0.06521312422222225,
+      "mean_invalid_cost": 0.1688888888888889,
+      "mean_top_recovery": 0.38888888888888884,
+      "policy_name": "jensen_tvr",
+      "scenario_id": "docking_failure_035",
+      "target_id": "PARP1",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.98222222222221,
+      "mean_failed_cost": 0.14555555555555555,
+      "mean_high_fidelity_simple_regret": 0.06521312422222225,
+      "mean_invalid_cost": 0.14555555555555555,
+      "mean_top_recovery": 0.38888888888888884,
+      "policy_name": "reliability_tvr",
+      "scenario_id": "docking_failure_035",
+      "target_id": "PARP1",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999988,
+      "mean_failed_cost": 0.15888888888888889,
+      "mean_high_fidelity_simple_regret": 0.06033277755555556,
+      "mean_invalid_cost": 0.15888888888888889,
+      "mean_top_recovery": 0.5,
+      "policy_name": "jensen_tvr",
+      "scenario_id": "docking_failure_035",
+      "target_id": "NR1A2",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999988,
+      "mean_failed_cost": 0.1511111111111111,
+      "mean_high_fidelity_simple_regret": 0.06250324822222224,
+      "mean_invalid_cost": 0.1511111111111111,
+      "mean_top_recovery": 0.5,
+      "policy_name": "reliability_tvr",
+      "scenario_id": "docking_failure_035",
+      "target_id": "NR1A2",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999991,
+      "mean_failed_cost": 0.6,
+      "mean_high_fidelity_simple_regret": 0.07557189177777777,
+      "mean_invalid_cost": 0.6,
+      "mean_top_recovery": 0.3333333333333333,
+      "policy_name": "jensen_tvr",
+      "scenario_id": "single_point_failure_035",
+      "target_id": "FACTOR_D",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999993,
+      "mean_failed_cost": 0.48888888888888893,
+      "mean_high_fidelity_simple_regret": 0.07995724844444445,
+      "mean_invalid_cost": 0.48888888888888893,
+      "mean_top_recovery": 0.3333333333333333,
+      "policy_name": "reliability_tvr",
+      "scenario_id": "single_point_failure_035",
+      "target_id": "FACTOR_D",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999991,
+      "mean_failed_cost": 0.5555555555555556,
+      "mean_high_fidelity_simple_regret": 0.060406957222222224,
+      "mean_invalid_cost": 0.5555555555555556,
+      "mean_top_recovery": 0.27777777777777773,
+      "policy_name": "jensen_tvr",
+      "scenario_id": "single_point_failure_035",
+      "target_id": "CXCR4",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999993,
+      "mean_failed_cost": 0.4222222222222222,
+      "mean_high_fidelity_simple_regret": 0.060406957222222224,
+      "mean_invalid_cost": 0.4222222222222222,
+      "mean_top_recovery": 0.27777777777777773,
+      "policy_name": "reliability_tvr",
+      "scenario_id": "single_point_failure_035",
+      "target_id": "CXCR4",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999993,
+      "mean_failed_cost": 0.6444444444444445,
+      "mean_high_fidelity_simple_regret": 0.10686339644444444,
+      "mean_invalid_cost": 0.6444444444444445,
+      "mean_top_recovery": 0.3333333333333333,
+      "policy_name": "jensen_tvr",
+      "scenario_id": "single_point_failure_035",
+      "target_id": "HIF_PH",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999991,
+      "mean_failed_cost": 0.6444444444444445,
+      "mean_high_fidelity_simple_regret": 0.09850193622222224,
+      "mean_invalid_cost": 0.6444444444444445,
+      "mean_top_recovery": 0.3888888888888889,
+      "policy_name": "reliability_tvr",
+      "scenario_id": "single_point_failure_035",
+      "target_id": "HIF_PH",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999991,
+      "mean_failed_cost": 1.1555555555555557,
+      "mean_high_fidelity_simple_regret": 0.08546459744444447,
+      "mean_invalid_cost": 1.1555555555555557,
+      "mean_top_recovery": 0.38888888888888884,
+      "policy_name": "jensen_tvr",
+      "scenario_id": "single_point_failure_035",
+      "target_id": "PARP1",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999993,
+      "mean_failed_cost": 0.7999999999999999,
+      "mean_high_fidelity_simple_regret": 0.10607966544444447,
+      "mean_invalid_cost": 0.7999999999999999,
+      "mean_top_recovery": 0.3333333333333333,
+      "policy_name": "reliability_tvr",
+      "scenario_id": "single_point_failure_035",
+      "target_id": "PARP1",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999991,
+      "mean_failed_cost": 0.4888888888888889,
+      "mean_high_fidelity_simple_regret": 0.03808448722222223,
+      "mean_invalid_cost": 0.4888888888888889,
+      "mean_top_recovery": 0.611111111111111,
+      "policy_name": "jensen_tvr",
+      "scenario_id": "single_point_failure_035",
+      "target_id": "NR1A2",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999991,
+      "mean_failed_cost": 0.4666666666666666,
+      "mean_high_fidelity_simple_regret": 0.03808448722222223,
+      "mean_invalid_cost": 0.4666666666666666,
+      "mean_top_recovery": 0.611111111111111,
+      "policy_name": "reliability_tvr",
+      "scenario_id": "single_point_failure_035",
+      "target_id": "NR1A2",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999991,
+      "mean_failed_cost": 3.4444444444444446,
+      "mean_high_fidelity_simple_regret": 0.10653405477777779,
+      "mean_invalid_cost": 3.4444444444444446,
+      "mean_top_recovery": 0.05555555555555555,
+      "policy_name": "jensen_tvr",
+      "scenario_id": "dose_response_failure_035",
+      "target_id": "FACTOR_D",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999993,
+      "mean_failed_cost": 3.222222222222222,
+      "mean_high_fidelity_simple_regret": 0.10653405477777779,
+      "mean_invalid_cost": 3.222222222222222,
+      "mean_top_recovery": 0.05555555555555555,
+      "policy_name": "reliability_tvr",
+      "scenario_id": "dose_response_failure_035",
+      "target_id": "FACTOR_D",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999991,
+      "mean_failed_cost": 3.111111111111111,
+      "mean_high_fidelity_simple_regret": 0.11554589633333336,
+      "mean_invalid_cost": 3.111111111111111,
+      "mean_top_recovery": 0.05555555555555555,
+      "policy_name": "jensen_tvr",
+      "scenario_id": "dose_response_failure_035",
+      "target_id": "CXCR4",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999988,
+      "mean_failed_cost": 2.888888888888889,
+      "mean_high_fidelity_simple_regret": 0.11426699100000004,
+      "mean_invalid_cost": 2.888888888888889,
+      "mean_top_recovery": 0.05555555555555555,
+      "policy_name": "reliability_tvr",
+      "scenario_id": "dose_response_failure_035",
+      "target_id": "CXCR4",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999991,
+      "mean_failed_cost": 3.2222222222222228,
+      "mean_high_fidelity_simple_regret": 0.10422406311111111,
+      "mean_invalid_cost": 3.2222222222222228,
+      "mean_top_recovery": 0.1111111111111111,
+      "policy_name": "jensen_tvr",
+      "scenario_id": "dose_response_failure_035",
+      "target_id": "HIF_PH",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999991,
+      "mean_failed_cost": 3.0,
+      "mean_high_fidelity_simple_regret": 0.09351596333333334,
+      "mean_invalid_cost": 3.0,
+      "mean_top_recovery": 0.2222222222222222,
+      "policy_name": "reliability_tvr",
+      "scenario_id": "dose_response_failure_035",
+      "target_id": "HIF_PH",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999991,
+      "mean_failed_cost": 3.6666666666666665,
+      "mean_high_fidelity_simple_regret": 0.07033196888888892,
+      "mean_invalid_cost": 3.6666666666666665,
+      "mean_top_recovery": 0.2222222222222222,
+      "policy_name": "jensen_tvr",
+      "scenario_id": "dose_response_failure_035",
+      "target_id": "PARP1",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999991,
+      "mean_failed_cost": 3.777777777777778,
+      "mean_high_fidelity_simple_regret": 0.06738176100000003,
+      "mean_invalid_cost": 3.777777777777778,
+      "mean_top_recovery": 0.2222222222222222,
+      "policy_name": "reliability_tvr",
+      "scenario_id": "dose_response_failure_035",
+      "target_id": "PARP1",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999993,
+      "mean_failed_cost": 5.777777777777778,
+      "mean_high_fidelity_simple_regret": 0.21947980688888888,
+      "mean_invalid_cost": 5.777777777777778,
+      "mean_top_recovery": 0.27777777777777773,
+      "policy_name": "jensen_tvr",
+      "scenario_id": "dose_response_failure_035",
+      "target_id": "NR1A2",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    },
+    {
+      "mean_cost_spent": 11.999999999999993,
+      "mean_failed_cost": 4.444444444444444,
+      "mean_high_fidelity_simple_regret": 0.16720645311111113,
+      "mean_invalid_cost": 4.444444444444444,
+      "mean_top_recovery": 0.27777777777777773,
+      "policy_name": "reliability_tvr",
+      "scenario_id": "dose_response_failure_035",
+      "target_id": "NR1A2",
+      "warm_start_seed_count_per_window": 3,
+      "window_count": 3
+    }
+  ],
+  "schema_version": "jensen_reliability_stress_evaluation.v1",
+  "status": "PASS_COMPLETE_FROZEN_STRESS_ABLATION",
+  "target_results": [
+    {
+      "cost_spent_difference": 0.005925925925927444,
+      "degraded_scenario_count": 3,
+      "failed_cost_reduction": 0.10407407407407421,
+      "invalid_cost_reduction": 0.10407407407407421,
+      "policy_means": {
+        "jensen_tvr": {
+          "cost_spent": 11.994074074074064,
+          "failed_cost": 1.3962962962962964,
+          "high_fidelity_simple_regret": 0.09457602259259261,
+          "invalid_cost": 1.3962962962962964,
+          "top_recovery": 0.1851851851851852
+        },
+        "reliability_tvr": {
+          "cost_spent": 11.999999999999991,
+          "failed_cost": 1.2922222222222222,
+          "high_fidelity_simple_regret": 0.08619470351851853,
+          "invalid_cost": 1.2922222222222222,
+          "top_recovery": 0.2222222222222222
+        }
+      },
+      "simple_regret_harm": -0.008381319074074078,
+      "target_id": "FACTOR_D",
+      "top_recovery_difference": 0.03703703703703701
+    },
+    {
+      "cost_spent_difference": 0.0,
+      "degraded_scenario_count": 3,
+      "failed_cost_reduction": 0.12296296296296294,
+      "invalid_cost_reduction": 0.12296296296296294,
+      "policy_means": {
+        "jensen_tvr": {
+          "cost_spent": 11.999999999999991,
+          "failed_cost": 1.2655555555555555,
+          "high_fidelity_simple_regret": 0.07618786511111113,
+          "invalid_cost": 1.2655555555555555,
+          "top_recovery": 0.2222222222222222
+        },
+        "reliability_tvr": {
+          "cost_spent": 11.999999999999991,
+          "failed_cost": 1.1425925925925926,
+          "high_fidelity_simple_regret": 0.07576156333333335,
+          "invalid_cost": 1.1425925925925926,
+          "top_recovery": 0.2037037037037037
+        }
+      },
+      "simple_regret_harm": -0.00042630177777777667,
+      "target_id": "CXCR4",
+      "top_recovery_difference": -0.018518518518518517
+    },
+    {
+      "cost_spent_difference": 0.0,
+      "degraded_scenario_count": 3,
+      "failed_cost_reduction": 0.07962962962962994,
+      "invalid_cost_reduction": 0.07962962962962994,
+      "policy_means": {
+        "jensen_tvr": {
+          "cost_spent": 11.999999999999991,
+          "failed_cost": 1.3322222222222224,
+          "high_fidelity_simple_regret": 0.09951635885185185,
+          "invalid_cost": 1.3322222222222224,
+          "top_recovery": 0.2407407407407407
+        },
+        "reliability_tvr": {
+          "cost_spent": 11.999999999999991,
+          "failed_cost": 1.2525925925925925,
+          "high_fidelity_simple_regret": 0.09309382911111112,
+          "invalid_cost": 1.2525925925925925,
+          "top_recovery": 0.2962962962962963
+        }
+      },
+      "simple_regret_harm": -0.006422529740740729,
+      "target_id": "HIF_PH",
+      "top_recovery_difference": 0.05555555555555558
+    },
+    {
+      "cost_spent_difference": 0.005925925925927444,
+      "degraded_scenario_count": 3,
+      "failed_cost_reduction": 0.08925925925925937,
+      "invalid_cost_reduction": 0.08925925925925937,
+      "policy_means": {
+        "jensen_tvr": {
+          "cost_spent": 11.988148148148136,
+          "failed_cost": 1.663703703703704,
+          "high_fidelity_simple_regret": 0.07366989685185188,
+          "invalid_cost": 1.663703703703704,
+          "top_recovery": 0.3333333333333333
+        },
+        "reliability_tvr": {
+          "cost_spent": 11.994074074074064,
+          "failed_cost": 1.5744444444444445,
+          "high_fidelity_simple_regret": 0.07955818355555559,
+          "invalid_cost": 1.5744444444444445,
+          "top_recovery": 0.3148148148148148
+        }
+      },
+      "simple_regret_harm": 0.005888286703703713,
+      "target_id": "PARP1",
+      "top_recovery_difference": -0.01851851851851849
+    },
+    {
+      "cost_spent_difference": 0.0,
+      "degraded_scenario_count": 3,
+      "failed_cost_reduction": 0.45444444444444465,
+      "invalid_cost_reduction": 0.45444444444444465,
+      "policy_means": {
+        "jensen_tvr": {
+          "cost_spent": 11.999999999999991,
+          "failed_cost": 2.1418518518518517,
+          "high_fidelity_simple_regret": 0.10596569055555555,
+          "invalid_cost": 2.1418518518518517,
+          "top_recovery": 0.46296296296296297
+        },
+        "reliability_tvr": {
+          "cost_spent": 11.999999999999991,
+          "failed_cost": 1.687407407407407,
+          "high_fidelity_simple_regret": 0.08926472951851853,
+          "invalid_cost": 1.687407407407407,
+          "top_recovery": 0.46296296296296297
+        }
+      },
+      "simple_regret_harm": -0.016700961037037013,
+      "target_id": "NR1A2",
+      "top_recovery_difference": 0.0
+    }
+  ]
+}

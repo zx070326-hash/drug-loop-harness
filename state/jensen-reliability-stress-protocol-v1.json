@@ -1,0 +1,200 @@
+{
+  "analysis_plan": {
+    "aggregation_order": [
+      "pair policies within target-scenario-window-warm_start_seed",
+      "average warm-start seeds within target-scenario-window-policy",
+      "average windows within target-scenario-policy",
+      "average the three degraded scenarios within target-policy",
+      "compare challenger minus control at target level"
+    ],
+    "confidence_interval": null,
+    "effectiveness_guard": "target_mean_qualified_high_fidelity_simple_regret_harm",
+    "formal_significance_test": null,
+    "primary_metric": "target_mean_failed_cost_reduction",
+    "reason_no_inference": "Only five targets are scientific units; scenarios, windows, and seeds are controlled repeated tasks.",
+    "scientific_unit": "target",
+    "scientific_unit_count": 5,
+    "supporting_guard": "target_mean_qualified_top_recovery_difference"
+  },
+  "claim_ceiling": {
+    "assay_execution_authority_granted": false,
+    "general_policy_superiority_permitted": false,
+    "molecular_activity_claim_permitted": false,
+    "permitted": "retrospective oracle-failure robustness development evidence",
+    "prospective_discovery_claim_permitted": false,
+    "scientific_claim_upgrade_permitted": false
+  },
+  "decision_gate": {
+    "go_decision": "SUPPORT_CREDIBILITY_AWARE_POLICY_FOR_PROSPECTIVE_DESIGN",
+    "maximum_median_simple_regret_harm": 0.03,
+    "maximum_single_target_simple_regret_harm": 0.1,
+    "minimum_median_failed_cost_reduction": 0.0,
+    "minimum_median_top_recovery_difference": -0.05,
+    "minimum_target_failed_cost_win_count": 3,
+    "no_go_decision": "RETAIN_BASE_TVR_AND_REDESIGN_RELIABILITY_POLICY",
+    "require_clean_action_sequence_equivalence": true,
+    "require_zero_qualified_failure_contamination": true
+  },
+  "design": {
+    "candidate_limit": 64,
+    "candidate_offsets": [
+      160,
+      224,
+      288
+    ],
+    "challenger_policy": "reliability_tvr",
+    "control_policy": "jensen_tvr",
+    "oracle_costs": {
+      "docking": 0.01,
+      "dose_response": 1.0,
+      "single_point": 0.2
+    },
+    "policy_names": [
+      "jensen_tvr",
+      "reliability_tvr"
+    ],
+    "scenarios": [
+      {
+        "common_random_numbers": true,
+        "executor_private_realization_seed": 2026071401,
+        "oracle_failure_rates": {
+          "docking": 0.0,
+          "dose_response": 0.0,
+          "single_point": 0.0
+        },
+        "public_manifest_sha256": "e715af57df953c7010a4b13698fabeaeebffee1f274e1934e57242f69dde3eed",
+        "realization_seed_exposed_to_policy": false,
+        "scenario_id": "clean",
+        "scenario_version": "oracle_specific_failure_v1"
+      },
+      {
+        "common_random_numbers": true,
+        "executor_private_realization_seed": 2026071402,
+        "oracle_failure_rates": {
+          "docking": 0.35,
+          "dose_response": 0.0,
+          "single_point": 0.0
+        },
+        "public_manifest_sha256": "8df9280f9fa0b52afc201ead93004531f7c6a04f68258d69fa9dafa51304ec1b",
+        "realization_seed_exposed_to_policy": false,
+        "scenario_id": "docking_failure_035",
+        "scenario_version": "oracle_specific_failure_v1"
+      },
+      {
+        "common_random_numbers": true,
+        "executor_private_realization_seed": 2026071403,
+        "oracle_failure_rates": {
+          "docking": 0.0,
+          "dose_response": 0.0,
+          "single_point": 0.35
+        },
+        "public_manifest_sha256": "d8969379f942cca3ccdf42259e19637e4c2eab26fe61dd7a01ebcd47303053e9",
+        "realization_seed_exposed_to_policy": false,
+        "scenario_id": "single_point_failure_035",
+        "scenario_version": "oracle_specific_failure_v1"
+      },
+      {
+        "common_random_numbers": true,
+        "executor_private_realization_seed": 2026071404,
+        "oracle_failure_rates": {
+          "docking": 0.0,
+          "dose_response": 0.35,
+          "single_point": 0.0
+        },
+        "public_manifest_sha256": "21ba12a9f0d57134739a35c3474ab26b73f3f098bcf1bfcad722fdc6fd73f346",
+        "realization_seed_exposed_to_policy": false,
+        "scenario_id": "dose_response_failure_035",
+        "scenario_version": "oracle_specific_failure_v1"
+      }
+    ],
+    "seed_per_oracle": 1,
+    "target_ids": [
+      "FACTOR_D",
+      "CXCR4",
+      "HIF_PH",
+      "PARP1",
+      "NR1A2"
+    ],
+    "top_fraction": 0.02,
+    "total_arm_count": 360,
+    "total_budget": 12.0,
+    "warm_start_seeds": [
+      101,
+      211,
+      307
+    ]
+  },
+  "implementation_sha256": {
+    "scripts/audit_jensen_reliability_window_exposure.py": "f525caa546961a5897030c50974f3b5268b22f29a136072bbba511d7d4378225",
+    "scripts/finalize_jensen_reliability_stress.py": "8bb16cb04ec4326f8b6f3631a521124319a43836c909cb2e3bd30c088dce59b4",
+    "scripts/register_jensen_reliability_stress_protocol.py": "3c3312d240fb59d586066ba9f387840feeca3955f00f173832608d0e8185c418",
+    "scripts/run_jensen_reliability_stress.py": "7a1af9ddfa827ecf8ee91fa9f831f243afb979e16b70ea688cc88448ccf40a1b",
+    "src/loop_harness/v2/action_space.py": "062a762a75d24e39e0da6b4d9df6016b36671a7269ab47a77a15b9be29f26e5d",
+    "src/loop_harness/v2/evaluation.py": "3eaedae82e28d80dc74a31a9235bfe54a3cae3c5d91cc2250cd93a15ad8f360b",
+    "src/loop_harness/v2/failure.py": "7582352730ed29d9e79b5a40c5807b3d07a03ca16fea0a30bd5ff439e27515f0",
+    "src/loop_harness/v2/gates.py": "8792757214dbc8d08347bb72e5357c6455f5c6febe00e70bbbdf67db995b3a5e",
+    "src/loop_harness/v2/jensen_experiment.py": "53825d2642832c7a2ae56d68684b898764b7571a420b1eccf19fec5e21569668",
+    "src/loop_harness/v2/jensen_mfbo_fixture.py": "a17630225ed07ff5d75728d8da7702c717d46df2e4878d78666fd0ef894488f7",
+    "src/loop_harness/v2/jensen_reliability_stress.py": "ebf4fc610a3d984605728d01de238d5f822e9a2d9eaeef77f494a5c66158556c",
+    "src/loop_harness/v2/mfbo_policy.py": "2833345bfe349be74913e2947c67a7c56cf954270c5fb4d701d8b20ccf7bc26f",
+    "src/loop_harness/v2/reliability.py": "8db7ca8bebc14e21874b00e5b07ca2d58a94c0d1facac0ec59c058340db2791f",
+    "src/loop_harness/v2/reliability_aware_policy.py": "d488da957d145900eb9235b9321e2ff64f5aed3028b05e2a145e07cc1915aac8",
+    "src/loop_harness/v2/runtime.py": "a0407f09826cb26af8814dcd5fcd4ba49a2e7de5f288ed4a1913fbfa03679e46",
+    "src/loop_harness/v2/state.py": "a9826f9f9739ffbf0a0f8f26b17722d2fe50f7dfeb93d09ee03f69f5b4bc4732"
+  },
+  "measurement_contract": {
+    "failed_cost_definition": "sum actual cost where result status is not success",
+    "failed_high_fidelity_request_counts_as_observed": false,
+    "high_fidelity_oracle": "dose_response",
+    "invalid_cost_definition": "sum actual cost where TrustGate evidence disposition is not qualified",
+    "no_qualified_high_fidelity_rule": "full_window_truth_range_regret",
+    "qualified_only_effectiveness": true
+  },
+  "policy_versions": {
+    "jensen_tvr": "jensen_style_tvr_numpy_icm_v1_not_original_baybe",
+    "reliability_tvr": "jensen_tvr_reliability_discount_v1"
+  },
+  "prior_exposure": {
+    "interpretation": "The selected windows are a new development split inside the same public benchmark family, not a prospective assay cohort.",
+    "prior_workspace_policy_artifact_match_count": 0,
+    "selected_candidate_windows": [
+      160,
+      224,
+      288
+    ],
+    "selected_window_policy_outcomes_accessed_during_this_stage_before_registration": false,
+    "strict_external_confirmation": false
+  },
+  "protocol_id": "jensen-reliability-aware-tvr-stress-v1",
+  "registered_at": "2026-07-14T01:39:23.868636+00:00",
+  "registered_before_selected_window_policy_execution": true,
+  "schema_version": "jensen_reliability_stress_protocol.v1",
+  "scientific_question": "Does discounting TVR by observed oracle invalidity reduce failed-oracle cost while preserving qualified high-fidelity discovery performance under isolated oracle-specific failures?",
+  "selected_window_exposure_audit": {
+    "path": "state/jensen-reliability-window-exposure-audit-v1.json",
+    "required_status": "PASS_NO_SELECTED_WINDOW_POLICY_ARTIFACTS",
+    "sha256": "2baac62b30f5c5fd74857cc3778a12360f13d45ef7eee410902249fb2ccb7108"
+  },
+  "source_sha256": {
+    "external/jensen-mfbo-2025/MF-BO_training_data.zip": "382076a4cb3c7f2d8b9c339a3860e65498a0d5b4385499f4f5533f7aa8414dfb",
+    "external/jensen-mfbo-2025/training_data/MFBO_CXCR4_set.csv": "08b47f3f0572cea7308bcb7628a54ae434ed50709b3b49ae8f5bebf5a3732ffa",
+    "external/jensen-mfbo-2025/training_data/MFBO_Factor-D_set.csv": "2c183e605f6c9726028552c6fc183390c360742748cbed6442b1c37ca8622e03",
+    "external/jensen-mfbo-2025/training_data/MFBO_HIF-PH_set.csv": "216d46480985b089f77b6932e94ce092c1d354c36f0f1e6bcf80cbfca80029d9",
+    "external/jensen-mfbo-2025/training_data/MFBO_NR1A2_set.csv": "e57d96d93e4616ddbebab4cf109ecdcf22f9a14a27629349708ec8b43aa7379f",
+    "external/jensen-mfbo-2025/training_data/MFBO_PARP1_set.csv": "3d298517dc08ccfbdb1572bf2762965a14b51a63ddb1aa1fc97474112da61c49",
+    "state/jensen-policy-curve-evaluation-v3.json": "c936aa384f88594142265a351c2fe3c3e39c4aff1c910f0c2d70093ce1722902",
+    "state/jensen-reliability-window-exposure-audit-v1.json": "2baac62b30f5c5fd74857cc3778a12360f13d45ef7eee410902249fb2ccb7108"
+  },
+  "target_source_sha256": {
+    "CXCR4": "08b47f3f0572cea7308bcb7628a54ae434ed50709b3b49ae8f5bebf5a3732ffa",
+    "FACTOR_D": "2c183e605f6c9726028552c6fc183390c360742748cbed6442b1c37ca8622e03",
+    "HIF_PH": "216d46480985b089f77b6932e94ce092c1d354c36f0f1e6bcf80cbfca80029d9",
+    "NR1A2": "e57d96d93e4616ddbebab4cf109ecdcf22f9a14a27629349708ec8b43aa7379f",
+    "PARP1": "3d298517dc08ccfbdb1572bf2762965a14b51a63ddb1aa1fc97474112da61c49"
+  },
+  "upstream_development_decision": {
+    "path": "state/jensen-policy-curve-evaluation-v3.json",
+    "required_decision": "SUPPORT_PROSPECTIVE_POLICY_STUDY_DESIGN",
+    "sha256": "c936aa384f88594142265a351c2fe3c3e39c4aff1c910f0c2d70093ce1722902"
+  }
+}

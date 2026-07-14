@@ -1,0 +1,44 @@
+{
+  "schema_version": "experiment_run_record.v1",
+  "run_id": "run_1c66b1c70c0340158670596653ad75fb",
+  "created_at": "2026-07-09T23:17:49.309215+00:00",
+  "report_path": "E:\\11\\drug-loop-harness\\examples\\data\\command_promotion_experiment_report.json",
+  "grade_path": "E:\\11\\drug-loop-harness\\examples\\data\\command_promotion_experiment_grade.json",
+  "verdict": "HUMAN",
+  "policy_names": [
+    "fixed_cascade",
+    "staged_trust_aware",
+    "staged_trust_gap_aware"
+  ],
+  "budget_limits": [
+    48.0,
+    56.0,
+    64.0
+  ],
+  "fail_issue_count": 0,
+  "human_issue_count": 57,
+  "issue_codes": [
+    "missing_or_budget_limited_observations",
+    "proxy_only_credible_hits",
+    "recorded_missing_observation",
+    "budget_curve_budget_sensitive_high_fidelity_yield",
+    "budget_curve_budget_sensitive_policy_traces",
+    "budget_curve_missing_or_budget_limited_actions_present"
+  ],
+  "key_issue_locations": [
+    "$.policy_summaries[0].missing_observation_count",
+    "$.policy_summaries[0]",
+    "$.policy_summaries[1].missing_observation_count",
+    "$.policy_summaries[1]",
+    "$.policy_summaries[2].missing_observation_count",
+    "$.loop_reports[0].missing_observation_count",
+    "$.loop_reports[0].rounds[3].actions[2].status",
+    "$.loop_reports[0].rounds[3].actions[3].status",
+    "$.loop_reports[0].rounds[3].actions[4].status",
+    "$.loop_reports[0].rounds[4].actions[0].status",
+    "$.loop_reports[0].rounds[4].actions[1].status",
+    "$.loop_reports[0].rounds[4].actions[2].status"
+  ],
+  "requires_human_interpretation": true,
+  "notes": "Regraded after trace taxonomy correction: recorded missing observations are distinct from incomplete trace coverage."
+}

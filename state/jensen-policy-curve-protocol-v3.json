@@ -1,0 +1,136 @@
+{
+  "analysis_plan": {
+    "aggregation_order": [
+      "average paired warm-start seeds within target-window-policy-budget",
+      "average windows within target-policy-budget",
+      "integrate target policy curve over budget with normalized trapezoidal AUC",
+      "compare adaptive policy with the predeclared greedy control at target level"
+    ],
+    "confidence_interval": null,
+    "cost_metric": "target_mean_spent_cost_budget_auc",
+    "formal_significance_test": null,
+    "nested_repeated_task": "non_overlapping_candidate_window",
+    "nuisance_repeat": "warm_start_seed",
+    "primary_metric": "target_mean_high_fidelity_simple_regret_budget_auc",
+    "reason_no_inference": "Five heterogeneous published targets are the only scientific units; windows and warm-start seeds are repeated tasks, not biological replicates.",
+    "scientific_unit": "target",
+    "scientific_unit_count": 5,
+    "supporting_metric": "target_mean_top_fraction_recovery_budget_auc"
+  },
+  "claim_ceiling": {
+    "autonomous_execution_authority_granted": false,
+    "clinical_claim_permitted": false,
+    "general_policy_superiority_permitted": false,
+    "molecular_activity_claim_permitted": false,
+    "permitted": "development evidence for or against advancing the frozen promotion policy to a separately preregistered prospective study",
+    "prospective_discovery_claim_permitted": false,
+    "scientific_claim_upgrade_permitted": false
+  },
+  "decision_gate": {
+    "go_decision": "SUPPORT_PROSPECTIVE_POLICY_STUDY_DESIGN",
+    "maximum_single_target_regret_auc_harm": 0.1,
+    "minimum_median_regret_auc_reduction": 0.02,
+    "minimum_median_top_recovery_auc_advantage": -0.05,
+    "minimum_target_regret_auc_win_count": 4,
+    "no_go_decision": "DO_NOT_ADVANCE_ADAPTIVE_POLICY",
+    "require_all_arms_shared_budget_valid": true,
+    "require_all_arms_trace_pass": true,
+    "required_complete_target_count": 5
+  },
+  "design": {
+    "adaptive_policy": "jensen_tvr",
+    "budget_curve": [
+      3.0,
+      6.0,
+      9.0,
+      12.0
+    ],
+    "candidate_limit": 64,
+    "candidate_offsets": [
+      0,
+      64,
+      128
+    ],
+    "oracle_costs": {
+      "docking": 0.01,
+      "dose_response": 1.0,
+      "single_point": 0.2
+    },
+    "policy_names": [
+      "heuristic",
+      "greedy",
+      "jensen_tvr"
+    ],
+    "primary_control_policy": "greedy",
+    "secondary_control_policy": "heuristic",
+    "seed_per_oracle": 1,
+    "target_ids": [
+      "FACTOR_D",
+      "CXCR4",
+      "HIF_PH",
+      "PARP1",
+      "NR1A2"
+    ],
+    "top_fraction": 0.02,
+    "warm_start_cost": 1.21,
+    "warm_start_seeds": [
+      17,
+      37,
+      59
+    ]
+  },
+  "implementation_sha256": {
+    "scripts/finalize_jensen_policy_curve.py": "0e6115118733c8280d0c5e99732edfd08e0d3c6854d754cc279a9cad513fd847",
+    "scripts/register_jensen_policy_curve_protocol.py": "1809035492aefdeea50e422ffab56a4ce7e129a9622f4cb18a807f3ee034d5e8",
+    "scripts/run_jensen_policy_curve.py": "fd630448f21ab5c4c45ebde47087aab9a42e504fbec654f29a7f4ed14f55641b",
+    "src/loop_harness/v2/evaluation.py": "3eaedae82e28d80dc74a31a9235bfe54a3cae3c5d91cc2250cd93a15ad8f360b",
+    "src/loop_harness/v2/jensen_benchmark.py": "da97eae8f7fe640298dc166fdf0aaa9516d44816b008dcc3e338601ae38f9e27",
+    "src/loop_harness/v2/jensen_experiment.py": "53825d2642832c7a2ae56d68684b898764b7571a420b1eccf19fec5e21569668",
+    "src/loop_harness/v2/jensen_mfbo_fixture.py": "a17630225ed07ff5d75728d8da7702c717d46df2e4878d78666fd0ef894488f7",
+    "src/loop_harness/v2/jensen_policy_curve.py": "69273fab971a1d2b89a37c49e2a49584e6778f103eff2787490a853f89faedfe",
+    "src/loop_harness/v2/mfbo_policy.py": "2833345bfe349be74913e2947c67a7c56cf954270c5fb4d701d8b20ccf7bc26f",
+    "src/loop_harness/v2/policy.py": "923c464bedb8239efcd3bfdf936628325bf8ffedae09f8d7f60ae6f4c30f9332",
+    "src/loop_harness/v2/runtime.py": "a0407f09826cb26af8814dcd5fcd4ba49a2e7de5f288ed4a1913fbfa03679e46"
+  },
+  "policy_versions": {
+    "greedy": "greedy_endpoint_belief_v1",
+    "heuristic": "heuristic_cost_aware_v2_1",
+    "jensen_tvr": "jensen_style_tvr_numpy_icm_v1_not_original_baybe"
+  },
+  "prior_exposure": {
+    "interpretation": "This is a frozen development-stage cross-target characterization, not an untouched confirmatory experiment.",
+    "known_development_artifacts": [
+      "state/jensen-benchmark-pilot.json",
+      "state/jensen-calibration-all-windows.json",
+      "state/jensen-stress-all-cohorts.json"
+    ],
+    "strict_unseen_confirmation": false
+  },
+  "protocol_id": "jensen-five-target-promotion-policy-curve-v3",
+  "registered_at": "2026-07-14T01:06:14.229337+00:00",
+  "registered_before_this_curve_execution": true,
+  "schema_version": "jensen_policy_curve_protocol.v3",
+  "scientific_question": "Under the same simulated-online multi-fidelity budget, does the frozen Jensen-style targeted-variance-reduction policy improve high-fidelity simple-regret efficiency over the greedy endpoint-belief control across the five published targets?",
+  "source_sha256": {
+    "external/jensen-mfbo-2025/MF-BO_training_data.zip": "382076a4cb3c7f2d8b9c339a3860e65498a0d5b4385499f4f5533f7aa8414dfb",
+    "external/jensen-mfbo-2025/training_data/MFBO_CXCR4_set.csv": "08b47f3f0572cea7308bcb7628a54ae434ed50709b3b49ae8f5bebf5a3732ffa",
+    "external/jensen-mfbo-2025/training_data/MFBO_Factor-D_set.csv": "2c183e605f6c9726028552c6fc183390c360742748cbed6442b1c37ca8622e03",
+    "external/jensen-mfbo-2025/training_data/MFBO_HIF-PH_set.csv": "216d46480985b089f77b6932e94ce092c1d354c36f0f1e6bcf80cbfca80029d9",
+    "external/jensen-mfbo-2025/training_data/MFBO_NR1A2_set.csv": "e57d96d93e4616ddbebab4cf109ecdcf22f9a14a27629349708ec8b43aa7379f",
+    "external/jensen-mfbo-2025/training_data/MFBO_PARP1_set.csv": "3d298517dc08ccfbdb1572bf2762965a14b51a63ddb1aa1fc97474112da61c49"
+  },
+  "supersession": {
+    "permitted_change": "canonical_json_normalization_of_complete_in_memory_result_only",
+    "superseded_protocol_path": "state/jensen-policy-curve-protocol-v2.json",
+    "superseded_protocol_sha256": "da68229e3d20825aeeb4b6d6120309501fbe0ae9d9c29312167d5aa20ac126f5",
+    "supersession_path": "state/jensen-policy-curve-protocol-v2-supersession.json",
+    "supersession_sha256": "abd7d035ca9b72baf284063e153ee8bbc72c5eeecba8cf53b2fc3efc71f19b30"
+  },
+  "target_source_sha256": {
+    "CXCR4": "08b47f3f0572cea7308bcb7628a54ae434ed50709b3b49ae8f5bebf5a3732ffa",
+    "FACTOR_D": "2c183e605f6c9726028552c6fc183390c360742748cbed6442b1c37ca8622e03",
+    "HIF_PH": "216d46480985b089f77b6932e94ce092c1d354c36f0f1e6bcf80cbfca80029d9",
+    "NR1A2": "e57d96d93e4616ddbebab4cf109ecdcf22f9a14a27629349708ec8b43aa7379f",
+    "PARP1": "3d298517dc08ccfbdb1572bf2762965a14b51a63ddb1aa1fc97474112da61c49"
+  }
+}

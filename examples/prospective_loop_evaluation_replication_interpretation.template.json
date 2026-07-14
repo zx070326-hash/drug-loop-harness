@@ -1,0 +1,17 @@
+{
+  "schema_version": "prospective_loop_evaluation_replication_interpretation_declaration.v1",
+  "interpretation_id": "target_loop_replication_interpretation_001",
+  "reviewer": "REPLACE_WITH_NAMED_SCIENTIFIC_REVIEWER",
+  "reviewed_at": "REPLACE_WITH_TIMEZONE_AWARE_TIMESTAMP_AFTER_REPLICATION_EVIDENCE",
+  "conclusion": "concordant_evidence_requires_additional_research",
+  "rationale": "The two independently predeclared studies have concordant nonzero primary-effect directions. This supports a follow-up research program, not a policy winner or scientific claim.",
+  "limitations": [
+    "Replication direction is not a pooled effect estimate.",
+    "Neither retrospective nor prospective proxy evidence establishes molecular efficacy or safety."
+  ],
+  "policy_interpretation_permitted": false,
+  "policy_ranking_permitted": false,
+  "execution_authority_granted": false,
+  "autonomous_execution_permitted": false,
+  "scientific_claim_upgrade_permitted": false
+}

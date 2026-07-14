@@ -1,0 +1,358 @@
+{
+  "verdict": "HUMAN",
+  "issues": [
+    {
+      "code": "missing_or_budget_limited_observations",
+      "severity": "human",
+      "message": "Missing observations may be budget-limited, but require interpretation.",
+      "location": "$.policy_summaries[0].missing_observation_count"
+    },
+    {
+      "code": "proxy_only_credible_hits",
+      "severity": "human",
+      "message": "Credible-hit count is proxy-supported with no high-fidelity positive.",
+      "location": "$.policy_summaries[0]"
+    },
+    {
+      "code": "missing_or_budget_limited_observations",
+      "severity": "human",
+      "message": "Missing observations may be budget-limited, but require interpretation.",
+      "location": "$.policy_summaries[1].missing_observation_count"
+    },
+    {
+      "code": "proxy_only_credible_hits",
+      "severity": "human",
+      "message": "Credible-hit count is proxy-supported with no high-fidelity positive.",
+      "location": "$.policy_summaries[1]"
+    },
+    {
+      "code": "missing_or_budget_limited_observations",
+      "severity": "human",
+      "message": "Missing observations may be budget-limited, but require interpretation.",
+      "location": "$.policy_summaries[2].missing_observation_count"
+    },
+    {
+      "code": "missing_or_budget_limited_observations",
+      "severity": "human",
+      "message": "Missing observations may be budget-limited, but require interpretation.",
+      "location": "$.loop_reports[0].missing_observation_count"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.loop_reports[0].rounds[3].actions[2].status"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.loop_reports[0].rounds[3].actions[3].status"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.loop_reports[0].rounds[3].actions[4].status"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.loop_reports[0].rounds[4].actions[0].status"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.loop_reports[0].rounds[4].actions[1].status"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.loop_reports[0].rounds[4].actions[2].status"
+    },
+    {
+      "code": "missing_or_budget_limited_observations",
+      "severity": "human",
+      "message": "Missing observations may be budget-limited, but require interpretation.",
+      "location": "$.loop_reports[1].missing_observation_count"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.loop_reports[1].rounds[5].actions[0].status"
+    },
+    {
+      "code": "missing_or_budget_limited_observations",
+      "severity": "human",
+      "message": "Missing observations may be budget-limited, but require interpretation.",
+      "location": "$.loop_reports[2].missing_observation_count"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.loop_reports[2].rounds[5].actions[0].status"
+    },
+    {
+      "code": "budget_curve_budget_sensitive_high_fidelity_yield",
+      "severity": "human",
+      "message": "Budget curve requires interpretation: budget_sensitive_high_fidelity_yield",
+      "location": "$.budget_curve.warnings"
+    },
+    {
+      "code": "budget_curve_budget_sensitive_policy_traces",
+      "severity": "human",
+      "message": "Budget curve requires interpretation: budget_sensitive_policy_traces",
+      "location": "$.budget_curve.warnings"
+    },
+    {
+      "code": "budget_curve_missing_or_budget_limited_actions_present",
+      "severity": "human",
+      "message": "Budget curve requires interpretation: missing_or_budget_limited_actions_present",
+      "location": "$.budget_curve.warnings"
+    },
+    {
+      "code": "missing_or_budget_limited_observations",
+      "severity": "human",
+      "message": "Missing observations may be budget-limited, but require interpretation.",
+      "location": "$.budget_curve.points[0].summary.missing_observation_count"
+    },
+    {
+      "code": "proxy_only_credible_hits",
+      "severity": "human",
+      "message": "Credible-hit count is proxy-supported with no high-fidelity positive.",
+      "location": "$.budget_curve.points[0].summary"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[0].rounds[3].actions[1].status"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[0].rounds[3].actions[2].status"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[0].rounds[3].actions[3].status"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[0].rounds[3].actions[4].status"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[0].rounds[4].actions[0].status"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[0].rounds[4].actions[1].status"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[0].rounds[4].actions[2].status"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[0].rounds[4].actions[3].status"
+    },
+    {
+      "code": "missing_or_budget_limited_observations",
+      "severity": "human",
+      "message": "Missing observations may be budget-limited, but require interpretation.",
+      "location": "$.budget_curve.points[1].summary.missing_observation_count"
+    },
+    {
+      "code": "proxy_only_credible_hits",
+      "severity": "human",
+      "message": "Credible-hit count is proxy-supported with no high-fidelity positive.",
+      "location": "$.budget_curve.points[1].summary"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[1].rounds[4].actions[0].status"
+    },
+    {
+      "code": "missing_or_budget_limited_observations",
+      "severity": "human",
+      "message": "Missing observations may be budget-limited, but require interpretation.",
+      "location": "$.budget_curve.points[2].summary.missing_observation_count"
+    },
+    {
+      "code": "proxy_only_credible_hits",
+      "severity": "human",
+      "message": "Credible-hit count is proxy-supported with no high-fidelity positive.",
+      "location": "$.budget_curve.points[2].summary"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[2].rounds[4].actions[0].status"
+    },
+    {
+      "code": "missing_or_budget_limited_observations",
+      "severity": "human",
+      "message": "Missing observations may be budget-limited, but require interpretation.",
+      "location": "$.budget_curve.points[3].summary.missing_observation_count"
+    },
+    {
+      "code": "proxy_only_credible_hits",
+      "severity": "human",
+      "message": "Credible-hit count is proxy-supported with no high-fidelity positive.",
+      "location": "$.budget_curve.points[3].summary"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[3].rounds[3].actions[2].status"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[3].rounds[3].actions[3].status"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[3].rounds[3].actions[4].status"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[3].rounds[4].actions[0].status"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[3].rounds[4].actions[1].status"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[3].rounds[4].actions[2].status"
+    },
+    {
+      "code": "missing_or_budget_limited_observations",
+      "severity": "human",
+      "message": "Missing observations may be budget-limited, but require interpretation.",
+      "location": "$.budget_curve.points[4].summary.missing_observation_count"
+    },
+    {
+      "code": "proxy_only_credible_hits",
+      "severity": "human",
+      "message": "Credible-hit count is proxy-supported with no high-fidelity positive.",
+      "location": "$.budget_curve.points[4].summary"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[4].rounds[5].actions[0].status"
+    },
+    {
+      "code": "missing_or_budget_limited_observations",
+      "severity": "human",
+      "message": "Missing observations may be budget-limited, but require interpretation.",
+      "location": "$.budget_curve.points[5].summary.missing_observation_count"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[5].rounds[5].actions[0].status"
+    },
+    {
+      "code": "missing_or_budget_limited_observations",
+      "severity": "human",
+      "message": "Missing observations may be budget-limited, but require interpretation.",
+      "location": "$.budget_curve.points[6].summary.missing_observation_count"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[6].rounds[3].actions[3].status"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[6].rounds[3].actions[4].status"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[6].rounds[4].actions[0].status"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[6].rounds[4].actions[1].status"
+    },
+    {
+      "code": "missing_or_budget_limited_observations",
+      "severity": "human",
+      "message": "Missing observations may be budget-limited, but require interpretation.",
+      "location": "$.budget_curve.points[7].summary.missing_observation_count"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[7].rounds[6].actions[0].status"
+    },
+    {
+      "code": "missing_or_budget_limited_observations",
+      "severity": "human",
+      "message": "Missing observations may be budget-limited, but require interpretation.",
+      "location": "$.budget_curve.points[8].summary.missing_observation_count"
+    },
+    {
+      "code": "recorded_missing_observation",
+      "severity": "human",
+      "message": "Action trace is present, but its requested observation is missing and requires budget/counterfactual interpretation.",
+      "location": "$.budget_curve.points[8].rounds[6].actions[0].status"
+    }
+  ],
+  "summary": {
+    "verdict": "HUMAN",
+    "fail_issue_count": 0,
+    "human_issue_count": 57,
+    "policy_count": 3,
+    "budget_limit_count": 3,
+    "machine_check": "strict_trace_and_manifest"
+  },
+  "input": {
+    "report": "E:\\11\\drug-loop-harness\\examples\\data\\command_promotion_experiment_report.json"
+  }
+}

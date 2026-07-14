@@ -1,0 +1,749 @@
+{
+  "campaign_id": "fixture_campaign",
+  "goal": {
+    "target": "demo_kinase",
+    "truth_anchor": "human_review_or_assay",
+    "objective": "credible hit under ADMET and binding evidence"
+  },
+  "metrics": {
+    "compound_count": 4,
+    "credible_hit_count": 1,
+    "experiment_ready_count": 1,
+    "human_signed_count": 0,
+    "credible_hit_rate": 0.25,
+    "experiment_ready_rate": 0.25,
+    "claim_upgrade_rate": 0.25,
+    "qualified_count": 6,
+    "rejected_count": 3,
+    "conflicted_count": 0,
+    "abstain_count": 0,
+    "needs_promotion_count": 6,
+    "needs_human_count": 0,
+    "planned_action_count": 0,
+    "planned_action_cost": 0,
+    "planned_high_fidelity_count": 0,
+    "planned_human_count": 0,
+    "trust_gap_reversal_rate": 0.5,
+    "trust_gap_waste_rate": 0.5,
+    "high_fidelity_scaffold_count": 0,
+    "repeated_scaffold_high_fidelity_count": 0,
+    "repeated_scaffold_high_fidelity_rate": 0.0,
+    "scaffold_repeat_waste_count": 0,
+    "scaffold_repeat_waste_rate": 0.0,
+    "rescued_scaffold_count": 0,
+    "rescued_scaffold_rate": 0.0
+  },
+  "compounds": [
+    {
+      "compound_id": "cmpd_001",
+      "smiles": "CCOc1ncccc1",
+      "route_id": "route_hinge_binder",
+      "strongest_claim": "experiment_ready",
+      "evidence": [
+        {
+          "result_id": "tg_2e55c6d383ec472892b3540e8c9e94c8",
+          "observation_id": "obs_chem_filter_cmpd_001",
+          "oracle_name": "basic_chem_filter",
+          "decision": "qualified",
+          "evidence_tier": "l0_chem_valid",
+          "can_support_claims": [
+            "triage"
+          ],
+          "flags": [],
+          "promotion_action": null,
+          "notes": "qualified"
+        },
+        {
+          "result_id": "tg_40e960e0303844679a0474db93ac21bc",
+          "observation_id": "obs_admet_001",
+          "oracle_name": "table_admet",
+          "decision": "needs_promotion",
+          "evidence_tier": "l2_admet_proxy",
+          "can_support_claims": [
+            "triage",
+            "credible_hit"
+          ],
+          "flags": [],
+          "promotion_action": "dock",
+          "notes": "needs_promotion"
+        },
+        {
+          "result_id": "tg_98a3f5e085ab4f31825bd249e804889c",
+          "observation_id": "obs_dock_001",
+          "oracle_name": "table_docking",
+          "decision": "needs_promotion",
+          "evidence_tier": "l3_binding_proxy",
+          "can_support_claims": [
+            "triage",
+            "credible_hit"
+          ],
+          "flags": [],
+          "promotion_action": "rescore",
+          "notes": "needs_promotion"
+        },
+        {
+          "result_id": "tg_8374a37f0fac4789bd1bafd703f32d9d",
+          "observation_id": "obs_rescore_001",
+          "oracle_name": "table_rescoring",
+          "decision": "qualified",
+          "evidence_tier": "l4_higher_fidelity",
+          "can_support_claims": [
+            "triage",
+            "credible_hit",
+            "experiment_ready"
+          ],
+          "flags": [],
+          "promotion_action": null,
+          "notes": "qualified"
+        },
+        {
+          "result_id": "tg_70abc84447914f03a5af622c2c8e4cb6",
+          "observation_id": "obs_human_001",
+          "oracle_name": "human_review",
+          "decision": "qualified",
+          "evidence_tier": "l5_human_review",
+          "can_support_claims": [
+            "triage",
+            "credible_hit",
+            "experiment_ready",
+            "human_signed"
+          ],
+          "flags": [],
+          "promotion_action": null,
+          "notes": "qualified"
+        }
+      ],
+      "claims": [
+        {
+          "protocol_name": "credible_hit_minimal",
+          "claim_level": "credible_hit",
+          "satisfied": true,
+          "supporting_result_ids": [
+            "tg_2e55c6d383ec472892b3540e8c9e94c8",
+            "tg_40e960e0303844679a0474db93ac21bc",
+            "tg_98a3f5e085ab4f31825bd249e804889c",
+            "tg_8374a37f0fac4789bd1bafd703f32d9d",
+            "tg_70abc84447914f03a5af622c2c8e4cb6"
+          ],
+          "missing_tiers": [],
+          "missing_oracle_kinds": [],
+          "unresolved_flags": [],
+          "needs_human": false,
+          "reason": "satisfied"
+        },
+        {
+          "protocol_name": "experiment_ready_minimal",
+          "claim_level": "experiment_ready",
+          "satisfied": true,
+          "supporting_result_ids": [
+            "tg_2e55c6d383ec472892b3540e8c9e94c8",
+            "tg_40e960e0303844679a0474db93ac21bc",
+            "tg_98a3f5e085ab4f31825bd249e804889c",
+            "tg_8374a37f0fac4789bd1bafd703f32d9d",
+            "tg_70abc84447914f03a5af622c2c8e4cb6"
+          ],
+          "missing_tiers": [],
+          "missing_oracle_kinds": [],
+          "unresolved_flags": [],
+          "needs_human": false,
+          "reason": "satisfied"
+        }
+      ]
+    },
+    {
+      "compound_id": "cmpd_002",
+      "smiles": "CCN(CC)CC",
+      "route_id": "route_hinge_binder",
+      "strongest_claim": null,
+      "evidence": [
+        {
+          "result_id": "tg_941fde0f4a1941fba2ccab582f0e8a20",
+          "observation_id": "obs_chem_filter_cmpd_002",
+          "oracle_name": "basic_chem_filter",
+          "decision": "qualified",
+          "evidence_tier": "l0_chem_valid",
+          "can_support_claims": [
+            "triage"
+          ],
+          "flags": [],
+          "promotion_action": null,
+          "notes": "qualified"
+        },
+        {
+          "result_id": "tg_aad8ab69b7904ebebea45c4230c7b268",
+          "observation_id": "obs_admet_002",
+          "oracle_name": "table_admet",
+          "decision": "rejected",
+          "evidence_tier": "l2_admet_proxy",
+          "can_support_claims": [],
+          "flags": [],
+          "promotion_action": null,
+          "notes": "rejected"
+        }
+      ],
+      "claims": [
+        {
+          "protocol_name": "credible_hit_minimal",
+          "claim_level": "credible_hit",
+          "satisfied": false,
+          "supporting_result_ids": [
+            "tg_941fde0f4a1941fba2ccab582f0e8a20"
+          ],
+          "missing_tiers": [
+            "l2_admet_proxy",
+            "l3_binding_proxy"
+          ],
+          "missing_oracle_kinds": [
+            "admet",
+            "docking"
+          ],
+          "unresolved_flags": [],
+          "needs_human": false,
+          "reason": "missing_or_unresolved_evidence"
+        },
+        {
+          "protocol_name": "experiment_ready_minimal",
+          "claim_level": "experiment_ready",
+          "satisfied": false,
+          "supporting_result_ids": [
+            "tg_941fde0f4a1941fba2ccab582f0e8a20"
+          ],
+          "missing_tiers": [
+            "l2_admet_proxy",
+            "l3_binding_proxy",
+            "l5_human_review"
+          ],
+          "missing_oracle_kinds": [
+            "admet",
+            "docking"
+          ],
+          "unresolved_flags": [],
+          "needs_human": true,
+          "reason": "missing_or_unresolved_evidence"
+        }
+      ]
+    },
+    {
+      "compound_id": "cmpd_003",
+      "smiles": "COc1ccc(NC(=O)C)cc1",
+      "route_id": "route_hinge_binder",
+      "strongest_claim": null,
+      "evidence": [
+        {
+          "result_id": "tg_cb94647d0d6b4c37b9c555f8e4178ea0",
+          "observation_id": "obs_chem_filter_cmpd_003",
+          "oracle_name": "basic_chem_filter",
+          "decision": "qualified",
+          "evidence_tier": "l0_chem_valid",
+          "can_support_claims": [
+            "triage"
+          ],
+          "flags": [],
+          "promotion_action": null,
+          "notes": "qualified"
+        },
+        {
+          "result_id": "tg_f0f3f33d62c947b1b59d372edb153173",
+          "observation_id": "obs_admet_003",
+          "oracle_name": "table_admet",
+          "decision": "needs_promotion",
+          "evidence_tier": "l2_admet_proxy",
+          "can_support_claims": [
+            "triage",
+            "credible_hit"
+          ],
+          "flags": [],
+          "promotion_action": "dock",
+          "notes": "needs_promotion"
+        },
+        {
+          "result_id": "tg_6fc150a3da52441da313e2f4e7363c85",
+          "observation_id": "obs_dock_003",
+          "oracle_name": "table_docking",
+          "decision": "needs_promotion",
+          "evidence_tier": "l3_binding_proxy",
+          "can_support_claims": [
+            "triage",
+            "credible_hit"
+          ],
+          "flags": [],
+          "promotion_action": "rescore",
+          "notes": "needs_promotion"
+        },
+        {
+          "result_id": "tg_2b257c5607b24ca08f2e8c60b16a5709",
+          "observation_id": "obs_rescore_003",
+          "oracle_name": "table_rescoring",
+          "decision": "rejected",
+          "evidence_tier": "l4_higher_fidelity",
+          "can_support_claims": [],
+          "flags": [
+            "possible_false_positive"
+          ],
+          "promotion_action": null,
+          "notes": "rejected; flags=possible_false_positive"
+        }
+      ],
+      "claims": [
+        {
+          "protocol_name": "credible_hit_minimal",
+          "claim_level": "credible_hit",
+          "satisfied": false,
+          "supporting_result_ids": [
+            "tg_cb94647d0d6b4c37b9c555f8e4178ea0",
+            "tg_f0f3f33d62c947b1b59d372edb153173",
+            "tg_6fc150a3da52441da313e2f4e7363c85"
+          ],
+          "missing_tiers": [],
+          "missing_oracle_kinds": [],
+          "unresolved_flags": [
+            "possible_false_positive"
+          ],
+          "needs_human": false,
+          "reason": "missing_or_unresolved_evidence"
+        },
+        {
+          "protocol_name": "experiment_ready_minimal",
+          "claim_level": "experiment_ready",
+          "satisfied": false,
+          "supporting_result_ids": [
+            "tg_cb94647d0d6b4c37b9c555f8e4178ea0",
+            "tg_f0f3f33d62c947b1b59d372edb153173",
+            "tg_6fc150a3da52441da313e2f4e7363c85"
+          ],
+          "missing_tiers": [
+            "l5_human_review"
+          ],
+          "missing_oracle_kinds": [],
+          "unresolved_flags": [
+            "possible_false_positive"
+          ],
+          "needs_human": true,
+          "reason": "missing_or_unresolved_evidence"
+        }
+      ]
+    },
+    {
+      "compound_id": "cmpd_004",
+      "smiles": "CC1=NC=CC=C1N",
+      "route_id": "route_hinge_binder",
+      "strongest_claim": null,
+      "evidence": [
+        {
+          "result_id": "tg_048b13ccc7284db2a765aebd5e8d4507",
+          "observation_id": "obs_chem_filter_cmpd_004",
+          "oracle_name": "basic_chem_filter",
+          "decision": "qualified",
+          "evidence_tier": "l0_chem_valid",
+          "can_support_claims": [
+            "triage"
+          ],
+          "flags": [],
+          "promotion_action": null,
+          "notes": "qualified"
+        },
+        {
+          "result_id": "tg_a96adc6423444267b11b837fbc0c496a",
+          "observation_id": "obs_admet_004",
+          "oracle_name": "table_admet",
+          "decision": "needs_promotion",
+          "evidence_tier": "l2_admet_proxy",
+          "can_support_claims": [
+            "triage",
+            "credible_hit"
+          ],
+          "flags": [],
+          "promotion_action": "dock",
+          "notes": "needs_promotion"
+        },
+        {
+          "result_id": "tg_dd1798bb4191437b9cd7232833e0a834",
+          "observation_id": "obs_dock_004",
+          "oracle_name": "table_docking",
+          "decision": "needs_promotion",
+          "evidence_tier": "l3_binding_proxy",
+          "can_support_claims": [
+            "triage",
+            "credible_hit"
+          ],
+          "flags": [],
+          "promotion_action": "rescore",
+          "notes": "needs_promotion"
+        },
+        {
+          "result_id": "tg_8e188e1cb9814a9a8f518a368cfe712a",
+          "observation_id": "obs_human_004",
+          "oracle_name": "human_review",
+          "decision": "rejected",
+          "evidence_tier": "l5_human_review",
+          "can_support_claims": [],
+          "flags": [
+            "possible_false_positive"
+          ],
+          "promotion_action": null,
+          "notes": "rejected; flags=possible_false_positive"
+        }
+      ],
+      "claims": [
+        {
+          "protocol_name": "credible_hit_minimal",
+          "claim_level": "credible_hit",
+          "satisfied": false,
+          "supporting_result_ids": [
+            "tg_048b13ccc7284db2a765aebd5e8d4507",
+            "tg_a96adc6423444267b11b837fbc0c496a",
+            "tg_dd1798bb4191437b9cd7232833e0a834"
+          ],
+          "missing_tiers": [],
+          "missing_oracle_kinds": [],
+          "unresolved_flags": [
+            "possible_false_positive"
+          ],
+          "needs_human": false,
+          "reason": "missing_or_unresolved_evidence"
+        },
+        {
+          "protocol_name": "experiment_ready_minimal",
+          "claim_level": "experiment_ready",
+          "satisfied": false,
+          "supporting_result_ids": [
+            "tg_048b13ccc7284db2a765aebd5e8d4507",
+            "tg_a96adc6423444267b11b837fbc0c496a",
+            "tg_dd1798bb4191437b9cd7232833e0a834"
+          ],
+          "missing_tiers": [
+            "l5_human_review"
+          ],
+          "missing_oracle_kinds": [],
+          "unresolved_flags": [
+            "possible_false_positive"
+          ],
+          "needs_human": true,
+          "reason": "missing_or_unresolved_evidence"
+        }
+      ]
+    }
+  ],
+  "policy_replays": [
+    {
+      "policy_name": "fixed_cascade",
+      "action_count": 1,
+      "planned_action_cost": 10.0,
+      "planned_high_fidelity_count": 0,
+      "planned_human_count": 1,
+      "credible_hit_rate": 0.25,
+      "experiment_ready_rate": 0.25,
+      "high_fidelity_scaffold_count": 0,
+      "repeated_scaffold_high_fidelity_count": 0,
+      "scaffold_repeat_waste_count": 0,
+      "rescued_scaffold_count": 0,
+      "actions": [
+        {
+          "action_id": "act_c5d2e5e3d6e64f09bafd8eda849ffc2a",
+          "kind": "ask_human",
+          "subject_ids": [
+            "cmpd_003"
+          ],
+          "budget_reserved": 10.0,
+          "reason": "fixed_cascade_next_missing_step",
+          "result_observation_ids": []
+        }
+      ]
+    },
+    {
+      "policy_name": "trust_aware",
+      "action_count": 1,
+      "planned_action_cost": 8.0,
+      "planned_high_fidelity_count": 1,
+      "planned_human_count": 0,
+      "credible_hit_rate": 0.25,
+      "experiment_ready_rate": 0.25,
+      "high_fidelity_scaffold_count": 0,
+      "repeated_scaffold_high_fidelity_count": 0,
+      "scaffold_repeat_waste_count": 0,
+      "rescued_scaffold_count": 0,
+      "actions": [
+        {
+          "action_id": "act_49bd788047714923b639d687f0259a8e",
+          "kind": "rescore",
+          "subject_ids": [
+            "cmpd_004"
+          ],
+          "budget_reserved": 8.0,
+          "reason": "proxy_evidence_needs_stronger_oracle",
+          "result_observation_ids": []
+        }
+      ]
+    },
+    {
+      "policy_name": "trust_gap_aware",
+      "action_count": 1,
+      "planned_action_cost": 8.0,
+      "planned_high_fidelity_count": 1,
+      "planned_human_count": 0,
+      "credible_hit_rate": 0.25,
+      "experiment_ready_rate": 0.25,
+      "high_fidelity_scaffold_count": 0,
+      "repeated_scaffold_high_fidelity_count": 0,
+      "scaffold_repeat_waste_count": 0,
+      "rescued_scaffold_count": 0,
+      "actions": [
+        {
+          "action_id": "act_2969772d613841ee9aa1c6ec87c68aae",
+          "kind": "rescore",
+          "subject_ids": [
+            "cmpd_004"
+          ],
+          "budget_reserved": 8.0,
+          "reason": "proxy_evidence_needs_stronger_oracle; trust_gap_adjusted weak=table_docking strong=table_rescoring scope=global scope_value=all reversal=0.50 waste=0.50 conflict=0.00 multiplier=0.50",
+          "result_observation_ids": []
+        }
+      ]
+    }
+  ],
+  "oracle_cache_replay": [
+    {
+      "policy_name": "fixed_cascade",
+      "action_count": 13,
+      "planned_action_cost": 47.0,
+      "credible_hit_rate": 0.5,
+      "experiment_ready_rate": 0.25,
+      "experiment_summary": {
+        "policy_name": "fixed_cascade",
+        "round_count": 4,
+        "action_count": 13,
+        "planned_action_count": 14,
+        "applied_observation_count": 13,
+        "missing_observation_count": 1,
+        "skipped_observation_count": 0,
+        "missing_counterfactual_rate": 0.07142857142857142,
+        "trace_coverage_rate": 1.0,
+        "planned_action_cost": 47.0,
+        "credible_hit_rate": 0.5,
+        "experiment_ready_rate": 0.25,
+        "high_fidelity_scaffold_count": 0,
+        "repeated_scaffold_high_fidelity_count": 0,
+        "repeated_scaffold_high_fidelity_rate": 0.0,
+        "scaffold_repeat_waste_count": 0,
+        "scaffold_repeat_waste_rate": 0.0,
+        "rescued_scaffold_count": 0,
+        "rescued_scaffold_rate": 0.0,
+        "terminal_stop_reason": "max_rounds_reached",
+        "warnings": [
+          "missing_counterfactuals_present",
+          "step_budget_reached"
+        ]
+      },
+      "missing_observations": [
+        {
+          "subject_id": "cmpd_003",
+          "action_kind": "ask_human",
+          "oracle_name": "human_review",
+          "reason": "no_cached_observation"
+        }
+      ],
+      "rounds": [
+        {
+          "round_index": 0,
+          "planned_action_count": 4,
+          "applied_observation_count": 4,
+          "missing_observation_count": 0,
+          "stop_reason": "continued",
+          "actions": [
+            {
+              "subject_id": "cmpd_001",
+              "action_kind": "filter",
+              "oracle_name": "basic_chem_filter",
+              "status": "applied",
+              "reason": "cached_observation_applied",
+              "observation_id": "obs_chem_filter_cmpd_001",
+              "trust_gate_result_id": "tg_44a4a41913cd434188e863a443eb8872",
+              "trust_gate_decision": "qualified",
+              "evidence_tier": "l0_chem_valid"
+            },
+            {
+              "subject_id": "cmpd_002",
+              "action_kind": "filter",
+              "oracle_name": "basic_chem_filter",
+              "status": "applied",
+              "reason": "cached_observation_applied",
+              "observation_id": "obs_chem_filter_cmpd_002",
+              "trust_gate_result_id": "tg_a4e1e555623b428eafaf21e51242f53d",
+              "trust_gate_decision": "qualified",
+              "evidence_tier": "l0_chem_valid"
+            },
+            {
+              "subject_id": "cmpd_003",
+              "action_kind": "filter",
+              "oracle_name": "basic_chem_filter",
+              "status": "applied",
+              "reason": "cached_observation_applied",
+              "observation_id": "obs_chem_filter_cmpd_003",
+              "trust_gate_result_id": "tg_2f0a467d0a324ed2b41937dc560f2055",
+              "trust_gate_decision": "qualified",
+              "evidence_tier": "l0_chem_valid"
+            },
+            {
+              "subject_id": "cmpd_004",
+              "action_kind": "filter",
+              "oracle_name": "basic_chem_filter",
+              "status": "applied",
+              "reason": "cached_observation_applied",
+              "observation_id": "obs_chem_filter_cmpd_004",
+              "trust_gate_result_id": "tg_86923ecde8ec4293bab0d75278a7b145",
+              "trust_gate_decision": "qualified",
+              "evidence_tier": "l0_chem_valid"
+            }
+          ]
+        },
+        {
+          "round_index": 1,
+          "planned_action_count": 4,
+          "applied_observation_count": 4,
+          "missing_observation_count": 0,
+          "stop_reason": "continued",
+          "actions": [
+            {
+              "subject_id": "cmpd_001",
+              "action_kind": "predict_admet",
+              "oracle_name": "table_admet",
+              "status": "applied",
+              "reason": "cached_observation_applied",
+              "observation_id": "obs_admet_001",
+              "trust_gate_result_id": "tg_c4d93498c94649eb87edef63397cc1c5",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l2_admet_proxy"
+            },
+            {
+              "subject_id": "cmpd_002",
+              "action_kind": "predict_admet",
+              "oracle_name": "table_admet",
+              "status": "applied",
+              "reason": "cached_observation_applied",
+              "observation_id": "obs_admet_002",
+              "trust_gate_result_id": "tg_3931fa262da44741a9272eff5b345f31",
+              "trust_gate_decision": "rejected",
+              "evidence_tier": "l2_admet_proxy"
+            },
+            {
+              "subject_id": "cmpd_003",
+              "action_kind": "predict_admet",
+              "oracle_name": "table_admet",
+              "status": "applied",
+              "reason": "cached_observation_applied",
+              "observation_id": "obs_admet_003",
+              "trust_gate_result_id": "tg_ea9dd4c23e794aa28560e3cd75856e1c",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l2_admet_proxy"
+            },
+            {
+              "subject_id": "cmpd_004",
+              "action_kind": "predict_admet",
+              "oracle_name": "table_admet",
+              "status": "applied",
+              "reason": "cached_observation_applied",
+              "observation_id": "obs_admet_004",
+              "trust_gate_result_id": "tg_f5673c4781e14dbf97472a3ccf1e5e0a",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l2_admet_proxy"
+            }
+          ]
+        },
+        {
+          "round_index": 2,
+          "planned_action_count": 3,
+          "applied_observation_count": 3,
+          "missing_observation_count": 0,
+          "stop_reason": "continued",
+          "actions": [
+            {
+              "subject_id": "cmpd_001",
+              "action_kind": "dock",
+              "oracle_name": "table_docking",
+              "status": "applied",
+              "reason": "cached_observation_applied",
+              "observation_id": "obs_dock_001",
+              "trust_gate_result_id": "tg_0a363c98d64a4abd9f37de13620702d0",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l3_binding_proxy"
+            },
+            {
+              "subject_id": "cmpd_003",
+              "action_kind": "dock",
+              "oracle_name": "table_docking",
+              "status": "applied",
+              "reason": "cached_observation_applied",
+              "observation_id": "obs_dock_003",
+              "trust_gate_result_id": "tg_6c88535e2d0b4348af0e862fc95b2513",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l3_binding_proxy"
+            },
+            {
+              "subject_id": "cmpd_004",
+              "action_kind": "dock",
+              "oracle_name": "table_docking",
+              "status": "applied",
+              "reason": "cached_observation_applied",
+              "observation_id": "obs_dock_004",
+              "trust_gate_result_id": "tg_ffd40dd416d548888226d54e5a33906a",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l3_binding_proxy"
+            }
+          ]
+        },
+        {
+          "round_index": 3,
+          "planned_action_count": 3,
+          "applied_observation_count": 2,
+          "missing_observation_count": 1,
+          "stop_reason": "max_rounds_reached",
+          "actions": [
+            {
+              "subject_id": "cmpd_001",
+              "action_kind": "ask_human",
+              "oracle_name": "human_review",
+              "status": "applied",
+              "reason": "cached_observation_applied",
+              "observation_id": "obs_human_001",
+              "trust_gate_result_id": "tg_00c1fee79a034f53b5ed31fd331eaa5d",
+              "trust_gate_decision": "qualified",
+              "evidence_tier": "l5_human_review"
+            },
+            {
+              "subject_id": "cmpd_003",
+              "action_kind": "ask_human",
+              "oracle_name": "human_review",
+              "status": "missing",
+              "reason": "no_cached_observation",
+              "observation_id": null,
+              "trust_gate_result_id": null,
+              "trust_gate_decision": null,
+              "evidence_tier": null
+            },
+            {
+              "subject_id": "cmpd_004",
+              "action_kind": "ask_human",
+              "oracle_name": "human_review",
+              "status": "applied",
+              "reason": "cached_observation_applied",
+              "observation_id": "obs_human_004",
+              "trust_gate_result_id": "tg_7e1ae8763e00494382270dabd6c341f8",
+              "trust_gate_decision": "rejected",
+              "evidence_tier": "l5_human_review"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composition": {
+    "candidate_csv": "E:\\11\\drug-loop-harness\\examples\\data\\candidates.csv",
+    "generated_chem_filter": true,
+    "generated_chem_filter_count": 4,
+    "observation_csvs": [
+      "E:\\11\\drug-loop-harness\\examples\\data\\downstream_observations.csv"
+    ],
+    "table_observation_count": 11,
+    "total_observation_count": 15
+  }
+}

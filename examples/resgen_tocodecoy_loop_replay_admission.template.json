@@ -1,0 +1,72 @@
+{
+  "schema_version": "open_benchmark_admission_manifest.v1",
+  "scenario_id": "hou_tocodecoy_policy_replay_v1",
+  "phase": "retrospective_oracle_cache_replay",
+  "scientific_question": "Under a fixed candidate pool, fixed source split, and fixed multi-fidelity oracle cache, does a credibility-aware promotion policy improve validated-candidate efficiency without suppressing failure visibility?",
+  "source_studies": [
+    {
+      "study_id": "tocodecoy_2022",
+      "title": "TocoDecoy: A New Approach to Design Unbiased Datasets for Training and Benchmarking Machine-Learning Scoring Functions",
+      "doi": "10.1021/acs.jmedchem.2c00460",
+      "study_url": "https://pubs.acs.org/doi/10.1021/acs.jmedchem.2c00460",
+      "relation": "primary fixed-candidate scoring and decoy benchmark"
+    },
+    {
+      "study_id": "resgen_2023",
+      "title": "ResGen is a pocket-aware 3D molecular generation model based on parallel multiscale modelling",
+      "doi": "10.1038/s42256-023-00712-7",
+      "study_url": "https://www.nature.com/articles/s42256-023-00712-7",
+      "relation": "future fixed-generator integration; out of scope for the first policy-only replay"
+    }
+  ],
+  "source_assets": [
+    {
+      "asset_id": "tocodecoy_data_zip",
+      "role": "fixed_candidate_pool_and_source_split",
+      "source_url": "https://zenodo.org/records/6476753",
+      "license": "CC BY 4.0",
+      "local_path": "external/tocodecoy/data.zip",
+      "integrity": {
+        "algorithm": "md5",
+        "value": "24b33b402ccc27b29272bf16d5495b01"
+      },
+      "required_for_cache_construction": true
+    }
+  ],
+  "frozen_split": {
+    "split_id": "tocodecoy_lit_pcba_source_split_v1",
+    "source_asset_id": "tocodecoy_data_zip",
+    "source_field": "published training/test label carried in the TocoDecoy archive",
+    "evaluation_holdout_rule": "Use only the published test-labelled targets/ligands for policy comparison; do not tune promotion thresholds on that evaluation holdout.",
+    "frozen_before_policy_comparison": true
+  },
+  "oracle_cache": {
+    "source_asset_ids": [
+      "tocodecoy_data_zip"
+    ],
+    "local_path": "state/hou_tocodecoy_oracle_cache.jsonl",
+    "action_kinds": [
+      "predict_admet",
+      "dock",
+      "rescore",
+      "check_synthesis"
+    ],
+    "precomputed_before_policy_comparison": true
+  },
+  "loop_intervention": {
+    "policy_only_intervention": true,
+    "generator_mode": "fixed_or_out_of_scope",
+    "all_policy_arms_use_same_cached_observations": true,
+    "policy_tuning_on_evaluation_holdout_permitted": false
+  },
+  "scientific_controls": {
+    "policy_ranking_permitted": false,
+    "execution_authority_granted": false,
+    "autonomous_execution_permitted": false,
+    "scientific_claim_upgrade_permitted": false
+  },
+  "human_acceptance": {
+    "decision": "pending",
+    "rationale": "A named scientific reviewer must accept this fixed retrospective policy-replay pilot before source-asset admission."
+  }
+}

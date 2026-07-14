@@ -1,0 +1,25 @@
+{
+  "schema_version": "prospective_assay_endpoint_policy.v1",
+  "policy_id": "target_assay_endpoint_policy_001",
+  "source_protocol_content_sha256": "REPLACE_WITH_REGISTERED_PROTOCOL_HASH",
+  "oracle_name": "prospective_assay_oracle",
+  "assay_protocol_id": "target_assay_protocol_v1",
+  "raw_metric_key": "ic50_nM",
+  "output_metric_key": "assay_validated",
+  "unit": "nM",
+  "comparator": "at_most",
+  "threshold": 100.0,
+  "required_control_ids": [
+    "positive_control",
+    "negative_control"
+  ],
+  "human_acceptance": {
+    "decision": "accept",
+    "reviewer": "assay-scientist@example.org",
+    "reviewed_at": "2026-07-11T00:00:00+00:00",
+    "rationale": "Reviewed endpoint unit, threshold direction, control set, and binding to the frozen prospective protocol."
+  },
+  "execution_authority_granted": false,
+  "autonomous_execution_permitted": false,
+  "scientific_claim_upgrade_permitted": false
+}

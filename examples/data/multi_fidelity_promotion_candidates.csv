@@ -1,0 +1,6 @@
+id,smiles,route_id,scaffold,tags
+cmpd_301,COc1ncccc1N,route_hinge_binder,aminopyridine_trap,trap
+cmpd_302,COc1ncc(N)cc1,route_hinge_binder,aminopyridine_trap,trap
+cmpd_303,CCNc1ncccc1O,route_hinge_binder,hydroxy_pyridine,rescue
+cmpd_304,CCOC(=O)Nc1ccncc1,route_hinge_binder,pyridine_carbamate,backup
+cmpd_305,CCN(CC)C(=O)N,route_hinge_binder,urea,background

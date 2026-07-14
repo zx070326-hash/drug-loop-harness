@@ -1,0 +1,15 @@
+{
+  "schema_version": "prospective_loop_evaluation_replication_design_declaration.v1",
+  "replication_design_id": "target_loop_replication_design_001",
+  "declared_at": "REPLACE_WITH_TIMEZONE_AWARE_TIMESTAMP_BEFORE_SOURCE_ASSIGNMENT",
+  "human_acceptance": {
+    "decision": "accept",
+    "reviewer": "REPLACE_WITH_INDEPENDENT_REVIEWER",
+    "reviewed_at": "REPLACE_WITH_TIMEZONE_AWARE_TIMESTAMP",
+    "rationale": "Reviewed the named replication cohort, different assay site, fixed policy arms, and matching primary endpoint before source allocation."
+  },
+  "policy_ranking_permitted": false,
+  "execution_authority_granted": false,
+  "autonomous_execution_permitted": false,
+  "scientific_claim_upgrade_permitted": false
+}

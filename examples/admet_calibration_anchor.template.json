@@ -1,0 +1,47 @@
+{
+  "schema_version": "admet_calibration_anchor.v1",
+  "anchor_id": "REPLACE_WITH_EXTERNAL_HOLDOUT_ANCHOR_ID",
+  "source_profile_content_sha256": "REPLACE_WITH_CANONICAL_PROFILE_CONTENT_SHA256",
+  "source_policy_content_sha256": "REPLACE_WITH_CANONICAL_POLICY_CONTENT_SHA256",
+  "profile_id": "REPLACE_WITH_PROFILE_ID",
+  "model_version": "REPLACE_WITH_MODEL_VERSION",
+  "endpoint_set_id": "REPLACE_WITH_ENDPOINT_SET_ID",
+  "population": {
+    "population_id": "REPLACE_WITH_EXTERNAL_TARGET_POPULATION",
+    "split_id": "REPLACE_WITH_PREDECLARED_SPLIT_ID",
+    "split_kind": "external_holdout"
+  },
+  "validation": {
+    "started_at": "REPLACE_WITH_TIMEZONE_AWARE_START",
+    "completed_at": "REPLACE_WITH_TIMEZONE_AWARE_END"
+  },
+  "artifacts": {
+    "external_labels": {
+      "path": "C:/absolute/path/to/external-labels.csv",
+      "sha256": "REPLACE_WITH_LABELS_SHA256",
+      "binding_column": "smiles"
+    },
+    "predictions": {
+      "path": "C:/absolute/path/to/calibration-predictions.csv",
+      "sha256": "REPLACE_WITH_PREDICTIONS_SHA256",
+      "binding_column": "smiles"
+    }
+  },
+  "endpoints": [
+    {
+      "metric_name": "REPLACE_WITH_POLICY_METRIC_NAME",
+      "label_column": "REPLACE_WITH_EXTERNAL_LABEL_COLUMN",
+      "favorable_values": ["1"],
+      "unfavorable_values": ["0"],
+      "min_labeled_n": 50,
+      "min_sensitivity": 0.7,
+      "min_specificity": 0.7
+    }
+  ],
+  "human_review": {
+    "decision": "accept",
+    "reviewer": "REPLACE_WITH_HUMAN_REVIEWER",
+    "rationale": "REPLACE_WITH_EXTERNAL_VALIDATION_REVIEW_RATIONALE",
+    "reviewed_at": "REPLACE_WITH_TIMEZONE_AWARE_REVIEW_AFTER_VALIDATION"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "verdict": "FAIL",
+  "issues": [
+    {
+      "code": "missing_or_budget_limited_observations",
+      "severity": "human",
+      "message": "Missing observations may be budget-limited, but require interpretation.",
+      "location": "$.policy_summaries[0].missing_observation_count"
+    },
+    {
+      "code": "proxy_only_credible_hits",
+      "severity": "human",
+      "message": "Credible-hit count is proxy-supported with no high-fidelity positive.",
+      "location": "$.policy_summaries[0]"
+    },
+    {
+      "code": "missing_or_budget_limited_observations",
+      "severity": "human",
+      "message": "Missing observations may be budget-limited, but require interpretation.",
+      "location": "$.policy_summaries[1].missing_observation_count"
+    },
+    {
+      "code": "proxy_only_credible_hits",
+      "severity": "human",
+      "message": "Credible-hit count is proxy-supported with no high-fidelity positive.",
+      "location": "$.policy_summaries[1]"
+    },
+    {
+      "code": "missing_or_budget_limited_observations",
+      "severity": "human",
+      "message": "Missing observations may be budget-limited, but require interpretation.",
+      "location": "$.policy_summaries[2].missing_observation_count"
+    },
+    {
+      "code": "missing_or_budget_limited_observations",
+      "severity": "human",
+      "message": "Missing observations may be budget-limited, but require interpretation.",
+      "location": "$.loop_reports[0].missing_observation_count"
+    },
+    {
+      "code": "missing_action_trace",
+      "severity": "human",
+      "message": "Missing action trace requires budget/counterfactual interpretation.",
+      "location": "$.loop_reports[0].rounds[3].actions[2].status"
+    },
+    {
+      "code": "missing_action_trace",
+      "severity": "human",
+      "message": "Missing action trace requires budget/counterfactual interpretation.",
+      "location": "$.loop_reports[0].rounds[3].actions[3].status"
+    },
+    {
+      "code": "missing_action_trace",
+      "severity": "human",
+      "message": "Missing action trace requires budget/counterfactual interpretation.",
+      "location": "$.loop_reports[0].rounds[3].actions[4].status"
+    },
+    {
+      "code": "missing_action_trace",
+      "severity": "human",
+      "message": "Missing action trace requires budget/counterfactual interpretation.",
+      "location": "$.loop_reports[0].rounds[4].actions[0].status"
+    },
+    {
+      "code": "missing_action_trace",
+      "severity": "human",
+      "message": "Missing action trace requires budget/counterfactual interpretation.",
+      "location": "$.loop_reports[0].rounds[4].actions[1].status"
+    },
+    {
+      "code": "missing_action_trace",
+      "severity": "human",
+      "message": "Missing action trace requires budget/counterfactual interpretation.",
+      "location": "$.loop_reports[0].rounds[4].actions[2].status"
+    },
+    {
+      "code": "missing_or_budget_limited_observations",
+      "severity": "human",
+      "message": "Missing observations may be budget-limited, but require interpretation.",
+      "location": "$.loop_reports[1].missing_observation_count"
+    },
+    {
+      "code": "missing_action_trace",
+      "severity": "human",
+      "message": "Missing action trace requires budget/counterfactual interpretation.",
+      "location": "$.loop_reports[1].rounds[5].actions[0].status"
+    },
+    {
+      "code": "missing_or_budget_limited_observations",
+      "severity": "human",
+      "message": "Missing observations may be budget-limited, but require interpretation.",
+      "location": "$.loop_reports[2].missing_observation_count"
+    },
+    {
+      "code": "missing_action_trace",
+      "severity": "human",
+      "message": "Missing action trace requires budget/counterfactual interpretation.",
+      "location": "$.loop_reports[2].rounds[5].actions[0].status"
+    },
+    {
+      "code": "missing_budget_curve",
+      "severity": "fail",
+      "message": "Promotion-policy reports need at least a three-point budget curve.",
+      "location": "$.budget_curve"
+    }
+  ],
+  "summary": {
+    "verdict": "FAIL",
+    "fail_issue_count": 1,
+    "human_issue_count": 16,
+    "policy_count": 3,
+    "budget_limit_count": 0,
+    "machine_check": "strict_trace_and_manifest"
+  },
+  "input": {
+    "report": "E:\\11\\drug-loop-harness\\examples\\data\\command_promotion_experiment_guarded_report.json"
+  }
+}

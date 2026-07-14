@@ -1,0 +1,16 @@
+id,subject_id,oracle_name,passed,score,pose_valid,steric_clash,ligand_strain_flag,hERG_risk,solubility,decision,uncertainty,cost_spent,domain,source
+obs_s_chem_201,cmpd_201,basic_chem_filter,true,,,,,,,,,1,small_molecule,scaffold_round_1
+obs_s_chem_202,cmpd_202,basic_chem_filter,true,,,,,,,,,1,small_molecule,scaffold_round_1
+obs_s_chem_203,cmpd_203,basic_chem_filter,true,,,,,,,,,1,small_molecule,scaffold_round_1
+obs_s_chem_204,cmpd_204,basic_chem_filter,true,,,,,,,,,1,small_molecule,scaffold_round_1
+obs_s_chem_205,cmpd_205,basic_chem_filter,true,,,,,,,,,1,small_molecule,scaffold_round_1
+obs_s_admet_201,cmpd_201,table_admet,true,,,,,low,ok,,0.22,2,small_molecule,scaffold_round_1
+obs_s_admet_202,cmpd_202,table_admet,true,,,,,low,ok,,0.24,2,small_molecule,scaffold_round_1
+obs_s_admet_203,cmpd_203,table_admet,true,,,,,low,ok,,0.25,2,small_molecule,scaffold_round_1
+obs_s_admet_204,cmpd_204,table_admet,true,,,,,low,ok,,0.18,2,small_molecule,scaffold_round_1
+obs_s_admet_205,cmpd_205,table_admet,true,,,,,medium,ok,,0.30,2,small_molecule,scaffold_round_1
+obs_s_dock_201,cmpd_201,table_docking,true,-10.4,true,false,false,,,,,5,protein_ligand|non_covalent,scaffold_round_1
+obs_s_dock_202,cmpd_202,table_docking,true,-10.1,true,false,false,,,,,5,protein_ligand|non_covalent,scaffold_round_1
+obs_s_dock_203,cmpd_203,table_docking,true,-9.9,true,false,false,,,,,5,protein_ligand|non_covalent,scaffold_round_1
+obs_s_dock_204,cmpd_204,table_docking,true,-8.2,true,false,false,,,,,5,protein_ligand|non_covalent,scaffold_round_1
+obs_s_dock_205,cmpd_205,table_docking,true,-7.2,true,false,false,,,,,5,protein_ligand|non_covalent,scaffold_round_1

@@ -1,0 +1,201 @@
+{
+  "autonomous_execution_permitted": false,
+  "created_at": "2026-07-14T02:09:49.578422+00:00",
+  "execution_authority_granted": false,
+  "frozen_development_evidence": {
+    "promotion_policy_curve": {
+      "decision": "SUPPORT_PROSPECTIVE_POLICY_STUDY_DESIGN",
+      "path": "state/jensen-policy-curve-evaluation-v3.json",
+      "primary_gate_passed": true,
+      "scientific_unit_count": 5,
+      "sha256": "c936aa384f88594142265a351c2fe3c3e39c4aff1c910f0c2d70093ce1722902"
+    },
+    "reliability_stress_ablation": {
+      "decision": "SUPPORT_CREDIBILITY_AWARE_POLICY_FOR_PROSPECTIVE_DESIGN",
+      "path": "state/jensen-reliability-stress-evaluation-v1.json",
+      "primary_gate_passed": true,
+      "scientific_unit_count": 5,
+      "sha256": "280450c4f020457d34a8b8ddc50ff4a5ee8f8db4c8c08a043b22eb5ab3b07781"
+    }
+  },
+  "handoff_id": "jensen-tvr-to-prospective-campaign-design-v1",
+  "policy_arms": {
+    "baseline": {
+      "policy_runtime_content_sha256": "5a16b5fa0c1770c6d8bebb915a5ac1d6ca942cdbeca001d1c363c579d89a3519",
+      "policy_runtime_manifest": {
+        "implementation_class": "JensenStyleTVRPolicy",
+        "parameters": {
+          "default_task_correlation": 0.5,
+          "fingerprint_bits": 256,
+          "legacy_reference_indexing": false,
+          "min_observations_per_oracle": 1,
+          "noise": 0.0001
+        },
+        "policy_kind": "jensen_tvr",
+        "policy_version": "jensen_style_tvr_numpy_icm_v1_not_original_baybe",
+        "runtime_dependencies": {
+          "numpy": "2.4.4",
+          "python": "3.12.10",
+          "rdkit": "2026.3.1"
+        },
+        "schema_version": "prospective_v2_policy_runtime_manifest.v1",
+        "source_modules": {
+          "action_space": "062a762a75d24e39e0da6b4d9df6016b36671a7269ab47a77a15b9be29f26e5d",
+          "contracts": "2e70ab24ce551482df58cf280a20cf71d726feaa5f67744c31444e0af43a57a6",
+          "ledger": "9517e2708d80f412837fecc271c7e25eb60689070694c9d34d77a324c2a421e3",
+          "mfbo_policy": "2833345bfe349be74913e2947c67a7c56cf954270c5fb4d701d8b20ccf7bc26f",
+          "prospective_policy_bridge": "78775cb9536f97b73367666d3cd7d3c7c281d8706cc2669077b8dd6788cf4525",
+          "reliability_aware_policy": "d488da957d145900eb9235b9321e2ff64f5aed3028b05e2a145e07cc1915aac8",
+          "state": "a9826f9f9739ffbf0a0f8f26b17722d2fe50f7dfeb93d09ee03f69f5b4bc4732"
+        },
+        "state_contract_id": "campaign_ledger_global_action_space.v2"
+      },
+      "policy_spec": {
+        "parameters": {
+          "default_task_correlation": 0.5,
+          "fingerprint_bits": 256,
+          "legacy_reference_indexing": false,
+          "min_observations_per_oracle": 1,
+          "noise": 0.0001
+        },
+        "policy_kind": "jensen_tvr",
+        "schema_version": "prospective_v2_policy_spec.v1",
+        "selection_count": 1,
+        "state_contract_id": "campaign_ledger_global_action_space.v2"
+      },
+      "policy_spec_content_sha256": "42489219a089b8c8758c3fb76d5e127abb6be9d342442f193a3d965d87cfb66c"
+    },
+    "credibility_aware": {
+      "policy_runtime_content_sha256": "d6fbc03e0cf573b8a46fe4e7069394d592dd9229220c0aa63d8e141f0927f7c8",
+      "policy_runtime_manifest": {
+        "implementation_class": "ReliabilityAwareTVRPolicy",
+        "parameters": {
+          "default_task_correlation": 0.5,
+          "fingerprint_bits": 256,
+          "legacy_reference_indexing": false,
+          "min_observations_per_oracle": 1,
+          "noise": 0.0001
+        },
+        "policy_kind": "reliability_tvr",
+        "policy_version": "jensen_tvr_reliability_discount_v1",
+        "runtime_dependencies": {
+          "numpy": "2.4.4",
+          "python": "3.12.10",
+          "rdkit": "2026.3.1"
+        },
+        "schema_version": "prospective_v2_policy_runtime_manifest.v1",
+        "source_modules": {
+          "action_space": "062a762a75d24e39e0da6b4d9df6016b36671a7269ab47a77a15b9be29f26e5d",
+          "contracts": "2e70ab24ce551482df58cf280a20cf71d726feaa5f67744c31444e0af43a57a6",
+          "ledger": "9517e2708d80f412837fecc271c7e25eb60689070694c9d34d77a324c2a421e3",
+          "mfbo_policy": "2833345bfe349be74913e2947c67a7c56cf954270c5fb4d701d8b20ccf7bc26f",
+          "prospective_policy_bridge": "78775cb9536f97b73367666d3cd7d3c7c281d8706cc2669077b8dd6788cf4525",
+          "reliability_aware_policy": "d488da957d145900eb9235b9321e2ff64f5aed3028b05e2a145e07cc1915aac8",
+          "state": "a9826f9f9739ffbf0a0f8f26b17722d2fe50f7dfeb93d09ee03f69f5b4bc4732"
+        },
+        "state_contract_id": "campaign_ledger_global_action_space.v2"
+      },
+      "policy_spec": {
+        "parameters": {
+          "default_task_correlation": 0.5,
+          "fingerprint_bits": 256,
+          "legacy_reference_indexing": false,
+          "min_observations_per_oracle": 1,
+          "noise": 0.0001
+        },
+        "policy_kind": "reliability_tvr",
+        "schema_version": "prospective_v2_policy_spec.v1",
+        "selection_count": 1,
+        "state_contract_id": "campaign_ledger_global_action_space.v2"
+      },
+      "policy_spec_content_sha256": "0609cc5a1852009fe16c858c6f9604dbb846160890c98ba1b612dc6e34371f0b"
+    }
+  },
+  "predeclared_primary_estimand": {
+    "claim_ceiling": "prospective_policy_efficiency_evidence_only",
+    "comparison": "credibility_aware_minus_baseline",
+    "effectiveness_guard": "assay_validated_candidate_rate_noninferiority",
+    "failure_cost_supporting_metric": "invalid_or_failed_oracle_cost_fraction",
+    "metric_id": "assay_validated_candidates_per_equal_total_campaign_cost"
+  },
+  "prospective_design_correction": {
+    "analysis_order": "compare arms within campaign replicate, then aggregate campaign-level contrasts",
+    "arm_isolation": "identical frozen starting pools and budgets, separate arm-local observation histories",
+    "existing_v5_candidate_episode_protocol_directly_compatible": false,
+    "independent_replication_required": true,
+    "outcome_capture": "blinded assay of the union of promoted candidates with overlap and shared measurements modeled as paired, correlated observations",
+    "randomization_unit": "independent_target_cohort_campaign_replicate",
+    "reason": "TVR ranks a shared candidate-oracle action space and changes future state; individual candidate decisions are coupled and are not independent policy replicates.",
+    "recommended_design": "paired_isolated_campaign_arms",
+    "scientific_unit": "independent_target_cohort_campaign_replicate"
+  },
+  "readiness": {
+    "assay_protocol_registration_ready": false,
+    "external_input_blocker_count": 8,
+    "next_legal_transition": "supply_and_review_assay_specific_design_inputs",
+    "replayable_decision_receipt_ready": true,
+    "v2_policy_runtime_ready": true
+  },
+  "required_external_inputs": [
+    {
+      "agent_may_invent": false,
+      "input_id": "target_population_and_campaign_replicates",
+      "requirement": "Independent target/cohort campaign replicates and inclusion criteria.",
+      "status": "MISSING_EXTERNAL_INPUT"
+    },
+    {
+      "agent_may_invent": false,
+      "input_id": "candidate_pool_and_feature_freeze",
+      "requirement": "Pre-outcome candidate pools, chemistry features, exclusions, and provenance hashes.",
+      "status": "MISSING_EXTERNAL_INPUT"
+    },
+    {
+      "agent_may_invent": false,
+      "input_id": "oracle_execution_and_cost_contracts",
+      "requirement": "Exact docking, assay, and optional intermediate oracle adapters, costs, latency, and failure semantics.",
+      "status": "MISSING_EXTERNAL_INPUT"
+    },
+    {
+      "agent_may_invent": false,
+      "input_id": "assay_endpoint_threshold_and_site",
+      "requirement": "Primary assay endpoint, positive threshold, measurement protocol, and blinded assay site.",
+      "status": "MISSING_EXTERNAL_INPUT"
+    },
+    {
+      "agent_may_invent": false,
+      "input_id": "campaign_budget_and_stopping_rules",
+      "requirement": "Equal per-arm compute/assay budget, maximum rounds, batch size, and non-outcome stop rules.",
+      "status": "MISSING_EXTERNAL_INPUT"
+    },
+    {
+      "agent_may_invent": false,
+      "input_id": "effect_size_and_power_plan",
+      "requirement": "Defensible baseline rate, minimum relevant effect, attrition assumptions, and campaign-level power plan.",
+      "status": "MISSING_EXTERNAL_INPUT"
+    },
+    {
+      "agent_may_invent": false,
+      "input_id": "external_assignment_and_blinding",
+      "requirement": "Independent assignment of campaign replicates and blinded outcome capture before analysis release.",
+      "status": "MISSING_EXTERNAL_INPUT"
+    },
+    {
+      "agent_may_invent": false,
+      "input_id": "human_scientific_and_execution_acceptance",
+      "requirement": "Named acceptance of the frozen scientific design and separate authorization for consequential execution.",
+      "status": "MISSING_EXTERNAL_INPUT"
+    }
+  ],
+  "schema_version": "prospective_v2_design_handoff.v1",
+  "scientific_claim_upgrade_permitted": false,
+  "scientific_question": "Under equal campaign budgets, does reliability-aware TVR reduce invalid-oracle resource loss without reducing the rate of independently assay-validated candidates?",
+  "stage_status": "READY_FOR_ASSAY_SPECIFIC_DESIGN_INPUTS",
+  "state_and_decision_contract": {
+    "decision_scope": "global_candidate_oracle_ranking_per_campaign_round",
+    "execution_separated_from_ranking": true,
+    "policy_input": "complete immutable CampaignLedger projection plus the deterministic global ActionSpace",
+    "policy_output": "ranked candidate-oracle proposals with a hash-bound full ranking and kernel dispositions",
+    "receipt_replay_required": true,
+    "state_contract_id": "campaign_ledger_global_action_space.v2"
+  }
+}

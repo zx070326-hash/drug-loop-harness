@@ -1,0 +1,4 @@
+id,smiles,route_id,scaffold,tags
+cmpd_cf_valid,CCOc1ncccc1,route_chem_filter,pyridine,valid
+cmpd_cf_bad_ring,C1CC,route_chem_filter,cyclopropane_like,invalid
+cmpd_cf_bad_bracket,CC[N,route_chem_filter,amine,invalid

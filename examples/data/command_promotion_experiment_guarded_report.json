@@ -1,0 +1,1949 @@
+{
+  "experiment": {
+    "name": "command_backed_promotion_policy_comparison",
+    "candidate_csv": "E:\\11\\drug-loop-harness\\examples\\data\\multi_fidelity_promotion_candidates.csv",
+    "observation_cache_csv": "E:\\11\\drug-loop-harness\\examples\\data\\multi_fidelity_promotion_observations.csv",
+    "tool": "E:\\11\\drug-loop-harness\\examples\\tools\\emit_cached_observation.py",
+    "policies": [
+      "fixed_cascade",
+      "staged_trust_aware",
+      "staged_trust_gap_aware"
+    ],
+    "budget_limit": 56.0,
+    "budget_curve": [],
+    "max_rounds": 7,
+    "tool_timeout": 5.0,
+    "guard_enforced": true,
+    "evaluation_note": "Proxy credible hits are not treated as final truth; compare high-fidelity promotions, reversals, and scaffold rescue."
+  },
+  "manifest": {
+    "schema_version": "command_promotion_experiment.v1",
+    "autonomy_level": "local_manual_l_draft",
+    "oracle_cache_mode": "declared_csv_cache_no_hidden_counterfactuals",
+    "candidate_csv": "E:\\11\\drug-loop-harness\\examples\\data\\multi_fidelity_promotion_candidates.csv",
+    "observation_cache_csv": "E:\\11\\drug-loop-harness\\examples\\data\\multi_fidelity_promotion_observations.csv",
+    "tool": "E:\\11\\drug-loop-harness\\examples\\tools\\emit_cached_observation.py",
+    "action_oracle_map": {
+      "filter": "basic_chem_filter",
+      "predict_admet": "table_admet",
+      "dock": "table_docking",
+      "rescore": "table_rescoring"
+    },
+    "trust_gap_pairs": [
+      {
+        "weak_oracle": "table_docking",
+        "strong_oracle": "table_rescoring"
+      }
+    ],
+    "policy_parameters": {
+      "fixed_cascade": {
+        "cascade": [
+          "filter",
+          "predict_admet",
+          "dock",
+          "rescore"
+        ]
+      },
+      "staged_trust_aware": {
+        "bootstrap_cascade": [
+          "filter",
+          "predict_admet",
+          "dock"
+        ],
+        "max_promotions_per_round": 1,
+        "promotion_policy": "TrustAwarePolicy"
+      },
+      "staged_trust_gap_aware": {
+        "bootstrap_cascade": [
+          "filter",
+          "predict_admet",
+          "dock"
+        ],
+        "max_promotions_per_round": 1,
+        "promotion_policy": "TrustGapAwarePolicy",
+        "min_value_per_cost": 0.1
+      }
+    },
+    "budget_limit": 56.0,
+    "budget_curve": [],
+    "max_rounds": 7,
+    "guard_enforced": true,
+    "interpretation_warnings": [
+      "fixture_scale_toy_not_drug_claim",
+      "proxy_evidence_is_not_final_truth",
+      "budget_curve_required_for_policy_claims"
+    ]
+  },
+  "policy_summaries": [
+    {
+      "policy_name": "fixed_cascade",
+      "budget_limit": 56.0,
+      "planned_action_cost": 56.0,
+      "action_count": 17,
+      "round_count": 5,
+      "applied_observation_count": 17,
+      "missing_observation_count": 6,
+      "skipped_observation_count": 0,
+      "invalid_observation_count": 0,
+      "rescore_subjects": [
+        "cmpd_301",
+        "cmpd_302"
+      ],
+      "rescore_reasons": [
+        "fixed_cascade_next_missing_step",
+        "fixed_cascade_next_missing_step"
+      ],
+      "high_fidelity_positive_subjects": [],
+      "high_fidelity_rejected_subjects": [
+        "cmpd_301",
+        "cmpd_302"
+      ],
+      "high_fidelity_positive_count": 0,
+      "high_fidelity_rejected_count": 2,
+      "high_fidelity_yield": 0.0,
+      "scaffold_repeat_waste_count": 1,
+      "rescued_scaffold_count": 0,
+      "credible_hit_count": 3,
+      "experiment_ready_count": 0,
+      "terminal_stop_reason": "no_progress",
+      "blocked_action_count": 0,
+      "failed_action_count": 0
+    },
+    {
+      "policy_name": "staged_trust_aware",
+      "budget_limit": 56.0,
+      "planned_action_cost": 56.0,
+      "action_count": 17,
+      "round_count": 6,
+      "applied_observation_count": 17,
+      "missing_observation_count": 1,
+      "skipped_observation_count": 0,
+      "invalid_observation_count": 0,
+      "rescore_subjects": [
+        "cmpd_301",
+        "cmpd_302"
+      ],
+      "rescore_reasons": [
+        "proxy_evidence_needs_stronger_oracle; stage=promotion",
+        "proxy_evidence_needs_stronger_oracle; stage=promotion"
+      ],
+      "high_fidelity_positive_subjects": [],
+      "high_fidelity_rejected_subjects": [
+        "cmpd_301",
+        "cmpd_302"
+      ],
+      "high_fidelity_positive_count": 0,
+      "high_fidelity_rejected_count": 2,
+      "high_fidelity_yield": 0.0,
+      "scaffold_repeat_waste_count": 1,
+      "rescued_scaffold_count": 0,
+      "credible_hit_count": 3,
+      "experiment_ready_count": 0,
+      "terminal_stop_reason": "no_progress",
+      "blocked_action_count": 0,
+      "failed_action_count": 0
+    },
+    {
+      "policy_name": "staged_trust_gap_aware",
+      "budget_limit": 56.0,
+      "planned_action_cost": 56.0,
+      "action_count": 17,
+      "round_count": 6,
+      "applied_observation_count": 17,
+      "missing_observation_count": 1,
+      "skipped_observation_count": 0,
+      "invalid_observation_count": 0,
+      "rescore_subjects": [
+        "cmpd_301",
+        "cmpd_303"
+      ],
+      "rescore_reasons": [
+        "proxy_evidence_needs_stronger_oracle; trust_gap=no_history; stage=promotion",
+        "proxy_evidence_needs_stronger_oracle; trust_gap=no_history; stage=promotion"
+      ],
+      "high_fidelity_positive_subjects": [
+        "cmpd_303"
+      ],
+      "high_fidelity_rejected_subjects": [
+        "cmpd_301"
+      ],
+      "high_fidelity_positive_count": 1,
+      "high_fidelity_rejected_count": 1,
+      "high_fidelity_yield": 0.5,
+      "scaffold_repeat_waste_count": 0,
+      "rescued_scaffold_count": 1,
+      "credible_hit_count": 3,
+      "experiment_ready_count": 0,
+      "terminal_stop_reason": "no_progress",
+      "blocked_action_count": 0,
+      "failed_action_count": 0
+    }
+  ],
+  "loop_reports": [
+    {
+      "policy_name": "fixed_cascade",
+      "stop_reason": "no_progress",
+      "metrics": {
+        "compound_count": 5,
+        "credible_hit_count": 3,
+        "experiment_ready_count": 0,
+        "human_signed_count": 0,
+        "credible_hit_rate": 0.6,
+        "experiment_ready_rate": 0.0,
+        "claim_upgrade_rate": 0.0,
+        "qualified_count": 5,
+        "rejected_count": 2,
+        "conflicted_count": 0,
+        "abstain_count": 0,
+        "needs_promotion_count": 10,
+        "needs_human_count": 0,
+        "planned_action_count": 17,
+        "planned_action_cost": 56.0,
+        "planned_high_fidelity_count": 2,
+        "planned_human_count": 0,
+        "trust_gap_reversal_rate": 1.0,
+        "trust_gap_waste_rate": 1.0,
+        "high_fidelity_scaffold_count": 1,
+        "repeated_scaffold_high_fidelity_count": 1,
+        "repeated_scaffold_high_fidelity_rate": 0.5,
+        "scaffold_repeat_waste_count": 1,
+        "scaffold_repeat_waste_rate": 0.5,
+        "rescued_scaffold_count": 0,
+        "rescued_scaffold_rate": 0.0
+      },
+      "action_count": 17,
+      "applied_observation_count": 17,
+      "missing_observation_count": 6,
+      "skipped_observation_count": 0,
+      "invalid_observation_count": 0,
+      "blocked_action_count": 0,
+      "failed_action_count": 0,
+      "actions": [
+        {
+          "action_id": "act_0400e9d0e37043118922cd2353909413",
+          "kind": "filter",
+          "subject_ids": [
+            "cmpd_301"
+          ],
+          "budget_reserved": 1.0,
+          "reason": "fixed_cascade_next_missing_step",
+          "result_observation_ids": [
+            "obs_mf_chem_301"
+          ]
+        },
+        {
+          "action_id": "act_99936c4c7b0b41df9239bf70277aab79",
+          "kind": "filter",
+          "subject_ids": [
+            "cmpd_302"
+          ],
+          "budget_reserved": 1.0,
+          "reason": "fixed_cascade_next_missing_step",
+          "result_observation_ids": [
+            "obs_mf_chem_302"
+          ]
+        },
+        {
+          "action_id": "act_dc36f28643d84214bf277d32d210e195",
+          "kind": "filter",
+          "subject_ids": [
+            "cmpd_303"
+          ],
+          "budget_reserved": 1.0,
+          "reason": "fixed_cascade_next_missing_step",
+          "result_observation_ids": [
+            "obs_mf_chem_303"
+          ]
+        },
+        {
+          "action_id": "act_47a2bdb9398c43c7be6e6b5304e46211",
+          "kind": "filter",
+          "subject_ids": [
+            "cmpd_304"
+          ],
+          "budget_reserved": 1.0,
+          "reason": "fixed_cascade_next_missing_step",
+          "result_observation_ids": [
+            "obs_mf_chem_304"
+          ]
+        },
+        {
+          "action_id": "act_8663fd0dde0148b3ac747ec3850862f8",
+          "kind": "filter",
+          "subject_ids": [
+            "cmpd_305"
+          ],
+          "budget_reserved": 1.0,
+          "reason": "fixed_cascade_next_missing_step",
+          "result_observation_ids": [
+            "obs_mf_chem_305"
+          ]
+        },
+        {
+          "action_id": "act_8d7632f1c864468f9e0ef702782afc08",
+          "kind": "predict_admet",
+          "subject_ids": [
+            "cmpd_301"
+          ],
+          "budget_reserved": 2.0,
+          "reason": "fixed_cascade_next_missing_step",
+          "result_observation_ids": [
+            "obs_mf_admet_301"
+          ]
+        },
+        {
+          "action_id": "act_7f3f63c96ead439d87891140877cbffe",
+          "kind": "predict_admet",
+          "subject_ids": [
+            "cmpd_302"
+          ],
+          "budget_reserved": 2.0,
+          "reason": "fixed_cascade_next_missing_step",
+          "result_observation_ids": [
+            "obs_mf_admet_302"
+          ]
+        },
+        {
+          "action_id": "act_8abd42d01aa942c0be8f2e9fb4507e12",
+          "kind": "predict_admet",
+          "subject_ids": [
+            "cmpd_303"
+          ],
+          "budget_reserved": 2.0,
+          "reason": "fixed_cascade_next_missing_step",
+          "result_observation_ids": [
+            "obs_mf_admet_303"
+          ]
+        },
+        {
+          "action_id": "act_c2397250f59148b28eb943224ce594b4",
+          "kind": "predict_admet",
+          "subject_ids": [
+            "cmpd_304"
+          ],
+          "budget_reserved": 2.0,
+          "reason": "fixed_cascade_next_missing_step",
+          "result_observation_ids": [
+            "obs_mf_admet_304"
+          ]
+        },
+        {
+          "action_id": "act_7112d883e96a49e6a6549bce04e4f1a9",
+          "kind": "predict_admet",
+          "subject_ids": [
+            "cmpd_305"
+          ],
+          "budget_reserved": 2.0,
+          "reason": "fixed_cascade_next_missing_step",
+          "result_observation_ids": [
+            "obs_mf_admet_305"
+          ]
+        },
+        {
+          "action_id": "act_f546df048ea34363b94f177a1aa9236e",
+          "kind": "dock",
+          "subject_ids": [
+            "cmpd_301"
+          ],
+          "budget_reserved": 5.0,
+          "reason": "fixed_cascade_next_missing_step",
+          "result_observation_ids": [
+            "obs_mf_dock_301"
+          ]
+        },
+        {
+          "action_id": "act_a910893772134c19b52d5e9fccec8146",
+          "kind": "dock",
+          "subject_ids": [
+            "cmpd_302"
+          ],
+          "budget_reserved": 5.0,
+          "reason": "fixed_cascade_next_missing_step",
+          "result_observation_ids": [
+            "obs_mf_dock_302"
+          ]
+        },
+        {
+          "action_id": "act_719bb6bfa6fa4c45a87d082d5a17dcda",
+          "kind": "dock",
+          "subject_ids": [
+            "cmpd_303"
+          ],
+          "budget_reserved": 5.0,
+          "reason": "fixed_cascade_next_missing_step",
+          "result_observation_ids": [
+            "obs_mf_dock_303"
+          ]
+        },
+        {
+          "action_id": "act_88edb9911d5a43e8884b0b2d716bd71e",
+          "kind": "dock",
+          "subject_ids": [
+            "cmpd_304"
+          ],
+          "budget_reserved": 5.0,
+          "reason": "fixed_cascade_next_missing_step",
+          "result_observation_ids": [
+            "obs_mf_dock_304"
+          ]
+        },
+        {
+          "action_id": "act_04ae1581ffc149e0aaedc186217b8bdb",
+          "kind": "dock",
+          "subject_ids": [
+            "cmpd_305"
+          ],
+          "budget_reserved": 5.0,
+          "reason": "fixed_cascade_next_missing_step",
+          "result_observation_ids": [
+            "obs_mf_dock_305"
+          ]
+        },
+        {
+          "action_id": "act_0f5257f1a13f4eefb664b8e7342f5ae1",
+          "kind": "rescore",
+          "subject_ids": [
+            "cmpd_301"
+          ],
+          "budget_reserved": 8.0,
+          "reason": "fixed_cascade_next_missing_step",
+          "result_observation_ids": [
+            "obs_mf_rescore_301"
+          ]
+        },
+        {
+          "action_id": "act_f35c5eac42134ae5994a3139fa71d76a",
+          "kind": "rescore",
+          "subject_ids": [
+            "cmpd_302"
+          ],
+          "budget_reserved": 8.0,
+          "reason": "fixed_cascade_next_missing_step",
+          "result_observation_ids": [
+            "obs_mf_rescore_302"
+          ]
+        }
+      ],
+      "missing_observations": [
+        {
+          "action_id": "act_807fb0b605f14d3baae24ed919e06883",
+          "subject_id": "cmpd_303",
+          "action_kind": "rescore",
+          "oracle_name": null,
+          "reason": "budget_limit_exceeded"
+        },
+        {
+          "action_id": "act_50cd294638884e1eb701160c6c9dce50",
+          "subject_id": "cmpd_304",
+          "action_kind": "rescore",
+          "oracle_name": null,
+          "reason": "budget_limit_exceeded"
+        },
+        {
+          "action_id": "act_6e6fffcc7dd04fe5b6412b81ecc05ca1",
+          "subject_id": "cmpd_305",
+          "action_kind": "rescore",
+          "oracle_name": null,
+          "reason": "budget_limit_exceeded"
+        },
+        {
+          "action_id": "act_7f79852da9c64197a567b7281d724a03",
+          "subject_id": "cmpd_303",
+          "action_kind": "rescore",
+          "oracle_name": null,
+          "reason": "budget_limit_exceeded"
+        },
+        {
+          "action_id": "act_f9fffdf66a874780be3a29793bb968a1",
+          "subject_id": "cmpd_304",
+          "action_kind": "rescore",
+          "oracle_name": null,
+          "reason": "budget_limit_exceeded"
+        },
+        {
+          "action_id": "act_9a5ae27e84074dd0b2944b5665324d4f",
+          "subject_id": "cmpd_305",
+          "action_kind": "rescore",
+          "oracle_name": null,
+          "reason": "budget_limit_exceeded"
+        }
+      ],
+      "rounds": [
+        {
+          "round_index": 0,
+          "planned_action_count": 5,
+          "applied_observation_count": 5,
+          "missing_observation_count": 0,
+          "skipped_observation_count": 0,
+          "invalid_observation_count": 0,
+          "blocked_action_count": 0,
+          "failed_action_count": 0,
+          "stop_reason": "continued",
+          "actions": [
+            {
+              "action_id": "act_0400e9d0e37043118922cd2353909413",
+              "subject_id": "cmpd_301",
+              "action_kind": "filter",
+              "oracle_name": "basic_chem_filter",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_chem_301",
+              "trust_gate_result_id": "tg_b6fc6ddb1d304c60b98048b8596dbd2b",
+              "trust_gate_decision": "qualified",
+              "evidence_tier": "l0_chem_valid"
+            },
+            {
+              "action_id": "act_99936c4c7b0b41df9239bf70277aab79",
+              "subject_id": "cmpd_302",
+              "action_kind": "filter",
+              "oracle_name": "basic_chem_filter",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_chem_302",
+              "trust_gate_result_id": "tg_ad89cd03804d484a89d6be35f46e777d",
+              "trust_gate_decision": "qualified",
+              "evidence_tier": "l0_chem_valid"
+            },
+            {
+              "action_id": "act_dc36f28643d84214bf277d32d210e195",
+              "subject_id": "cmpd_303",
+              "action_kind": "filter",
+              "oracle_name": "basic_chem_filter",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_chem_303",
+              "trust_gate_result_id": "tg_9b67160dfdc84bc29ee8ea85e59241e7",
+              "trust_gate_decision": "qualified",
+              "evidence_tier": "l0_chem_valid"
+            },
+            {
+              "action_id": "act_47a2bdb9398c43c7be6e6b5304e46211",
+              "subject_id": "cmpd_304",
+              "action_kind": "filter",
+              "oracle_name": "basic_chem_filter",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_chem_304",
+              "trust_gate_result_id": "tg_f9df5340fd96494eaaa3ff2d577d3609",
+              "trust_gate_decision": "qualified",
+              "evidence_tier": "l0_chem_valid"
+            },
+            {
+              "action_id": "act_8663fd0dde0148b3ac747ec3850862f8",
+              "subject_id": "cmpd_305",
+              "action_kind": "filter",
+              "oracle_name": "basic_chem_filter",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_chem_305",
+              "trust_gate_result_id": "tg_5958b7a357244ba78ef2793f9c9e1fe0",
+              "trust_gate_decision": "qualified",
+              "evidence_tier": "l0_chem_valid"
+            }
+          ]
+        },
+        {
+          "round_index": 1,
+          "planned_action_count": 5,
+          "applied_observation_count": 5,
+          "missing_observation_count": 0,
+          "skipped_observation_count": 0,
+          "invalid_observation_count": 0,
+          "blocked_action_count": 0,
+          "failed_action_count": 0,
+          "stop_reason": "continued",
+          "actions": [
+            {
+              "action_id": "act_8d7632f1c864468f9e0ef702782afc08",
+              "subject_id": "cmpd_301",
+              "action_kind": "predict_admet",
+              "oracle_name": "table_admet",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_admet_301",
+              "trust_gate_result_id": "tg_50f9b3e1c88644f987407835c92fa5ec",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l2_admet_proxy"
+            },
+            {
+              "action_id": "act_7f3f63c96ead439d87891140877cbffe",
+              "subject_id": "cmpd_302",
+              "action_kind": "predict_admet",
+              "oracle_name": "table_admet",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_admet_302",
+              "trust_gate_result_id": "tg_9a9caca748bd4e19868ac4356cb4e75b",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l2_admet_proxy"
+            },
+            {
+              "action_id": "act_8abd42d01aa942c0be8f2e9fb4507e12",
+              "subject_id": "cmpd_303",
+              "action_kind": "predict_admet",
+              "oracle_name": "table_admet",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_admet_303",
+              "trust_gate_result_id": "tg_6d8c37c064cc41b5af13c6ec09b60088",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l2_admet_proxy"
+            },
+            {
+              "action_id": "act_c2397250f59148b28eb943224ce594b4",
+              "subject_id": "cmpd_304",
+              "action_kind": "predict_admet",
+              "oracle_name": "table_admet",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_admet_304",
+              "trust_gate_result_id": "tg_17e27280a22c443a882d81b601b0d161",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l2_admet_proxy"
+            },
+            {
+              "action_id": "act_7112d883e96a49e6a6549bce04e4f1a9",
+              "subject_id": "cmpd_305",
+              "action_kind": "predict_admet",
+              "oracle_name": "table_admet",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_admet_305",
+              "trust_gate_result_id": "tg_bf99a65b25d948d4bec075672b4c7ec7",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l2_admet_proxy"
+            }
+          ]
+        },
+        {
+          "round_index": 2,
+          "planned_action_count": 5,
+          "applied_observation_count": 5,
+          "missing_observation_count": 0,
+          "skipped_observation_count": 0,
+          "invalid_observation_count": 0,
+          "blocked_action_count": 0,
+          "failed_action_count": 0,
+          "stop_reason": "continued",
+          "actions": [
+            {
+              "action_id": "act_f546df048ea34363b94f177a1aa9236e",
+              "subject_id": "cmpd_301",
+              "action_kind": "dock",
+              "oracle_name": "table_docking",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_dock_301",
+              "trust_gate_result_id": "tg_5a7e5e8d9c1b484b9bd1903e3ebbeefc",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l3_binding_proxy"
+            },
+            {
+              "action_id": "act_a910893772134c19b52d5e9fccec8146",
+              "subject_id": "cmpd_302",
+              "action_kind": "dock",
+              "oracle_name": "table_docking",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_dock_302",
+              "trust_gate_result_id": "tg_d398b8ef32e14cd3a4a5f4527fcba269",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l3_binding_proxy"
+            },
+            {
+              "action_id": "act_719bb6bfa6fa4c45a87d082d5a17dcda",
+              "subject_id": "cmpd_303",
+              "action_kind": "dock",
+              "oracle_name": "table_docking",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_dock_303",
+              "trust_gate_result_id": "tg_c956f73d746a4e34898eaabd819d65e7",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l3_binding_proxy"
+            },
+            {
+              "action_id": "act_88edb9911d5a43e8884b0b2d716bd71e",
+              "subject_id": "cmpd_304",
+              "action_kind": "dock",
+              "oracle_name": "table_docking",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_dock_304",
+              "trust_gate_result_id": "tg_142b5e4b01674234b8456f27e17d0942",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l3_binding_proxy"
+            },
+            {
+              "action_id": "act_04ae1581ffc149e0aaedc186217b8bdb",
+              "subject_id": "cmpd_305",
+              "action_kind": "dock",
+              "oracle_name": "table_docking",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_dock_305",
+              "trust_gate_result_id": "tg_d90009a2b0984737b5ee6fac07abe831",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l3_binding_proxy"
+            }
+          ]
+        },
+        {
+          "round_index": 3,
+          "planned_action_count": 5,
+          "applied_observation_count": 2,
+          "missing_observation_count": 3,
+          "skipped_observation_count": 0,
+          "invalid_observation_count": 0,
+          "blocked_action_count": 0,
+          "failed_action_count": 0,
+          "stop_reason": "continued",
+          "actions": [
+            {
+              "action_id": "act_0f5257f1a13f4eefb664b8e7342f5ae1",
+              "subject_id": "cmpd_301",
+              "action_kind": "rescore",
+              "oracle_name": "table_rescoring",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_rescore_301",
+              "trust_gate_result_id": "tg_a328620a24a1409a9b2b338c0bf25ebf",
+              "trust_gate_decision": "rejected",
+              "evidence_tier": "l4_higher_fidelity"
+            },
+            {
+              "action_id": "act_f35c5eac42134ae5994a3139fa71d76a",
+              "subject_id": "cmpd_302",
+              "action_kind": "rescore",
+              "oracle_name": "table_rescoring",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_rescore_302",
+              "trust_gate_result_id": "tg_719811ddb3bb49b0b091a1ca9db1007e",
+              "trust_gate_decision": "rejected",
+              "evidence_tier": "l4_higher_fidelity"
+            },
+            {
+              "action_id": "act_807fb0b605f14d3baae24ed919e06883",
+              "subject_id": "cmpd_303",
+              "action_kind": "rescore",
+              "oracle_name": null,
+              "status": "missing",
+              "reason": "budget_limit_exceeded",
+              "observation_id": null,
+              "trust_gate_result_id": null,
+              "trust_gate_decision": null,
+              "evidence_tier": null
+            },
+            {
+              "action_id": "act_50cd294638884e1eb701160c6c9dce50",
+              "subject_id": "cmpd_304",
+              "action_kind": "rescore",
+              "oracle_name": null,
+              "status": "missing",
+              "reason": "budget_limit_exceeded",
+              "observation_id": null,
+              "trust_gate_result_id": null,
+              "trust_gate_decision": null,
+              "evidence_tier": null
+            },
+            {
+              "action_id": "act_6e6fffcc7dd04fe5b6412b81ecc05ca1",
+              "subject_id": "cmpd_305",
+              "action_kind": "rescore",
+              "oracle_name": null,
+              "status": "missing",
+              "reason": "budget_limit_exceeded",
+              "observation_id": null,
+              "trust_gate_result_id": null,
+              "trust_gate_decision": null,
+              "evidence_tier": null
+            }
+          ]
+        },
+        {
+          "round_index": 4,
+          "planned_action_count": 3,
+          "applied_observation_count": 0,
+          "missing_observation_count": 3,
+          "skipped_observation_count": 0,
+          "invalid_observation_count": 0,
+          "blocked_action_count": 0,
+          "failed_action_count": 0,
+          "stop_reason": "no_progress",
+          "actions": [
+            {
+              "action_id": "act_7f79852da9c64197a567b7281d724a03",
+              "subject_id": "cmpd_303",
+              "action_kind": "rescore",
+              "oracle_name": null,
+              "status": "missing",
+              "reason": "budget_limit_exceeded",
+              "observation_id": null,
+              "trust_gate_result_id": null,
+              "trust_gate_decision": null,
+              "evidence_tier": null
+            },
+            {
+              "action_id": "act_f9fffdf66a874780be3a29793bb968a1",
+              "subject_id": "cmpd_304",
+              "action_kind": "rescore",
+              "oracle_name": null,
+              "status": "missing",
+              "reason": "budget_limit_exceeded",
+              "observation_id": null,
+              "trust_gate_result_id": null,
+              "trust_gate_decision": null,
+              "evidence_tier": null
+            },
+            {
+              "action_id": "act_9a5ae27e84074dd0b2944b5665324d4f",
+              "subject_id": "cmpd_305",
+              "action_kind": "rescore",
+              "oracle_name": null,
+              "status": "missing",
+              "reason": "budget_limit_exceeded",
+              "observation_id": null,
+              "trust_gate_result_id": null,
+              "trust_gate_decision": null,
+              "evidence_tier": null
+            }
+          ]
+        }
+      ],
+      "input": {
+        "candidate_csv": "E:\\11\\drug-loop-harness\\examples\\data\\multi_fidelity_promotion_candidates.csv",
+        "observation_cache_csv": "E:\\11\\drug-loop-harness\\examples\\data\\multi_fidelity_promotion_observations.csv",
+        "tool": "E:\\11\\drug-loop-harness\\examples\\tools\\emit_cached_observation.py",
+        "policy": "fixed_cascade",
+        "budget_limit": 56.0,
+        "max_rounds": 7,
+        "tool_timeout": 5.0,
+        "guard_enforced": true
+      }
+    },
+    {
+      "policy_name": "staged_trust_aware",
+      "stop_reason": "no_progress",
+      "metrics": {
+        "compound_count": 5,
+        "credible_hit_count": 3,
+        "experiment_ready_count": 0,
+        "human_signed_count": 0,
+        "credible_hit_rate": 0.6,
+        "experiment_ready_rate": 0.0,
+        "claim_upgrade_rate": 0.0,
+        "qualified_count": 5,
+        "rejected_count": 2,
+        "conflicted_count": 0,
+        "abstain_count": 0,
+        "needs_promotion_count": 10,
+        "needs_human_count": 0,
+        "planned_action_count": 17,
+        "planned_action_cost": 56.0,
+        "planned_high_fidelity_count": 2,
+        "planned_human_count": 0,
+        "trust_gap_reversal_rate": 1.0,
+        "trust_gap_waste_rate": 1.0,
+        "high_fidelity_scaffold_count": 1,
+        "repeated_scaffold_high_fidelity_count": 1,
+        "repeated_scaffold_high_fidelity_rate": 0.5,
+        "scaffold_repeat_waste_count": 1,
+        "scaffold_repeat_waste_rate": 0.5,
+        "rescued_scaffold_count": 0,
+        "rescued_scaffold_rate": 0.0
+      },
+      "action_count": 17,
+      "applied_observation_count": 17,
+      "missing_observation_count": 1,
+      "skipped_observation_count": 0,
+      "invalid_observation_count": 0,
+      "blocked_action_count": 0,
+      "failed_action_count": 0,
+      "actions": [
+        {
+          "action_id": "act_47e26fc965e6440987163e4bea0bff6d",
+          "kind": "filter",
+          "subject_ids": [
+            "cmpd_301"
+          ],
+          "budget_reserved": 1.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_chem_301"
+          ]
+        },
+        {
+          "action_id": "act_5203e9b7e15d492a922e8bf67602126f",
+          "kind": "filter",
+          "subject_ids": [
+            "cmpd_302"
+          ],
+          "budget_reserved": 1.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_chem_302"
+          ]
+        },
+        {
+          "action_id": "act_6a00d9b119dc4617b0391fd79e1ab3dd",
+          "kind": "filter",
+          "subject_ids": [
+            "cmpd_303"
+          ],
+          "budget_reserved": 1.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_chem_303"
+          ]
+        },
+        {
+          "action_id": "act_39fa7cc762154c0d87a8117100e0b7ee",
+          "kind": "filter",
+          "subject_ids": [
+            "cmpd_304"
+          ],
+          "budget_reserved": 1.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_chem_304"
+          ]
+        },
+        {
+          "action_id": "act_a65c7747c34346a786fba2802448bdc0",
+          "kind": "filter",
+          "subject_ids": [
+            "cmpd_305"
+          ],
+          "budget_reserved": 1.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_chem_305"
+          ]
+        },
+        {
+          "action_id": "act_73095d8d2a624804b1bfe0ed85338d25",
+          "kind": "predict_admet",
+          "subject_ids": [
+            "cmpd_301"
+          ],
+          "budget_reserved": 2.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_admet_301"
+          ]
+        },
+        {
+          "action_id": "act_7df46d8c4b6c44828afba697920c0780",
+          "kind": "predict_admet",
+          "subject_ids": [
+            "cmpd_302"
+          ],
+          "budget_reserved": 2.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_admet_302"
+          ]
+        },
+        {
+          "action_id": "act_f655d87ebf2e47bc94408cee51f73d65",
+          "kind": "predict_admet",
+          "subject_ids": [
+            "cmpd_303"
+          ],
+          "budget_reserved": 2.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_admet_303"
+          ]
+        },
+        {
+          "action_id": "act_e47b4fa6f550440199997d7c534bf6fa",
+          "kind": "predict_admet",
+          "subject_ids": [
+            "cmpd_304"
+          ],
+          "budget_reserved": 2.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_admet_304"
+          ]
+        },
+        {
+          "action_id": "act_78777c02da9b42909be5ef5930abc588",
+          "kind": "predict_admet",
+          "subject_ids": [
+            "cmpd_305"
+          ],
+          "budget_reserved": 2.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_admet_305"
+          ]
+        },
+        {
+          "action_id": "act_d7e66533014f4e6994eb27f152b89151",
+          "kind": "dock",
+          "subject_ids": [
+            "cmpd_301"
+          ],
+          "budget_reserved": 5.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_dock_301"
+          ]
+        },
+        {
+          "action_id": "act_439a4cb73c964a11a6f5224fdd6de556",
+          "kind": "dock",
+          "subject_ids": [
+            "cmpd_302"
+          ],
+          "budget_reserved": 5.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_dock_302"
+          ]
+        },
+        {
+          "action_id": "act_b8ce677531f74ac09ba419d841a4a97c",
+          "kind": "dock",
+          "subject_ids": [
+            "cmpd_303"
+          ],
+          "budget_reserved": 5.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_dock_303"
+          ]
+        },
+        {
+          "action_id": "act_c02204be21c24dd2b08b043984881b87",
+          "kind": "dock",
+          "subject_ids": [
+            "cmpd_304"
+          ],
+          "budget_reserved": 5.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_dock_304"
+          ]
+        },
+        {
+          "action_id": "act_553a21af1df34cbfa855a5051191781b",
+          "kind": "dock",
+          "subject_ids": [
+            "cmpd_305"
+          ],
+          "budget_reserved": 5.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_dock_305"
+          ]
+        },
+        {
+          "action_id": "act_757394b9dd1e4a609d2d18d8bf65c3b4",
+          "kind": "rescore",
+          "subject_ids": [
+            "cmpd_301"
+          ],
+          "budget_reserved": 8.0,
+          "reason": "proxy_evidence_needs_stronger_oracle; stage=promotion",
+          "result_observation_ids": [
+            "obs_mf_rescore_301"
+          ]
+        },
+        {
+          "action_id": "act_36a29c3301b54ca2ae12c3e66335aaed",
+          "kind": "rescore",
+          "subject_ids": [
+            "cmpd_302"
+          ],
+          "budget_reserved": 8.0,
+          "reason": "proxy_evidence_needs_stronger_oracle; stage=promotion",
+          "result_observation_ids": [
+            "obs_mf_rescore_302"
+          ]
+        }
+      ],
+      "missing_observations": [
+        {
+          "action_id": "act_206dc4a3e338478eacc812542d2b223e",
+          "subject_id": "cmpd_303",
+          "action_kind": "rescore",
+          "oracle_name": null,
+          "reason": "budget_limit_exceeded"
+        }
+      ],
+      "rounds": [
+        {
+          "round_index": 0,
+          "planned_action_count": 5,
+          "applied_observation_count": 5,
+          "missing_observation_count": 0,
+          "skipped_observation_count": 0,
+          "invalid_observation_count": 0,
+          "blocked_action_count": 0,
+          "failed_action_count": 0,
+          "stop_reason": "continued",
+          "actions": [
+            {
+              "action_id": "act_47e26fc965e6440987163e4bea0bff6d",
+              "subject_id": "cmpd_301",
+              "action_kind": "filter",
+              "oracle_name": "basic_chem_filter",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_chem_301",
+              "trust_gate_result_id": "tg_1068f2b0ebc54e81abe510480480fb28",
+              "trust_gate_decision": "qualified",
+              "evidence_tier": "l0_chem_valid"
+            },
+            {
+              "action_id": "act_5203e9b7e15d492a922e8bf67602126f",
+              "subject_id": "cmpd_302",
+              "action_kind": "filter",
+              "oracle_name": "basic_chem_filter",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_chem_302",
+              "trust_gate_result_id": "tg_0c7926df249f491595aea8d46750bbc6",
+              "trust_gate_decision": "qualified",
+              "evidence_tier": "l0_chem_valid"
+            },
+            {
+              "action_id": "act_6a00d9b119dc4617b0391fd79e1ab3dd",
+              "subject_id": "cmpd_303",
+              "action_kind": "filter",
+              "oracle_name": "basic_chem_filter",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_chem_303",
+              "trust_gate_result_id": "tg_a46f7e962df147b0aee933c762234ab3",
+              "trust_gate_decision": "qualified",
+              "evidence_tier": "l0_chem_valid"
+            },
+            {
+              "action_id": "act_39fa7cc762154c0d87a8117100e0b7ee",
+              "subject_id": "cmpd_304",
+              "action_kind": "filter",
+              "oracle_name": "basic_chem_filter",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_chem_304",
+              "trust_gate_result_id": "tg_494c4e172e294c339c01e2a3b408baf8",
+              "trust_gate_decision": "qualified",
+              "evidence_tier": "l0_chem_valid"
+            },
+            {
+              "action_id": "act_a65c7747c34346a786fba2802448bdc0",
+              "subject_id": "cmpd_305",
+              "action_kind": "filter",
+              "oracle_name": "basic_chem_filter",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_chem_305",
+              "trust_gate_result_id": "tg_e4d9ed7ce81f4bd1afa9bb9ede00628b",
+              "trust_gate_decision": "qualified",
+              "evidence_tier": "l0_chem_valid"
+            }
+          ]
+        },
+        {
+          "round_index": 1,
+          "planned_action_count": 5,
+          "applied_observation_count": 5,
+          "missing_observation_count": 0,
+          "skipped_observation_count": 0,
+          "invalid_observation_count": 0,
+          "blocked_action_count": 0,
+          "failed_action_count": 0,
+          "stop_reason": "continued",
+          "actions": [
+            {
+              "action_id": "act_73095d8d2a624804b1bfe0ed85338d25",
+              "subject_id": "cmpd_301",
+              "action_kind": "predict_admet",
+              "oracle_name": "table_admet",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_admet_301",
+              "trust_gate_result_id": "tg_a12412f229a84710937075edf7d00b23",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l2_admet_proxy"
+            },
+            {
+              "action_id": "act_7df46d8c4b6c44828afba697920c0780",
+              "subject_id": "cmpd_302",
+              "action_kind": "predict_admet",
+              "oracle_name": "table_admet",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_admet_302",
+              "trust_gate_result_id": "tg_dea7dea5d0cc4eaeba18d28fae5cc307",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l2_admet_proxy"
+            },
+            {
+              "action_id": "act_f655d87ebf2e47bc94408cee51f73d65",
+              "subject_id": "cmpd_303",
+              "action_kind": "predict_admet",
+              "oracle_name": "table_admet",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_admet_303",
+              "trust_gate_result_id": "tg_9716002a9570438baf0deb78e70847be",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l2_admet_proxy"
+            },
+            {
+              "action_id": "act_e47b4fa6f550440199997d7c534bf6fa",
+              "subject_id": "cmpd_304",
+              "action_kind": "predict_admet",
+              "oracle_name": "table_admet",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_admet_304",
+              "trust_gate_result_id": "tg_54f0ddba2b8d4d11b229100848206704",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l2_admet_proxy"
+            },
+            {
+              "action_id": "act_78777c02da9b42909be5ef5930abc588",
+              "subject_id": "cmpd_305",
+              "action_kind": "predict_admet",
+              "oracle_name": "table_admet",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_admet_305",
+              "trust_gate_result_id": "tg_6259bbf18a7442fe9a5658c0a7206f26",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l2_admet_proxy"
+            }
+          ]
+        },
+        {
+          "round_index": 2,
+          "planned_action_count": 5,
+          "applied_observation_count": 5,
+          "missing_observation_count": 0,
+          "skipped_observation_count": 0,
+          "invalid_observation_count": 0,
+          "blocked_action_count": 0,
+          "failed_action_count": 0,
+          "stop_reason": "continued",
+          "actions": [
+            {
+              "action_id": "act_d7e66533014f4e6994eb27f152b89151",
+              "subject_id": "cmpd_301",
+              "action_kind": "dock",
+              "oracle_name": "table_docking",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_dock_301",
+              "trust_gate_result_id": "tg_8e86e75fd3a14d6eb73ad594b30c8543",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l3_binding_proxy"
+            },
+            {
+              "action_id": "act_439a4cb73c964a11a6f5224fdd6de556",
+              "subject_id": "cmpd_302",
+              "action_kind": "dock",
+              "oracle_name": "table_docking",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_dock_302",
+              "trust_gate_result_id": "tg_4c7fa03679bb49fbb6de73808fb9011a",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l3_binding_proxy"
+            },
+            {
+              "action_id": "act_b8ce677531f74ac09ba419d841a4a97c",
+              "subject_id": "cmpd_303",
+              "action_kind": "dock",
+              "oracle_name": "table_docking",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_dock_303",
+              "trust_gate_result_id": "tg_c1835b5ac67243ab87dfdf6b36a31a72",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l3_binding_proxy"
+            },
+            {
+              "action_id": "act_c02204be21c24dd2b08b043984881b87",
+              "subject_id": "cmpd_304",
+              "action_kind": "dock",
+              "oracle_name": "table_docking",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_dock_304",
+              "trust_gate_result_id": "tg_22d7be17d3b34e969d91626c8b3b1956",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l3_binding_proxy"
+            },
+            {
+              "action_id": "act_553a21af1df34cbfa855a5051191781b",
+              "subject_id": "cmpd_305",
+              "action_kind": "dock",
+              "oracle_name": "table_docking",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_dock_305",
+              "trust_gate_result_id": "tg_1373c8f651b74ab1bd73454e9a13c7c7",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l3_binding_proxy"
+            }
+          ]
+        },
+        {
+          "round_index": 3,
+          "planned_action_count": 1,
+          "applied_observation_count": 1,
+          "missing_observation_count": 0,
+          "skipped_observation_count": 0,
+          "invalid_observation_count": 0,
+          "blocked_action_count": 0,
+          "failed_action_count": 0,
+          "stop_reason": "continued",
+          "actions": [
+            {
+              "action_id": "act_757394b9dd1e4a609d2d18d8bf65c3b4",
+              "subject_id": "cmpd_301",
+              "action_kind": "rescore",
+              "oracle_name": "table_rescoring",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_rescore_301",
+              "trust_gate_result_id": "tg_3a74a75be0ac4587892286e24b2d6619",
+              "trust_gate_decision": "rejected",
+              "evidence_tier": "l4_higher_fidelity"
+            }
+          ]
+        },
+        {
+          "round_index": 4,
+          "planned_action_count": 1,
+          "applied_observation_count": 1,
+          "missing_observation_count": 0,
+          "skipped_observation_count": 0,
+          "invalid_observation_count": 0,
+          "blocked_action_count": 0,
+          "failed_action_count": 0,
+          "stop_reason": "continued",
+          "actions": [
+            {
+              "action_id": "act_36a29c3301b54ca2ae12c3e66335aaed",
+              "subject_id": "cmpd_302",
+              "action_kind": "rescore",
+              "oracle_name": "table_rescoring",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_rescore_302",
+              "trust_gate_result_id": "tg_18e2cd003cd04dc88fdff06bae6baac3",
+              "trust_gate_decision": "rejected",
+              "evidence_tier": "l4_higher_fidelity"
+            }
+          ]
+        },
+        {
+          "round_index": 5,
+          "planned_action_count": 1,
+          "applied_observation_count": 0,
+          "missing_observation_count": 1,
+          "skipped_observation_count": 0,
+          "invalid_observation_count": 0,
+          "blocked_action_count": 0,
+          "failed_action_count": 0,
+          "stop_reason": "no_progress",
+          "actions": [
+            {
+              "action_id": "act_206dc4a3e338478eacc812542d2b223e",
+              "subject_id": "cmpd_303",
+              "action_kind": "rescore",
+              "oracle_name": null,
+              "status": "missing",
+              "reason": "budget_limit_exceeded",
+              "observation_id": null,
+              "trust_gate_result_id": null,
+              "trust_gate_decision": null,
+              "evidence_tier": null
+            }
+          ]
+        }
+      ],
+      "input": {
+        "candidate_csv": "E:\\11\\drug-loop-harness\\examples\\data\\multi_fidelity_promotion_candidates.csv",
+        "observation_cache_csv": "E:\\11\\drug-loop-harness\\examples\\data\\multi_fidelity_promotion_observations.csv",
+        "tool": "E:\\11\\drug-loop-harness\\examples\\tools\\emit_cached_observation.py",
+        "policy": "staged_trust_aware",
+        "budget_limit": 56.0,
+        "max_rounds": 7,
+        "tool_timeout": 5.0,
+        "guard_enforced": true
+      }
+    },
+    {
+      "policy_name": "staged_trust_gap_aware",
+      "stop_reason": "no_progress",
+      "metrics": {
+        "compound_count": 5,
+        "credible_hit_count": 3,
+        "experiment_ready_count": 0,
+        "human_signed_count": 0,
+        "credible_hit_rate": 0.6,
+        "experiment_ready_rate": 0.0,
+        "claim_upgrade_rate": 0.0,
+        "qualified_count": 6,
+        "rejected_count": 1,
+        "conflicted_count": 0,
+        "abstain_count": 0,
+        "needs_promotion_count": 10,
+        "needs_human_count": 0,
+        "planned_action_count": 17,
+        "planned_action_cost": 56.0,
+        "planned_high_fidelity_count": 2,
+        "planned_human_count": 0,
+        "trust_gap_reversal_rate": 0.5,
+        "trust_gap_waste_rate": 0.5,
+        "high_fidelity_scaffold_count": 2,
+        "repeated_scaffold_high_fidelity_count": 0,
+        "repeated_scaffold_high_fidelity_rate": 0.0,
+        "scaffold_repeat_waste_count": 0,
+        "scaffold_repeat_waste_rate": 0.0,
+        "rescued_scaffold_count": 1,
+        "rescued_scaffold_rate": 0.5
+      },
+      "action_count": 17,
+      "applied_observation_count": 17,
+      "missing_observation_count": 1,
+      "skipped_observation_count": 0,
+      "invalid_observation_count": 0,
+      "blocked_action_count": 0,
+      "failed_action_count": 0,
+      "actions": [
+        {
+          "action_id": "act_2c0b9bbc46b04ad1a411ed256089b09c",
+          "kind": "filter",
+          "subject_ids": [
+            "cmpd_301"
+          ],
+          "budget_reserved": 1.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_chem_301"
+          ]
+        },
+        {
+          "action_id": "act_29748cb1844948e88d559d59cdd4c032",
+          "kind": "filter",
+          "subject_ids": [
+            "cmpd_302"
+          ],
+          "budget_reserved": 1.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_chem_302"
+          ]
+        },
+        {
+          "action_id": "act_40ad68003ab845a197fd57bdf918b75c",
+          "kind": "filter",
+          "subject_ids": [
+            "cmpd_303"
+          ],
+          "budget_reserved": 1.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_chem_303"
+          ]
+        },
+        {
+          "action_id": "act_3f08b36c1cbd41eba5797d772c2a8025",
+          "kind": "filter",
+          "subject_ids": [
+            "cmpd_304"
+          ],
+          "budget_reserved": 1.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_chem_304"
+          ]
+        },
+        {
+          "action_id": "act_182fefd29926492cadcd0942a19d32bc",
+          "kind": "filter",
+          "subject_ids": [
+            "cmpd_305"
+          ],
+          "budget_reserved": 1.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_chem_305"
+          ]
+        },
+        {
+          "action_id": "act_ac73bdab7230441a973110270ab8dd2b",
+          "kind": "predict_admet",
+          "subject_ids": [
+            "cmpd_301"
+          ],
+          "budget_reserved": 2.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_admet_301"
+          ]
+        },
+        {
+          "action_id": "act_377a8fe416b441628875ad16b63b751c",
+          "kind": "predict_admet",
+          "subject_ids": [
+            "cmpd_302"
+          ],
+          "budget_reserved": 2.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_admet_302"
+          ]
+        },
+        {
+          "action_id": "act_a4deb9307e6741a9a5c2e0483b97fccb",
+          "kind": "predict_admet",
+          "subject_ids": [
+            "cmpd_303"
+          ],
+          "budget_reserved": 2.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_admet_303"
+          ]
+        },
+        {
+          "action_id": "act_53327c5e87a54484b245e59323c206c1",
+          "kind": "predict_admet",
+          "subject_ids": [
+            "cmpd_304"
+          ],
+          "budget_reserved": 2.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_admet_304"
+          ]
+        },
+        {
+          "action_id": "act_fc78002d9929452583d8350a205644ce",
+          "kind": "predict_admet",
+          "subject_ids": [
+            "cmpd_305"
+          ],
+          "budget_reserved": 2.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_admet_305"
+          ]
+        },
+        {
+          "action_id": "act_1240437647ea47b0b8d29a1d28eec7cf",
+          "kind": "dock",
+          "subject_ids": [
+            "cmpd_301"
+          ],
+          "budget_reserved": 5.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_dock_301"
+          ]
+        },
+        {
+          "action_id": "act_105efc98b1d74cf29424ceaacc77c509",
+          "kind": "dock",
+          "subject_ids": [
+            "cmpd_302"
+          ],
+          "budget_reserved": 5.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_dock_302"
+          ]
+        },
+        {
+          "action_id": "act_8353e11752ef47ab82e1ca90386ab5c3",
+          "kind": "dock",
+          "subject_ids": [
+            "cmpd_303"
+          ],
+          "budget_reserved": 5.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_dock_303"
+          ]
+        },
+        {
+          "action_id": "act_88d21ccc06834d9ab1a350e849c4655c",
+          "kind": "dock",
+          "subject_ids": [
+            "cmpd_304"
+          ],
+          "budget_reserved": 5.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_dock_304"
+          ]
+        },
+        {
+          "action_id": "act_5f357196b6c34d4f903baee069d1b2fd",
+          "kind": "dock",
+          "subject_ids": [
+            "cmpd_305"
+          ],
+          "budget_reserved": 5.0,
+          "reason": "fixed_cascade_next_missing_step; stage=bootstrap",
+          "result_observation_ids": [
+            "obs_mf_dock_305"
+          ]
+        },
+        {
+          "action_id": "act_0d739293351842b88dde1d2da2e42084",
+          "kind": "rescore",
+          "subject_ids": [
+            "cmpd_301"
+          ],
+          "budget_reserved": 8.0,
+          "reason": "proxy_evidence_needs_stronger_oracle; trust_gap=no_history; stage=promotion",
+          "result_observation_ids": [
+            "obs_mf_rescore_301"
+          ]
+        },
+        {
+          "action_id": "act_382db5c71fa94f5893e363c3ec24720f",
+          "kind": "rescore",
+          "subject_ids": [
+            "cmpd_303"
+          ],
+          "budget_reserved": 8.0,
+          "reason": "proxy_evidence_needs_stronger_oracle; trust_gap=no_history; stage=promotion",
+          "result_observation_ids": [
+            "obs_mf_rescore_303"
+          ]
+        }
+      ],
+      "missing_observations": [
+        {
+          "action_id": "act_d6afad43aa7445c7bae1164b06253a80",
+          "subject_id": "cmpd_304",
+          "action_kind": "rescore",
+          "oracle_name": null,
+          "reason": "budget_limit_exceeded"
+        }
+      ],
+      "rounds": [
+        {
+          "round_index": 0,
+          "planned_action_count": 5,
+          "applied_observation_count": 5,
+          "missing_observation_count": 0,
+          "skipped_observation_count": 0,
+          "invalid_observation_count": 0,
+          "blocked_action_count": 0,
+          "failed_action_count": 0,
+          "stop_reason": "continued",
+          "actions": [
+            {
+              "action_id": "act_2c0b9bbc46b04ad1a411ed256089b09c",
+              "subject_id": "cmpd_301",
+              "action_kind": "filter",
+              "oracle_name": "basic_chem_filter",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_chem_301",
+              "trust_gate_result_id": "tg_6181fa81b1be463f93d27a27d9331718",
+              "trust_gate_decision": "qualified",
+              "evidence_tier": "l0_chem_valid"
+            },
+            {
+              "action_id": "act_29748cb1844948e88d559d59cdd4c032",
+              "subject_id": "cmpd_302",
+              "action_kind": "filter",
+              "oracle_name": "basic_chem_filter",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_chem_302",
+              "trust_gate_result_id": "tg_d485579ff71442039a5b16c1fe1a67eb",
+              "trust_gate_decision": "qualified",
+              "evidence_tier": "l0_chem_valid"
+            },
+            {
+              "action_id": "act_40ad68003ab845a197fd57bdf918b75c",
+              "subject_id": "cmpd_303",
+              "action_kind": "filter",
+              "oracle_name": "basic_chem_filter",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_chem_303",
+              "trust_gate_result_id": "tg_b5d3d68f98394b3b86d599ea3dd5cc34",
+              "trust_gate_decision": "qualified",
+              "evidence_tier": "l0_chem_valid"
+            },
+            {
+              "action_id": "act_3f08b36c1cbd41eba5797d772c2a8025",
+              "subject_id": "cmpd_304",
+              "action_kind": "filter",
+              "oracle_name": "basic_chem_filter",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_chem_304",
+              "trust_gate_result_id": "tg_5153dff4bafe477ba6554364de67930e",
+              "trust_gate_decision": "qualified",
+              "evidence_tier": "l0_chem_valid"
+            },
+            {
+              "action_id": "act_182fefd29926492cadcd0942a19d32bc",
+              "subject_id": "cmpd_305",
+              "action_kind": "filter",
+              "oracle_name": "basic_chem_filter",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_chem_305",
+              "trust_gate_result_id": "tg_e38b23fc480842dca34dbf8c5f364efa",
+              "trust_gate_decision": "qualified",
+              "evidence_tier": "l0_chem_valid"
+            }
+          ]
+        },
+        {
+          "round_index": 1,
+          "planned_action_count": 5,
+          "applied_observation_count": 5,
+          "missing_observation_count": 0,
+          "skipped_observation_count": 0,
+          "invalid_observation_count": 0,
+          "blocked_action_count": 0,
+          "failed_action_count": 0,
+          "stop_reason": "continued",
+          "actions": [
+            {
+              "action_id": "act_ac73bdab7230441a973110270ab8dd2b",
+              "subject_id": "cmpd_301",
+              "action_kind": "predict_admet",
+              "oracle_name": "table_admet",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_admet_301",
+              "trust_gate_result_id": "tg_db33235d4a554929a2d80933980e76bb",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l2_admet_proxy"
+            },
+            {
+              "action_id": "act_377a8fe416b441628875ad16b63b751c",
+              "subject_id": "cmpd_302",
+              "action_kind": "predict_admet",
+              "oracle_name": "table_admet",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_admet_302",
+              "trust_gate_result_id": "tg_882d0a1d180142e0b1ed7663ef6cb37e",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l2_admet_proxy"
+            },
+            {
+              "action_id": "act_a4deb9307e6741a9a5c2e0483b97fccb",
+              "subject_id": "cmpd_303",
+              "action_kind": "predict_admet",
+              "oracle_name": "table_admet",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_admet_303",
+              "trust_gate_result_id": "tg_a97dbdb7dad644669bc827550f4ef33b",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l2_admet_proxy"
+            },
+            {
+              "action_id": "act_53327c5e87a54484b245e59323c206c1",
+              "subject_id": "cmpd_304",
+              "action_kind": "predict_admet",
+              "oracle_name": "table_admet",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_admet_304",
+              "trust_gate_result_id": "tg_e1be5948f69247858ba69df7d6886bde",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l2_admet_proxy"
+            },
+            {
+              "action_id": "act_fc78002d9929452583d8350a205644ce",
+              "subject_id": "cmpd_305",
+              "action_kind": "predict_admet",
+              "oracle_name": "table_admet",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_admet_305",
+              "trust_gate_result_id": "tg_84cdc8bc525d412dbdc504cd9a3eb829",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l2_admet_proxy"
+            }
+          ]
+        },
+        {
+          "round_index": 2,
+          "planned_action_count": 5,
+          "applied_observation_count": 5,
+          "missing_observation_count": 0,
+          "skipped_observation_count": 0,
+          "invalid_observation_count": 0,
+          "blocked_action_count": 0,
+          "failed_action_count": 0,
+          "stop_reason": "continued",
+          "actions": [
+            {
+              "action_id": "act_1240437647ea47b0b8d29a1d28eec7cf",
+              "subject_id": "cmpd_301",
+              "action_kind": "dock",
+              "oracle_name": "table_docking",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_dock_301",
+              "trust_gate_result_id": "tg_733fb718153043dfb854856634c59492",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l3_binding_proxy"
+            },
+            {
+              "action_id": "act_105efc98b1d74cf29424ceaacc77c509",
+              "subject_id": "cmpd_302",
+              "action_kind": "dock",
+              "oracle_name": "table_docking",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_dock_302",
+              "trust_gate_result_id": "tg_c80a587f4bbd4f5c943693315ac135e9",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l3_binding_proxy"
+            },
+            {
+              "action_id": "act_8353e11752ef47ab82e1ca90386ab5c3",
+              "subject_id": "cmpd_303",
+              "action_kind": "dock",
+              "oracle_name": "table_docking",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_dock_303",
+              "trust_gate_result_id": "tg_fa690bb1bec3416bbffde338543ef2a0",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l3_binding_proxy"
+            },
+            {
+              "action_id": "act_88d21ccc06834d9ab1a350e849c4655c",
+              "subject_id": "cmpd_304",
+              "action_kind": "dock",
+              "oracle_name": "table_docking",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_dock_304",
+              "trust_gate_result_id": "tg_bacca4ac013e4c7a99e535dbf4677144",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l3_binding_proxy"
+            },
+            {
+              "action_id": "act_5f357196b6c34d4f903baee069d1b2fd",
+              "subject_id": "cmpd_305",
+              "action_kind": "dock",
+              "oracle_name": "table_docking",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_dock_305",
+              "trust_gate_result_id": "tg_b220f53de09b487e9429751146bd34a2",
+              "trust_gate_decision": "needs_promotion",
+              "evidence_tier": "l3_binding_proxy"
+            }
+          ]
+        },
+        {
+          "round_index": 3,
+          "planned_action_count": 1,
+          "applied_observation_count": 1,
+          "missing_observation_count": 0,
+          "skipped_observation_count": 0,
+          "invalid_observation_count": 0,
+          "blocked_action_count": 0,
+          "failed_action_count": 0,
+          "stop_reason": "continued",
+          "actions": [
+            {
+              "action_id": "act_0d739293351842b88dde1d2da2e42084",
+              "subject_id": "cmpd_301",
+              "action_kind": "rescore",
+              "oracle_name": "table_rescoring",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_rescore_301",
+              "trust_gate_result_id": "tg_00d234a9c88346eab1458514ce8d5cb1",
+              "trust_gate_decision": "rejected",
+              "evidence_tier": "l4_higher_fidelity"
+            }
+          ]
+        },
+        {
+          "round_index": 4,
+          "planned_action_count": 1,
+          "applied_observation_count": 1,
+          "missing_observation_count": 0,
+          "skipped_observation_count": 0,
+          "invalid_observation_count": 0,
+          "blocked_action_count": 0,
+          "failed_action_count": 0,
+          "stop_reason": "continued",
+          "actions": [
+            {
+              "action_id": "act_382db5c71fa94f5893e363c3ec24720f",
+              "subject_id": "cmpd_303",
+              "action_kind": "rescore",
+              "oracle_name": "table_rescoring",
+              "status": "applied",
+              "reason": "observation_admitted",
+              "observation_id": "obs_mf_rescore_303",
+              "trust_gate_result_id": "tg_ab4fa7bdcecb4fdc98e17b9b4519d6c2",
+              "trust_gate_decision": "qualified",
+              "evidence_tier": "l4_higher_fidelity"
+            }
+          ]
+        },
+        {
+          "round_index": 5,
+          "planned_action_count": 1,
+          "applied_observation_count": 0,
+          "missing_observation_count": 1,
+          "skipped_observation_count": 0,
+          "invalid_observation_count": 0,
+          "blocked_action_count": 0,
+          "failed_action_count": 0,
+          "stop_reason": "no_progress",
+          "actions": [
+            {
+              "action_id": "act_d6afad43aa7445c7bae1164b06253a80",
+              "subject_id": "cmpd_304",
+              "action_kind": "rescore",
+              "oracle_name": null,
+              "status": "missing",
+              "reason": "budget_limit_exceeded",
+              "observation_id": null,
+              "trust_gate_result_id": null,
+              "trust_gate_decision": null,
+              "evidence_tier": null
+            }
+          ]
+        }
+      ],
+      "input": {
+        "candidate_csv": "E:\\11\\drug-loop-harness\\examples\\data\\multi_fidelity_promotion_candidates.csv",
+        "observation_cache_csv": "E:\\11\\drug-loop-harness\\examples\\data\\multi_fidelity_promotion_observations.csv",
+        "tool": "E:\\11\\drug-loop-harness\\examples\\tools\\emit_cached_observation.py",
+        "policy": "staged_trust_gap_aware",
+        "budget_limit": 56.0,
+        "max_rounds": 7,
+        "tool_timeout": 5.0,
+        "guard_enforced": true
+      }
+    }
+  ],
+  "interpretation_warnings": [
+    "single_budget_only"
+  ]
+}

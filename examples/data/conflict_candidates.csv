@@ -1,0 +1,5 @@
+id,smiles,route_id,scaffold,tags
+cmpd_101,COc1ncccc1N,route_conflict_binder,aminopyridine,docking_trap
+cmpd_102,CCOc1ccc(N)cn1,route_conflict_binder,anilino_pyridine,human_reject
+cmpd_103,CCNc1ncccc1O,route_conflict_binder,hydroxy_pyridine,human_approve
+cmpd_104,CCN(CC)C(=O)N,route_conflict_binder,urea,admet_fail

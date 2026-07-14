@@ -1,0 +1,12 @@
+id,subject_id,oracle_name,passed,score,pose_valid,steric_clash,ligand_strain_flag,hERG_risk,solubility,decision,uncertainty,cost_spent,domain,source
+obs_admet_001,cmpd_001,table_admet,true,,,,,low,ok,,0.22,2,small_molecule,fixture_downstream
+obs_admet_002,cmpd_002,table_admet,false,,,,,high,poor,,0.18,2,small_molecule,fixture_downstream
+obs_admet_003,cmpd_003,table_admet,true,,,,,low,ok,,0.30,2,small_molecule,fixture_downstream
+obs_admet_004,cmpd_004,table_admet,true,,,,,medium,ok,,0.33,2,small_molecule,fixture_downstream
+obs_dock_001,cmpd_001,table_docking,true,-9.1,true,false,false,,,,,5,protein_ligand|non_covalent,fixture_downstream
+obs_dock_003,cmpd_003,table_docking,true,-9.4,true,false,false,,,,,5,protein_ligand|non_covalent,fixture_downstream
+obs_dock_004,cmpd_004,table_docking,true,-8.0,true,false,false,,,,,5,protein_ligand|non_covalent,fixture_downstream
+obs_rescore_001,cmpd_001,table_rescoring,true,-8.8,true,false,false,,,,,8,protein_ligand|non_covalent,fixture_downstream
+obs_rescore_003,cmpd_003,table_rescoring,false,-5.2,true,false,false,,,,,8,protein_ligand|non_covalent,fixture_downstream
+obs_human_001,cmpd_001,human_review,true,,,,,,,approve,,10,medchem_review,fixture_downstream
+obs_human_004,cmpd_004,human_review,false,,,,,,,reject,,10,medchem_review,fixture_downstream
